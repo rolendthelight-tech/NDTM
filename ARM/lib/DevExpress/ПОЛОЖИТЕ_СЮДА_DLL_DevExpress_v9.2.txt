@@ -1,0 +1,10 @@
+Скопируйте сюда из установленных «Графические компоненты» (DevExpress 9.2):
+
+  DevExpress.Data.v9.2.dll
+  DevExpress.Utils.v9.2.dll
+  DevExpress.XtraBars.v9.2.dll
+  DevExpress.XtraEditors.v9.2.dll
+  DevExpress.XtraGrid.v9.2.dll
+  DevExpress.XtraVerticalGrid.v9.2.dll
+
+Обычно они в папке установки DevExpress / в GAC не копируйте — нужны именно файлы .dll для ссылок MSBuild.

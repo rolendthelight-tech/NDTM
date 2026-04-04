@@ -1,0 +1,36 @@
+Папка NDTM_Workspace — единая рабочая копия для Visual Studio.
+
+Структура
+---------
+  NDTM.sln              — откройте этот файл в Visual Studio.
+  ARM\                  — проект «АРМ Формирование НДТМ» + все DLL из дистрибутива (3.0.8144.0) и ваши исходники.
+                          В корне ARM должны лежать все *.resources из Core\src (формы + Shell.UI.Properties.Resources.resources),
+                          иначе MissingManifestResourceException при чтении Resources.Log4netConfig.
+  ARM\lib\DevExpress\   — сюда положите 6 DLL DevExpress v9.2 (см. txt внутри папки).
+  Toolbox\ATToolbox\    — исходники ATToolbox из Core\Toolbox\src\ATToolbox
+  Toolbox\Libraries\    — log4net.dll для сборки ATToolbox
+  bin\                  — сюда при Debug-сборке ATToolbox попадёт ATToolbox.dll (OutputPath в csproj)
+
+Откуда что взято
+----------------
+  ARM: скопировано из Core\src (без bin/obj) и дополнено файлами из
+       Core\АРМ_Формирование_НДТМ_msi_files\AudiTech\АРМ Формирование НДТМ\3.0.8144.0
+  Toolbox: из Core\Toolbox\src
+
+Сборка
+------
+  1) Установите компонент .NET Framework 3.5 (если ещё не включён в Windows).
+  2) Скопируйте DLL DevExpress в ARM\lib\DevExpress\
+  3) Откройте NDTM.sln. В решении два проекта:
+     — «АРМ Формирование НДТМ» использует ATToolbox.dll из папки ARM (как в оригинале).
+     — «ATToolbox» — исходники; соберите его отдельно, если меняли Toolbox, затем запустите
+       Обновить_ATToolbox_dll.ps1 (копирует bin\Debug\ATToolbox.dll → ARM\).
+  4) Соберите только АРМ (или всё решение: ATToolbox соберётся без влияния на ссылки АРМ).
+  5) Запуск F5 с проекта АРМ — ARM\bin\Debug\АРМ Формирование НДТМ.exe
+
+Почему АРМ не ссылается на проект ATToolbox напрямую
+-----------------------------------------------------
+  Так сделано специально: прямая ProjectReference даёт конфликты имён с ERMS.Core
+  (LookupContainer, AppManager и т.д.). Сборка идёт через готовую ATToolbox.dll в ARM.
+
+Исходный Core\src не изменялся; эта копия живёт только в NDTM_Workspace.

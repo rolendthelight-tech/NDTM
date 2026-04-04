@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11527.330 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATToolbox", "Toolbox\ATToolbox\ATToolbox.csproj", "{867510E4-F88F-4E4A-B267-95FD0C5E22DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF508BD1-1B19-4717-B9A6-B444A220058A} = {FF508BD1-1B19-4717-B9A6-B444A220058A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "АРМ Формирование НДТМ", "ARM\АРМ Формирование НДТМ.csproj", "{FF508BD1-1B19-4717-B9A6-B444A220058A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Debug|x86.Build.0 = Debug|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{867510E4-F88F-4E4A-B267-95FD0C5E22DC}.Release|x86.Build.0 = Release|Any CPU
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Debug|Any CPU.Build.0 = Debug|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Debug|x86.ActiveCfg = Debug|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Debug|x86.Build.0 = Debug|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Release|Any CPU.ActiveCfg = Release|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Release|Any CPU.Build.0 = Release|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Release|x86.ActiveCfg = Release|x86
+		{FF508BD1-1B19-4717-B9A6-B444A220058A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {611F3A1E-9649-4BF9-9835-053F684B92EC}
+	EndGlobalSection
+EndGlobal

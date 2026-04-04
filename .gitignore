@@ -1,0 +1,43 @@
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.cache
+
+# Build outputs
+**/bin/
+**/obj/
+
+# ARM: скопированные в корень проекта DLL/EXE (сборка — не в git)
+ARM/*.dll
+ARM/*.pdb
+ARM/*.exe
+ARM/*.plugin
+
+# Сторонние / собранные бинарники (DevExpress с GitHub не публикуют; плагины пересобираются)
+ARM/lib/**/*.dll
+ARM/PlugIns/*.dll
+ARM/PlugIns/*.pdb
+ARM/RU/*.dll
+
+# Скомпилированные ресурсы WinForms в корне ARM (пересоздаются при сборке)
+ARM/Shell.UI.*.resources
+ARM/*.g.resources
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+
+# NuGet
+packages/
+*.nupkg
+
+# Code signing certificate (never commit)
+*.pfx
+
+# Misc
+temp/
+*.log
+Thumbs.db
