@@ -1,256 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{867510E4-F88F-4E4A-B267-95FD0C5E22DC}</ProjectGuid>
+    <TargetFramework>net10.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AT.Toolbox</RootNamespace>
-    <AssemblyName>ATToolbox</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-    <Win32Resource>
-    </Win32Resource>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TrackFileAccess>false</TrackFileAccess>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
+    <SignAssembly>false</SignAssembly>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <NoWarn>$(NoWarn);SYSLIB0011;NU1510;RESGEN1;MSB3491</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libraries\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Security" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="log4net" Version="3.3.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.5" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.5" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0" />
+    <PackageReference Include="Azure.Identity" Version="1.20.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.17.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\IAppInstanceInitializer.cs" />
-    <Compile Include="Application\ApplicationSettings.cs" />
-    <Compile Include="Application\ApplicationInfo.cs" />
-    <Compile Include="Application\AppSwitchabelPool.cs" />
-    <Compile Include="Application\AssemblyClassifier.cs" />
-    <Compile Include="Application\AssemblyCollector.cs" />
-    <Compile Include="Application\AssemblyTreeBuilder.cs" />
-    <Compile Include="Application\ConfigFileFinder.cs" />
-    <Compile Include="Application\IAppInstance.cs" />
-    <Compile Include="Log\INotificator.cs" />
-    <Compile Include="Application\InvalidPluginManifestException.cs" />
-    <Compile Include="Application\ISynchronizeProvider.cs" />
-    <Compile Include="Application\PluginInfo.cs" />
-    <Compile Include="Application\PluginManifestReader.cs" />
-    <Compile Include="Application\CommandLineArgs.cs" />
-    <Compile Include="Network\ClickOnce\UpdateChecker.cs" />
-    <Compile Include="Network\ClickOnce\UpdateInstaller.cs" />
-    <Compile Include="Structure\AdjacencyList.cs" />
-    <Compile Include="Common\ApplicationLoadingTask.cs" />
-    <Compile Include="Common\AppManager.cs" />
-    <Compile Include="Structure\CommandHistory.cs" />
-    <Compile Include="Common\ConvertionHelper.cs" />
-    <Compile Include="Common\DataContractConfigurator.cs" />
-    <Compile Include="Common\DependencyContainer.cs" />
-    <Compile Include="Common\DisplayNameResAttribute.cs" />
-    <Compile Include="Common\DynamicMethodFactory.cs" />
-    <Compile Include="Structure\EntryBase.cs" />
-    <Compile Include="Common\EnumLabelConverter.cs" />
-    <Compile Include="Common\IApplicationLoader.cs" />
-    <Compile Include="Structure\ICommand.cs" />
-    <Compile Include="Common\IConfigFile.cs" />
-    <Compile Include="Common\IConfigurator.cs" />
-    <Compile Include="Common\IDependencyItem.cs" />
-    <Compile Include="Common\IEventDispatcher.cs" />
-    <Compile Include="Common\ILoadingQueue.cs" />
-    <Compile Include="Common\ILookupProvider.cs" />
-    <Compile Include="Log\Info.cs" />
-    <Compile Include="Structure\INodeMoveProvider.cs" />
-    <Compile Include="Common\IOperationWrapper.cs" />
-    <Compile Include="Common\IRemoteIndicator.cs" />
-    <Compile Include="Common\IRunBase.cs" />
-    <Compile Include="Common\ITaskManager.cs" />
-    <Compile Include="Common\Lock.cs" />
-    <Compile Include="Common\LoginService.cs" />
-    <Compile Include="Common\LookupContainer.cs" />
-    <Compile Include="Log\MessageLogAppender.cs" />
-    <Compile Include="Structure\NestedBindingList.cs" />
-    <Compile Include="Common\ParameterInfo.cs" />
-    <Compile Include="Common\ProcessExitCodes.cs">
+    <Compile Update="Common\ProcessExitCodes.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Structure\PropertyValueContainer.cs" />
-    <Compile Include="Structure\ReadOnlyArray.cs" />
-    <Compile Include="Structure\ReadOnlyDictionary.cs" />
-    <Compile Include="Common\RemoteProgressRepository.cs" />
-    <Compile Include="Structure\SerializableDictionary.cs" />
-    <Compile Include="Structure\SharedSource.cs" />
-    <Compile Include="Extensions\SystemExtensions.cs" />
-    <Compile Include="Common\ThreadField.cs" />
-    <Compile Include="Common\TypeFilterConverter.cs" />
-    <Compile Include="Structure\VirtualizedCollection.cs" />
-    <Compile Include="Encryption\FileEncryptor.cs" />
-    <Compile Include="Encryption\SecureStringProvider.cs" />
-    <Compile Include="Extensions\AssemblyExtensions.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Files\CsvFile.cs" />
-    <Compile Include="Gradients\Gradient.cs" />
-    <Compile Include="Gradients\GradientPoint.cs" />
-    <Compile Include="Gradients\Gradients.cs" />
-    <Compile Include="Gradients\HSLRoutines.cs" />
-    <Compile Include="Log\LoggingUtils.cs" />
-    <Compile Include="Log\LogStreamWriter.cs" />
-    <Compile Include="Misc\Constants.cs" />
-    <Compile Include="Files\FlatFile.cs" />
-    <Compile Include="Misc\Crc32.cs" />
-    <Compile Include="Misc\GetHashCodeHelper.cs" />
-    <Compile Include="Misc\ParametrizedTimer.cs" />
-    <Compile Include="Misc\PointD.cs" />
-    <Compile Include="Network\MailHelper.cs" />
-    <Compile Include="SerializationWrapper.cs" />
-    <Compile Include="Application\ISwitchableLanguage.cs" />
-    <Compile Include="Misc\ParamEventArgs.cs" />
-    <Compile Include="Files\DirScanner.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Network\NetworkMessenger.cs" />
-    <Compile Include="Network\PopSmtpMessenger.cs" />
-    <Compile Include="Network\Messenger.cs" />
-    <Compile Include="Network\Networks.cs" />
-    <Compile Include="Network\SyncTCPClient.cs" />
-    <Compile Include="Network\SyncTCPServer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.RU.Designer.cs">
-      <DependentUpon>Resources.RU.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="ToolboxResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ToolboxResources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\check2.png" />
-    <None Include="Resources\error.png" />
-    <None Include="Resources\help.png" />
-    <None Include="Resources\warning.png" />
-    <None Include="TextFile1.txt" />
+    <Compile Remove="Network\ClickOnce\**\*.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Application\Application.cd" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="Common\Configurator.cd" />
-    <None Include="Resources\AudiTech.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.RU.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.RU.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolboxResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ToolboxResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ToolboxResources.RU.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

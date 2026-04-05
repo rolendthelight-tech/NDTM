@@ -162,7 +162,13 @@ namespace AT.Toolbox.Log
 
           try
           {
+#if NETFRAMEWORK
             string configFilePath = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
+#else
+            // In .NET 5+, use the entry assembly name with .config extension
+            string assemblyPath = Assembly.GetEntryAssembly()?.Location ?? Assembly.GetExecutingAssembly().Location;
+            string configFilePath = assemblyPath + ".config";
+#endif
             if (File.Exists(configFilePath))
             {
               Trace.WriteLine(string.Format("ConfigDirectory.get(): application configuration file found at '{0}'", configFilePath));

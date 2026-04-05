@@ -1,216 +1,188 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <ProjectType>local</ProjectType>
-    <ProjectVersion>7.10.377</ProjectVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FF508BD1-1B19-4717-B9A6-B444A220058A}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <AssemblyName>АРМ Формирование НДТМ</AssemblyName>
-    <RootNamespace>Shell.UI</RootNamespace>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ApplicationIcon />
+    <RootNamespace>Shell.UI</RootNamespace>
+    <AssemblyName>АРМ Формирование НДТМ</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <NoWarn>$(NoWarn);SYSLIB0011;WFO1000</NoWarn>
     <StartupObject>Shell.UI.Program</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
-  <Import Project="References.props" />
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <!-- Exclude Examples from build (they are example plugins, not part of main app) -->
+    <Compile Remove="Examples\**\*.cs" />
+    <EmbeddedResource Remove="Examples\**\*.resx" />
+    <!-- Exclude auto-generated Resources.cs to prevent duplicate class definition -->
+    <Compile Remove="Shell\UI\Properties\Resources.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ProjectReference to ATToolbox library -->
+    <ProjectReference Include="..\Toolbox\ATToolbox\ATToolbox.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- NuGet package references for .NET 10 compatibility -->
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.5" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.5" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- External DLL references from lib directory and root -->
+    <Reference Include="DevExpress.BonusSkins.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.BonusSkins.v9.2.dll</HintPath>
+      <Private>true</Private>
     </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    <Reference Include="DevExpress.Data.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.Data.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.Utils.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraBars.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraEditors.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraGrid.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraVerticalGrid.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraLayout.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.2">
+      <HintPath>lib\DevExpress\DevExpress.XtraPrinting.v9.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ERMS.BLL">
+      <HintPath>ERMS.BLL.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ERMS.Core">
+      <HintPath>ERMS.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ERMS.Security">
+      <HintPath>ERMS.Security.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ERMS.UI">
+      <HintPath>ERMS.UI.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <!-- Additional required assembly references -->
+    <Reference Include="ATGuiToolbox">
+      <HintPath>ATGuiToolbox.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ATMssqlToolbox">
+      <HintPath>ATMssqlToolbox.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="BLL.FareControlSystem">
+      <HintPath>BLL.FareControlSystem.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ContactInfo">
+      <HintPath>ContactInfo.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ETL">
+      <HintPath>ETL.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ETL.Adapter.ACS">
+      <HintPath>ETL.Adapter.ACS.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ETL.Adapter.Mif">
+      <HintPath>ETL.Adapter.Mif.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ETL.Adapter.Oracle">
+      <HintPath>ETL.Adapter.Oracle.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="TransportModel">
+      <HintPath>TransportModel.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="GUOP">
+      <HintPath>GUOP.BLL.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <!-- Additional assemblies for Map and Network support -->
+    <Reference Include="Map.Client">
+      <HintPath>Map.Client.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Map.Core">
+      <HintPath>Map.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Map.Interfaces">
+      <HintPath>Map.Interfaces.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="MapEntities">
+      <HintPath>MapEntities.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="RoadNetwork">
+      <HintPath>RoadNetwork.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="LineNetwork">
+      <HintPath>LineNetwork.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Visum.BLL">
+      <HintPath>Visum.BLL.dll</HintPath>
+      <Private>true</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Global.cs" />
-    <Compile Include="Shell\UI\Adapters\MicrosoftAccessUIAdapter.cs" />
-    <Compile Include="Shell\UI\Adapters\SqlConnectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\Adapters\SqlServerUIAdapter.cs" />
-    <Compile Include="Shell\UI\AddDataSourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\CorrectCoordinatesWork.cs" />
-    <Compile Include="Shell\UI\DataSourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\DataSourceWork.cs" />
-    <Compile Include="Shell\UI\EditDataSourceWork.cs" />
-    <Compile Include="Shell\UI\AddDataSourceWork.cs" />
-    <Compile Include="Shell\UI\EditDataSourceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\ExportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\ExportVisum.cs" />
-    <Compile Include="Shell\UI\ImportVisum.cs" />
-    <Compile Include="Shell\UI\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\PluginsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\RunScenarioForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\ScenarioDOM\RunScenarioWork.cs" />
-    <Compile Include="Shell\UI\ScenarioEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\Program.cs" />
-    <Compile Include="Shell\UI\ETLShellSettings.cs" />
-    <Compile Include="Shell\UI\Properties\Resources.cs" />
-    <Compile Include="Shell\UI\Properties\Settings.cs" />
-    <Compile Include="Shell\UI\ShellSqlFormService.cs" />
-    <Compile Include="Shell\UI\ShellStubs.cs" />
-    <Compile Include="Shell\UI\TableForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\VisumDatabaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shell\UI\VisumDatabaseFormFactory.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx" />
-    <EmbeddedResource Include="АРМ Формирование НДТМ.g.resources" />
-    <EmbeddedResource Include="Shell.UI.Adapters.SqlConnectionForm.resources" />
-    <EmbeddedResource Include="Shell.UI.AddDataSourceForm.resources" />
-    <EmbeddedResource Include="Shell.UI.DataSourceForm.resources" />
-    <EmbeddedResource Include="Shell.UI.EditDataSourceForm.resources" />
-    <EmbeddedResource Include="Shell.UI.ExportForm.resources" />
-    <EmbeddedResource Include="Shell.UI.MainForm.resources" />
-    <EmbeddedResource Include="Shell.UI.PluginsForm.resources" />
-    <EmbeddedResource Include="Shell.UI.RunScenarioForm.resources" />
-    <EmbeddedResource Include="Shell.UI.ScenarioEditor.resources" />
-    <EmbeddedResource Include="Shell.UI.TableForm.resources" />
-    <EmbeddedResource Include="Shell.UI.VisumDatabaseForm.resources" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\log4net.config" />
-    <None Include="database.ed" />
-    <None Include="database.mould" />
-    <None Include="ETL.Adapter.ACS.plugin" />
-    <None Include="ETL.Adapter.Mif.plugin" />
-    <None Include="ETL.Adapter.Oracle.plugin" />
-    <None Include="ETL.Plugin.AffineCoordinateTransformer.plugin" />
-    <None Include="ETL.Plugin.CoordinateTransformer.plugin" />
-    <None Include="ETL.Plugin.CSBI.plugin" />
-    <None Include="ETL.Plugin.EntityCreator.plugin" />
-    <None Include="ETL.Plugin.LineNetworkLoader.plugin" />
-    <None Include="ETL.Plugin.LineRouteGeometryLoader.plugin" />
-    <None Include="ETL.Plugin.MapBackgroundCreator.plugin" />
-    <None Include="ETL.Plugin.VisumHandlers.plugin" />
-    <None Include="GUOP.dsm" />
-    <None Include="References.props" />
-    <None Include="АРМ Формирование НДТМ.exe.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ATGuiToolbox.dll" />
-    <Content Include="ATGuiToolbox.pdb" />
-    <Content Include="ATGuiToolbox.resources.dll" />
-    <Content Include="ATMssqlToolbox.dll" />
-    <Content Include="ATMssqlToolbox.pdb" />
-    <Content Include="ATMssqlToolbox.resources.dll" />
-    <Content Include="ATToolbox.dll" />
-    <Content Include="ATToolbox.pdb" />
-    <Content Include="ATToolbox.resources.dll" />
-    <Content Include="BLL.FareControlSystem.dll" />
-    <Content Include="BLL.FareControlSystem.pdb" />
-    <Content Include="ContactInfo.dll" />
-    <Content Include="ContactInfo.pdb" />
-    <Content Include="Core.dll" />
-    <Content Include="Core.pdb" />
-    <Content Include="ERMS.BLL.dll" />
-    <Content Include="ERMS.BLL.pdb" />
-    <Content Include="ERMS.Core.dll" />
-    <Content Include="ERMS.Core.pdb" />
-    <Content Include="ERMS.Core.resources.dll" />
-    <Content Include="ERMS.Security.dll" />
-    <Content Include="ERMS.Security.pdb" />
-    <Content Include="ERMS.UI.dll" />
-    <Content Include="ERMS.UI.pdb" />
-    <Content Include="ERMS.UI.resources.dll" />
-    <Content Include="ETL.Adapter.ACS.dll" />
-    <Content Include="ETL.Adapter.ACS.pdb" />
-    <Content Include="ETL.Adapter.Mif.dll" />
-    <Content Include="ETL.Adapter.Mif.pdb" />
-    <Content Include="ETL.Adapter.Oracle.dll" />
-    <Content Include="ETL.Adapter.Oracle.pdb" />
-    <Content Include="ETL.Console.exe" />
-    <Content Include="ETL.Console.pdb" />
-    <Content Include="ETL.dll" />
-    <Content Include="ETL.pdb" />
-    <Content Include="ETL.Plugin.AffineCoordinateTransformer.dll" />
-    <Content Include="ETL.Plugin.CoordinateTransformer.dll" />
-    <Content Include="ETL.Plugin.CoordinateTransformer.pdb" />
-    <Content Include="ETL.Plugin.CSBI.dll" />
-    <Content Include="ETL.Plugin.CSBI.pdb" />
-    <Content Include="ETL.Plugin.EntityCreator.dll" />
-    <Content Include="ETL.Plugin.EntityCreator.pdb" />
-    <Content Include="ETL.Plugin.LineNetworkLoader.dll" />
-    <Content Include="ETL.Plugin.LineNetworkLoader.pdb" />
-    <Content Include="ETL.Plugin.LineRouteGeometryLoader.dll" />
-    <Content Include="ETL.Plugin.LineRouteGeometryLoader.pdb" />
-    <Content Include="ETL.Plugin.MapBackgroundCreator.dll" />
-    <Content Include="ETL.Plugin.MapBackgroundCreator.pdb" />
-    <Content Include="ETL.Plugin.VisumHandlers.dll" />
-    <Content Include="ETL.Plugin.VisumHandlers.pdb" />
-    <Content Include="ETL.resources.dll" />
-    <Content Include="Geography.dll" />
-    <Content Include="Geography.pdb" />
-    <Content Include="GUOP.BLL.dll" />
-    <Content Include="GUOP.BLL.pdb" />
-    <Content Include="LineNetwork.dll" />
-    <Content Include="LineNetwork.pdb" />
-    <Content Include="log4net.dll" />
-    <Content Include="Map.Client.dll" />
-    <Content Include="Map.Core.dll" />
-    <Content Include="Map.Core.pdb" />
-    <Content Include="Map.Interfaces.dll" />
-    <Content Include="Map.Interfaces.pdb" />
-    <Content Include="MapEntities.dll" />
-    <Content Include="MapEntities.pdb" />
-    <Content Include="Moulds.dll" />
-    <Content Include="Moulds.pdb" />
-    <Content Include="RoadNetwork.dll" />
-    <Content Include="RoadNetwork.pdb" />
-    <Content Include="settings.xml" />
-    <Content Include="TransportInfrastructureCheck.dll" />
-    <Content Include="TransportInfrastructureCheck.pdb" />
-    <Content Include="TransportModel.dll" />
-    <Content Include="TransportModel.pdb" />
-    <Content Include="Visum.BLL.dll" />
-    <Content Include="Visum.BLL.pdb" />
-    <Content Include="Visum.xml" />
-    <Content Include="АРМ Формирование НДТМ.pdb" />
-    <Content Include="АРМ Формирование НДТМ.resources.dll" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>
