@@ -404,7 +404,10 @@
                     if ((!type.IsAbstract && typeof(IRunnable).IsAssignableFrom(type)) && (type.GetConstructor(System.Type.EmptyTypes) != null))
                     {
                         IRunnable item = (IRunnable) Activator.CreateInstance(type);
-                        dictionary[ERMS.Core.Common.SystemExtensions.GetDisplayName(type)] = () => item.Run(this);
+                        string displayName = ERMS.Core.Common.SystemExtensions.GetDisplayName(type);
+                        if (string.IsNullOrEmpty(displayName))
+                            displayName = type.Name;
+                        dictionary[displayName] = () => item.Run(this);
                     }
                 }
             }

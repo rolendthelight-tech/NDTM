@@ -98,6 +98,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Shell\UI\VisumDatabaseFormFactory.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
     <EmbeddedResource Include="АРМ Формирование НДТМ.g.resources" />
     <EmbeddedResource Include="Shell.UI.Adapters.SqlConnectionForm.resources" />
     <EmbeddedResource Include="Shell.UI.AddDataSourceForm.resources" />

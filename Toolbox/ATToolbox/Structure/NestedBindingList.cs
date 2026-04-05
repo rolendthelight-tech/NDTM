@@ -158,12 +158,18 @@ namespace AT.Toolbox
 
     public void Undo()
     {
+      if (this.Item == null || string.IsNullOrEmpty(this.PropertyName))
+        return;
+
       this.Item[PropertyName] = this.OldValue;
       this.Item.RaisePropertyChanged(this.PropertyName);
     }
 
     public void Redo()
     {
+      if (this.Item == null || string.IsNullOrEmpty(this.PropertyName))
+        return;
+
       this.Item[PropertyName] = this.NewValue;
       this.Item.RaisePropertyChanged(this.PropertyName);
     }

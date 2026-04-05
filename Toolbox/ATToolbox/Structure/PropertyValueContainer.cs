@@ -53,8 +53,16 @@ namespace AT.Toolbox
 
     public object this[string propertyName] 
     {
-      get { return m_values[propertyName]; }
-      set { m_values[propertyName] = m_converters.Lookup(propertyName).Convert(value); }
+      get
+      {
+        this.ValidatePropertyName(propertyName);
+        return m_values[propertyName];
+      }
+      set
+      {
+        this.ValidatePropertyName(propertyName);
+        m_values[propertyName] = m_converters.Lookup(propertyName).Convert(value);
+      }
     }
 
     public string[] GetFieldNames()
@@ -64,6 +72,8 @@ namespace AT.Toolbox
 
     private TType GetReturnValue<TType>(string propertyName)
     {
+      this.ValidatePropertyName(propertyName);
+
       object ret;
 
       if (m_values.TryGetValue(propertyName, out ret))
@@ -79,6 +89,8 @@ namespace AT.Toolbox
 
     private TType ProcessPropertyType<TType>(string propertyName, object ret)
     {
+      this.ValidatePropertyName(propertyName);
+
       if (ret == null && !typeof(TType).IsNullable())
         ret = default(TType);
 
@@ -101,6 +113,12 @@ namespace AT.Toolbox
     private string GetPropertyName<TType>(Expression<Func<TType>> property)
     {
       return ((MemberExpression)property.Body).Member.Name;
+    }
+
+    private void ValidatePropertyName(string propertyName)
+    {
+      if (string.IsNullOrEmpty(propertyName))
+        throw new ArgumentNullException("propertyName");
     }
   }
 
