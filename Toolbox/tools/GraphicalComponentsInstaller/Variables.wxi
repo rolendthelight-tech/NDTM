@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <?define ProductVersion="2.0.3.0"?>
+  <?define ProductName="Графические компоненты"?>
+  <?define FullProductName="$(var.ProductName) $(var.ProductVersion)"?>
+  <?define Manufacturer="AudiTech"?>
+  <?define Description="Компоненты графического интерфейса в виде .Net сборок"?>
+  <?define ProductCode="5F169F93-1A1A-4640-B9EE-3189E99D261C"?>
+  <?define UpgradeCode="06A61104-1E30-463D-87E1-18A29B4C6861"?>
+
+</Include>

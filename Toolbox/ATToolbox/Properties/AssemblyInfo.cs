@@ -12,7 +12,7 @@ using AT.Toolbox;
 [assembly: AssemblyTitle( "ATToolbox" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyVersion( "2.0.0.2" )]
+[assembly: AssemblyVersion( "3.0.8144.0" )]
 [assembly: AssemblyCompany( "AudiTech" )]
 [assembly: AssemblyProduct( "ATToolbox" )]
 [assembly: AssemblyCopyright("Copyright © AudiTech 2010")]
@@ -40,4 +40,4 @@ using AT.Toolbox;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("0.9.0.0")]
-[assembly: AssemblyFileVersion("0.9.0.0")]
+[assembly: AssemblyFileVersion("3.0.8144.0")]

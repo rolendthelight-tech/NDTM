@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="AssemblyFolder">
+            <Directory Id="ru" Name="ru" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TargetFiles">
+            <Component Id="DevExpress.BonusSkins.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.BonusSkins.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.BonusSkins.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Build.XamlResourceProcessing.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Build.XamlResourceProcessing.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Build.XamlResourceProcessing.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Charts.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Charts.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Charts.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.CodeParser.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.CodeParser.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.CodeParser.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Data.v11.1.Compact.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Data.v11.1.Compact.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Data.v11.1.Compact.dll" />
+            </Component>
+            <Component Id="DevExpress.Data.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Data.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Data.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Data.v11.1.Linq.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Data.v11.1.Linq.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Data.v11.1.Linq.dll" />
+            </Component>
+            <Component Id="DevExpress.DemoData.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.DemoData.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.DemoData.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.DemoReports.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.DemoReports.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.DemoReports.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Design.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Design.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Design.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.OfficeSkins.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.OfficeSkins.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.OfficeSkins.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.PivotGrid.v11.1.Adomd.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.PivotGrid.v11.1.Adomd.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.PivotGrid.v11.1.Adomd.dll" />
+            </Component>
+            <Component Id="DevExpress.PivotGrid.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.PivotGrid.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.PivotGrid.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.Printing.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Printing.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Printing.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.Projects.v11.1.Installers.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Projects.v11.1.Installers.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Projects.v11.1.Installers.dll" />
+            </Component>
+            <Component Id="DevExpress.Reports.v11.1.Designer.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Reports.v11.1.Designer.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Reports.v11.1.Designer.dll" />
+            </Component>
+            <Component Id="DevExpress.RichEdit.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.RichEdit.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.RichEdit.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.SharePoint.2010.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.SharePoint.2010.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.SharePoint.2010.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.SharePoint.MOSS.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.SharePoint.MOSS.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.SharePoint.MOSS.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.SharePoint.WSS.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.SharePoint.WSS.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.SharePoint.WSS.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.SpellChecker.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.SpellChecker.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.SpellChecker.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.Tutorials.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Tutorials.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Tutorials.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Utils.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Utils.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Utils.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxEditors.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxEditors.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxEditors.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxGauges.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxGauges.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxGauges.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxGridView.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxGridView.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxGridView.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxGridView.v11.1.Export.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxGridView.v11.1.Export.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxGridView.v11.1.Export.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxHtmlEditor.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxHtmlEditor.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxHtmlEditor.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxPivotGrid.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxPivotGrid.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxPivotGrid.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxScheduler.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxScheduler.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxScheduler.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxScheduler.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxScheduler.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxScheduler.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxSpellChecker.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxSpellChecker.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxSpellChecker.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxThemes.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxThemes.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxThemes.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxTreeList.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxTreeList.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxTreeList.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.ASPxTreeList.v11.1.Export.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.ASPxTreeList.v11.1.Export.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.ASPxTreeList.v11.1.Export.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.Mvc.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.Mvc.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.Mvc.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Web.v11.1.Linq.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Web.v11.1.Linq.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Web.v11.1.Linq.dll" />
+            </Component>
+            <Component Id="DevExpress.Win.Projects.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Win.Projects.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Win.Projects.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpf.DemoBase.v11.1.TestUtils.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpf.DemoBase.v11.1.TestUtils.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpf.DemoBase.v11.1.TestUtils.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Compact.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Compact.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Compact.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Linq.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Linq.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Linq.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Providers.Compact.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Providers.Compact.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Providers.Compact.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Providers.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Providers.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Providers.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.Web.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.Web.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.Xpo.v11.1.Web.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraBars.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraBars.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraBars.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraBars.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraBars.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraBars.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.Extensions.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.Extensions.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.Extensions.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.UI.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.UI.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.UI.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.Web.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.Web.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.Web.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.Web.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.Web.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraCharts.v11.1.Web.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraEditors.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraEditors.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraEditors.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraEditors.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraEditors.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraEditors.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGauges.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Design.Win.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Design.Win.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGauges.v11.1.Design.Win.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Presets.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Presets.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGauges.v11.1.Presets.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Win.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Win.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGauges.v11.1.Win.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGrid.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGrid.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGrid.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGrid.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraGrid.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraGrid.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraLayout.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraLayout.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraLayout.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraLayout.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraLayout.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraLayout.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraNavBar.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraNavBar.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraNavBar.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraNavBar.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraNavBar.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraNavBar.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPivotGrid.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraPivotGrid.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraPivotGrid.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPivotGrid.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraPivotGrid.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraPivotGrid.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPrinting.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraPrinting.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraPrinting.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPrinting.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraPrinting.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraPrinting.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraReports.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraReports.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.Extensions.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.Extensions.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraReports.v11.1.Extensions.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.Web.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.Web.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraReports.v11.1.Web.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraRichEdit.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraRichEdit.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.Extensions.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.Extensions.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.Printing.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.Printing.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraRichEdit.v11.1.Printing.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Core.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Core.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.Core.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Extensions.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Extensions.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.Extensions.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.iCalendarExchange.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.iCalendarExchange.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.iCalendarExchange.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.OutlookExchange.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.OutlookExchange.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.OutlookExchange.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Reporting.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Reporting.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.Reporting.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Reporting.Extensions.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Reporting.Extensions.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.Reporting.Extensions.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.VCalendarExchange.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.VCalendarExchange.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraScheduler.v11.1.VCalendarExchange.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraSpellChecker.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraSpellChecker.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraSpellChecker.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraSpellChecker.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraSpellChecker.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraSpellChecker.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraTreeList.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraTreeList.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraTreeList.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraTreeList.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraTreeList.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraTreeList.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraVerticalGrid.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraVerticalGrid.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraVerticalGrid.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraVerticalGrid.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraVerticalGrid.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraVerticalGrid.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraWizard.v11.1.Design.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraWizard.v11.1.Design.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraWizard.v11.1.Design.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraWizard.v11.1.dll" Directory="AssemblyFolder" Guid="*">
+                <File Id="DevExpress.XtraWizard.v11.1.dll" KeyPath="yes" Assembly=".net" Source="components\DevExpress.XtraWizard.v11.1.dll" />
+            </Component>
+            <Component Id="DevExpress.Data.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.Data.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.Data.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.AuditTrail.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.AuditTrail.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.AuditTrail.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Chart.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Chart.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Chart.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.CloneObject.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.CloneObject.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.CloneObject.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.ConditionalEditorState.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.ConditionalEditorState.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.ConditionalEditorState.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Demos.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Demos.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Demos.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.FileAttachment.Web.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.FileAttachment.Web.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.FileAttachment.Web.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.FileAttachment.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.FileAttachment.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.FileAttachment.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Kpi.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Kpi.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Kpi.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Objects.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Objects.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Objects.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.PivotChart.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.PivotChart.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.PivotChart.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.PivotChart.Web.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.PivotChart.Web.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.PivotChart.Web.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.PivotChart.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.PivotChart.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.PivotChart.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.PivotGrid.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.PivotGrid.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.PivotGrid.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Printing.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Printing.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Printing.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Reports.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Reports.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Reports.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Reports.Web.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Reports.Web.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Reports.Web.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Reports.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Reports.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Reports.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Scheduler.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Scheduler.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Scheduler.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Scheduler.Web.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Scheduler.Web.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Scheduler.Web.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Scheduler.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Scheduler.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Scheduler.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.ScriptRecorder.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.ScriptRecorder.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.ScriptRecorder.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.ScriptRecorder.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.ScriptRecorder.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.ScriptRecorder.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Security.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Security.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Security.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.StateMachine.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.StateMachine.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.StateMachine.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Validation.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Validation.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Validation.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Validation.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Validation.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Validation.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.ViewVariantsModule.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.ViewVariantsModule.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.ViewVariantsModule.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Web.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Web.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Web.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.ExpressApp.Win.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.ExpressApp.Win.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.ExpressApp.Win.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.PivotGrid.v11.1.Core.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.PivotGrid.v11.1.Core.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.PivotGrid.v11.1.Core.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.RichEdit.v11.1.Core.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.RichEdit.v11.1.Core.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.RichEdit.v11.1.Core.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.Utils.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.Utils.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.Utils.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.Xpo.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.Xpo.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.Xpo.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraBars.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraBars.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraBars.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraCharts.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraCharts.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraCharts.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraEditors.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraEditors.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraEditors.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Core.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Core.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraGauges.v11.1.Core.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGauges.v11.1.Presets.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraGauges.v11.1.Presets.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraGauges.v11.1.Presets.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraGrid.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraGrid.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraGrid.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraLayout.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraLayout.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraLayout.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraNavBar.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraNavBar.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraNavBar.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPivotGrid.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraPivotGrid.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraPivotGrid.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraPrinting.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraPrinting.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraPrinting.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.Extensions.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.Extensions.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraReports.v11.1.Extensions.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraReports.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraReports.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraReports.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.Extensions.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.Extensions.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraRichEdit.v11.1.Extensions.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraRichEdit.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraRichEdit.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraRichEdit.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Core.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Core.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraScheduler.v11.1.Core.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Extensions.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Extensions.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraScheduler.v11.1.Extensions.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.Reporting.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.Reporting.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraScheduler.v11.1.Reporting.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraScheduler.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraScheduler.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraScheduler.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraSpellChecker.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraSpellChecker.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraSpellChecker.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraTreeList.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraTreeList.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraTreeList.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraVerticalGrid.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraVerticalGrid.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraVerticalGrid.v11.1.resources.dll" />
+            </Component>
+            <Component Id="DevExpress.XtraWizard.v11.1.resources.dll" Directory="ru" Guid="*">
+                <File Id="DevExpress.XtraWizard.v11.1.resources.dll" KeyPath="yes" Assembly=".net" Source="components\ru\DevExpress.XtraWizard.v11.1.resources.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<!-- Форматированием файла занималась MS VS {и продолжает заниматься} — все претензии по форматированию к MS VS -->
+	<!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />-->
+	<UsingTask TaskName="MSBuildClickOnceHelper.ClickOnceTasks.VersionNexter" AssemblyFile="..\..\..\lib\MSBuildClickOnceHelper.dll" />
+	<UsingTask TaskName="MSBuildClickOnceHelper.ClickOnceTasks.VersionWritter" AssemblyFile="..\..\..\lib\MSBuildClickOnceHelper.dll" />
+	<!---->
+	<!-- Вычисление строки версии и фрагмента пути развёртывания -->
+	<!---->
+	<Target Name="NextVersion">
+		<VersionNexter Condition="'$(BUILD_NUMBER)'==''" VersionFile="$(VersionFile)" BaseVersionFile="$(BaseVersionFile)">
+			<Output TaskParameter="NextVersion" PropertyName="DeployVersion" />
+		</VersionNexter>
+		<VersionWritter Condition="'$(BUILD_NUMBER)'!=''" VersionFile="$(VersionFile)" BaseVersionFile="$(BaseVersionFile)" Component2="$(BUILD_NUMBER)" Component3="$(BUILD_VCS_NUMBER)">
+			<Output TaskParameter="NewVersion" PropertyName="DeployVersion" />
+		</VersionWritter>
+		<!--<DeployVersion>1.0.0.5</DeployVersion>-->
+		<Message Text="Версия развёртывания: $(DeployVersion)" Importance="high" />
+		<PropertyGroup>
+			<DeployVersionSubDir>Application Files\$(DeployVersion)\</DeployVersionSubDir>
+		</PropertyGroup>
+	</Target>
+	<!---->
+	<!-- Копирование файлов для дистрибутива в локальную папку bin -->
+	<!---->
+	<PropertyGroup>
+		<CopyToLocalFolderDependsOn>
+			NextVersion;
+			ResolveFiles
+		</CopyToLocalFolderDependsOn>
+	</PropertyGroup>
+	<!---->
+	<Target Name="CopyToLocalFolder" DependsOnTargets="$(CopyToLocalFolderDependsOn)">
+		<RemoveDir Directories="$(OutputPath)$(DeployVersionSubDir)" />
+		<!--Защита от сбоя при создании жёстких ссылок следующей командой-->
+		<Copy SourceFiles="@(InputFilesToCopy)" DestinationFiles="@(InputFilesToCopy->'$(OutputPath)$(DeployVersionSubDir)%(TargetPath)$(DeploymentFileSuffix)')" OverwriteReadOnlyFiles="true">
+			<Output ItemName="ApplicationFiles" TaskParameter="CopiedFiles" />
+		</Copy>
+		<Message Text="Скопированы все собранные файлы $(Product) в папку подготовки к публикации из $(InputPath)" Importance="high" />
+	</Target>
+	<!---->
+	<!-- Преобразование имён файлов -->
+	<!---->
+	<PropertyGroup>
+		<TranslateNamesDependsOn>
+			ResolveFiles
+		</TranslateNamesDependsOn>
+	</PropertyGroup>
+	<!---->
+	<Target Name="TranslateNames" DependsOnTargets="$(TranslateNamesDependsOn)">
+		<ItemGroup>
+			<EntryPointLocalOutput Include="@(EntryPoint)">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</EntryPointLocalOutput>
+			<ConfigFileLocalOutput Include="@(ConfigFile)">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</ConfigFileLocalOutput>
+			<DependencyLocalOutput Include="@(Dependency)">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</DependencyLocalOutput>
+			<FileLocalOutput Include="@(File)">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</FileLocalOutput>
+			<IconFileLocalOutput Include="@(IconFile)">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</IconFileLocalOutput>
+			<OtherCertificatesSourceLocalOutput Include="@(OtherCertificatesSource)">
+				<TargetPath>%(TargetPath)</TargetPath>
+			</OtherCertificatesSourceLocalOutput>
+			<FileAssociationLocalOutput Include="@(FileAssociation)">
+				<ProgId>%(ProgId)</ProgId>
+				<DefaultIcon>%(DefaultIcon)$(DeploymentFileSuffix)</DefaultIcon>
+				<Description>%(Description)</Description>
+			</FileAssociationLocalOutput>
+			<MySourceFiles Include="@(MyInputFiles->'$(OutputPath)$(DeployVersionSubDir)%(TargetPath)$(DeploymentFileSuffix)')">
+				<TargetPath>%(TargetPath)$(DeploymentFileSuffix)</TargetPath>
+			</MySourceFiles>
+		</ItemGroup>
+		<Message Text="Имена файлов преобразованы" Importance="high" />
+	</Target>
+	<!---->
+	<!-- Построение проекта -->
+	<!---->
+	<PropertyGroup>
+		<BuildCoreDependsOn>
+			<!--ResolveReferencesFromCoreBuild;-->
+			NextVersion;
+			ResolveFiles;
+			CopyToLocalFolder;
+			TranslateNames
+		</BuildCoreDependsOn>
+	</PropertyGroup>
+	<!---->
+	<Target Name="BuildCore" DependsOnTargets="$(BuildCoreDependsOn)">
+		<Message Text="Начало публикации $(Product)" Importance="high" />
+		<Delete Files="$(OutputPath)$(DeployVersionSubDir)$(ApplicationManifestName)" />
+		<Delete Files="$(OutputPath)$(DeploymentManifestName)" />
+		<Message Text="Удалены старые манифесты" Importance="high" />
+		<GenerateApplicationManifest AssemblyName="$(EntryPointName).exe"
+																 AssemblyVersion="$(DeployVersion)"
+																 ConfigFile="@(ConfigFile)"
+																 Dependencies="@(Dependency)"
+																 Description="$(Product)"
+																 EntryPoint="@(EntryPoint)"
+																 ErrorReportUrl="@(ErrorReportUrl)"
+																 FileAssociations="@(FileAssociation)"
+																 Files="@(File)"
+																 IconFile="@(IconFile)"
+																 OutputManifest="$(OutputPath)$(DeployVersionSubDir)$(ApplicationManifestName)"
+																 Product="$(Product)"
+																 Publisher="$(Publisher)"
+																 RequiresMinimumFramework35SP1="True"
+																 SupportUrl="$(SupportUrl)"
+																 TargetFrameworkVersion="v4.0"
+																 UseApplicationTrust="true">
+			<Output ItemName="ApplicationManifest" TaskParameter="OutputManifest" />
+		</GenerateApplicationManifest>
+		<Message Text="Сгенерирован манифест приложения $(Product)" Importance="high" />
+		<!--<SignFile CertificateThumbprint="$(ThumbprintA)" SigningTarget="@(ApplicationManifest)" /> //TODO: Не работает-->
+		<!--<Exec Command="$(MAGE) -Sign &quot;@(ApplicationManifest)&quot; -CertFile &quot;$(KeyA)&quot; -Password &quot;$(PswdA)&quot;" Timeout="12345" />-->
+		<MageSign SourceManifestPath="@(ApplicationManifest)"
+							SignedManifestPath="@(ApplicationManifest)"
+							CertificatePath="$(KeyA)"
+							CertificatePassword="$(PswdA)"
+							IterationTimeout="23456"
+							TryCount="10" />
+		<Message Text="Подписан манифест приложения $(Product)" Importance="high" />
+		<ItemGroup>
+			<ApplicationManifestDep Include="$(OutputPath)$(DeployVersionSubDir)$(ApplicationManifestName)">
+				<TargetPath>$(DeployVersionSubDir)$(ApplicationManifestName)</TargetPath>
+			</ApplicationManifestDep>
+		</ItemGroup>
+		<ItemGroup>
+			<ApplicationManifestCopy Include="$(OutputPath)$(DeployVersionSubDir)$(ApplicationManifestName)">
+				<TargetPath>$(ApplicationManifestName)</TargetPath>
+			</ApplicationManifestCopy>
+		</ItemGroup>
+		<GenerateDeploymentManifest AssemblyName="$(DeploymentManifestName)"
+																AssemblyVersion="$(DeployVersion)"
+																CreateDesktopShortcut="true"
+																DeploymentUrl="$(UpdateUrl)"
+																Description="$(Product)"
+																DisallowUrlActivation="false"
+																EntryPoint="@(ApplicationManifestDep)"
+																ErrorReportUrl="@(ErrorReportUrl)"
+																Install="true"
+																MapFileExtensions="true"
+																OutputManifest="$(OutputPath)$(DeploymentManifestName)"
+																Product="$(Product)"
+																Publisher="$(Publisher)"
+																SuiteName="$(SuiteName)"
+																SupportUrl="$(SupportUrl)"
+																TargetFrameworkMoniker=".NETFramework,Version=v4.0"
+																TargetFrameworkVersion="v4.0"
+																TrustUrlParameters="true"
+																UpdateEnabled="false"
+																UpdateInterval="1"
+																UpdateMode="Background"
+																UpdateUnit="hours">
+			<Output ItemName="DeployManifest"
+							TaskParameter="OutputManifest" />
+		</GenerateDeploymentManifest>
+		<Message Text="Сгенерирован манифест развёртывания $(Product)"
+						 Importance="high" />
+		<!--<SignFile CertificateThumbprint="$(ThumbprintD)" SigningTarget="@(DeployManifest)" /> //TODO: Не работает-->
+		<!--<Exec Command="$(MAGE) -Sign &quot;@(DeployManifest)&quot; -CertFile &quot;$(KeyD)&quot; -Password &quot;$(PswdD)&quot;" Timeout="12345" />-->
+		<MageSign SourceManifestPath="@(DeployManifest)"
+							SignedManifestPath="@(DeployManifest)"
+							CertificatePath="$(KeyD)"
+							CertificatePassword="$(PswdD)"
+							IterationTimeout="23456"
+							TryCount="10" />
+		<Message Text="Подписан манифест развёртывания $(Product)" Importance="high" />
+		<ItemGroup>
+			<DeployManifestCopy Include="$(OutputPath)$(DeploymentManifestName)">
+				<TargetPath>$(DeploymentManifestName)</TargetPath>
+			</DeployManifestCopy>
+		</ItemGroup>
+		<ItemGroup>
+			<MyPublicFiles Include="@(MySourceFiles)" />
+			<MyPublicFiles Include="@(ApplicationManifestCopy)" />
+			<MyPublicFiles Include="@(DeployManifestCopy)" />
+		</ItemGroup>
+		<Message Text="Собраны все файлы $(Product) в кучу" Importance="high" />
+		<Copy SourceFiles="@(MyPublicFiles)" DestinationFiles="@(MyPublicFiles->'$(DeployUrl)$(DeployVersionSubDir)%(TargetPath)')" />
+		<Message Text="Скопированы все файлы $(Product) в общую папку $(DeployUrl) версии $(DeployVersion)" Importance="high" />
+		<Copy SourceFiles="@(DeployManifest)" DestinationFiles="@(DeployManifestCopy->'$(DeployUrl)%(TargetPath)')" OverwriteReadOnlyFiles="true" />
+		<Message Text="Скопирован манифест развёртывания $(Product) в общую папку $(DeployUrl)" Importance="high" />
+		<!--<PropertyGroup>
+      <ApplicationManifest>@(ApplicationManifest)</ApplicationManifest>
+    </PropertyGroup>
+    <PropertyGroup>
+      <DeployManifest>@(DeployManifest)</DeployManifest>
+    </PropertyGroup>
+    <GenerateDeploymentManifest InputManifest="$(DeployUrl)$(DeployManifest)" EntryPoint="$(DeployUrl)$(DeployVersionSubDir)$(ApplicationManifest)">
+      <Output ItemName="DeployManifest" TaskParameter="OutputManifest" />
+    </GenerateDeploymentManifest>-->
+		<Message Text="Закончена публикация $(Product)" Importance="high" />
+	</Target>
+	<!---->
+	<!-- Очистка проекта -->
+	<!---->
+	<Target Name="CleanCore">
+		<Delete Files="@(MySourceFiles)" Condition="'@(MySourceFiles)' != ''" />
+		<Delete Files="@(ApplicationManifest)" Condition="'@(ApplicationManifest)' != ''" />
+		<Delete Files="@(DeployManifest)" Condition="'@(DeployManifest)' != ''" />
+		<Delete Files="@(ApplicationFiles)" Condition="'@(ApplicationFiles)' != ''" />
+		<RemoveDir Directories="$(OutputPath)" />
+		<!--<Delete Files="$(OutputPath)$(DeploymentManifestName)" />-->
+		<Message Text="Clean выполнился" Importance="high" />
+	</Target>
+</Project>

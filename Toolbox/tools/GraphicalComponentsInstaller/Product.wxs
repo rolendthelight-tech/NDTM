@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <?include Variables.wxi?>
+
+  <Product Id="$(var.ProductCode)" Name="$(var.Manufacturer) $(var.ProductName) $(var.ProductVersion)" Language="1049" Version="$(var.ProductVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
+		<Package InstallerVersion="200" Compressed="yes" />
+
+    <!--Проверка наличия .NET Framework 3.5-->
+    <PropertyRef Id="NETFRAMEWORK35"/>
+    <Condition Message="Для работы приложения требуется наличие .NET Framework 3.5. Пожалуйста, установите .NET Framework и запустите программу установки заново.">
+      <![CDATA[Installed OR NETFRAMEWORK35]]>
+    </Condition>
+
+    <Icon Id="ApplicationIcon" SourceFile="Application.ico" />
+
+    <?include AddOrRemovePrograms.wxi?>
+
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+    <!--Системные сслыки на папки http://msdn.microsoft.com/en-us/library/aa370905%28VS.85%29.aspx#system_folder_properties-->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="WindowsFolder">
+        <Directory Id="AssemblyFolder">
+
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+
+      <ComponentGroupRef Id="TargetFiles"/>
+
+    </Feature>
+
+    <UIRef Id="WixUI_InstallDir_Customized"/>
+
+    <CustomAction Id="NoDowngrade" Error="Более новая версия продукта '[ProductName]' уже установлена." />
+
+    <InstallExecuteSequence>
+      <Custom Action="NoDowngrade" After="FindRelatedProducts">NEWERVERSIONFOUND</Custom>
+      <RemoveExistingProducts After="InstallInitialize">PREVIOUSVERSIONFOUND</RemoveExistingProducts>
+    </InstallExecuteSequence>
+
+    <!--Особенность ICE: При сравнении двух значений версий учитываются только первые 3 числа из каждой версии.-->
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion OnlyDetect="yes" Property="NEWERVERSIONFOUND" IncludeMinimum="no" Minimum="$(var.ProductVersion)" Maximum="3.0.0" IncludeMaximum="no" />
+      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSVERSIONFOUND" IncludeMinimum="yes" Minimum="2.0.0" Maximum="$(var.ProductVersion)" IncludeMaximum="no" />
+    </Upgrade>
+
+   </Product>
+</Wix>

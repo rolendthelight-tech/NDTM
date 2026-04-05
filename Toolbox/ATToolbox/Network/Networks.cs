@@ -96,11 +96,11 @@ namespace AT.Toolbox.Network
 
         for( int i = 0; i < totalEntries; i++ )
         {
-          IntPtr tmpBuffer = new IntPtr( (int) buffer + ( i * sizeofINFO ) );
+          IntPtr tmpBuffer = IntPtr.Add( buffer, i * sizeofINFO );
 
           ServerInfo svrInfo = (ServerInfo) Marshal.PtrToStructure( tmpBuffer, typeof( ServerInfo ) );
 
-          ret_val.Add( new string( svrInfo.sv100_name.ToCharArray( ) ) );
+          ret_val.Add( svrInfo.sv100_name );
         }
       }
       catch( Exception ex )
@@ -131,8 +131,9 @@ namespace AT.Toolbox.Network
 
         foreach( DataRow row in table.Rows )
         {
+          string instanceName = row["InstanceName"].ToString();
           string val = (string) row["ServerName"] 
-            + (row["InstanceName"].ToString() != "" ? "\\" + row["InstanceName"] : "");
+            + (!string.IsNullOrEmpty( instanceName ) ? "\\" + instanceName : "");
 
           if( !ret_val.Contains( val ) )
             ret_val.Add( val );

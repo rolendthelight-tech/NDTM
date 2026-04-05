@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topic Id="36bff3bd-9076-4ae0-887f-7856919b3a88" Status="New Topic" CreatedOn="2012-02-17T09:44:52.9704539Z" ModifiedOn="2012-02-21T19:36:54.5421317Z" PageTypeName="" AutoIndex="true" HelpContextIds="" Name="module_exapmle_db" BuildFlags="">
+  <Title m="2012-02-17T09:49:06.6348209Z">Пример модуля (база данных)</Title>
+  <ContentsTitle />
+  <Notes></Notes>
+  <TopicSections>
+    <TopicSection Name="BodyText">
+      <Content m="2012-02-17T10:52:44.039234Z">&lt;?xml:namespace prefix = innovasys ns = "http://www.innovasys.com/widgets" /&gt;&lt;innovasys:widget type="In This Topic List" layout="block"&gt;&lt;innovasys:widgetproperty layout="inline" name="Prefix"&gt; 
+&lt;P&gt;&lt;STRONG&gt;Содержание&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;&lt;/P&gt;&lt;/innovasys:widgetproperty&gt;&lt;innovasys:widgetproperty layout="inline" name="Tag"&gt;H1&lt;/innovasys:widgetproperty&gt;&lt;/innovasys:widget&gt;
+&lt;H1&gt;Постановка задачи&lt;/H1&gt;
+&lt;P&gt;Мы будем разрабатывать приложение "Реестр рекламных конструкций". Все рекламные конструкции города должны отображаться на карте поверх топографической подкладки.&amp;nbsp;Тип рекламной конструкции должен показываться иконкой, статус - цветом.&amp;nbsp;Кроме того, на карте в виде линий должны отображаться маршруты движения инспекторов, которые проверяют законность установки рекламных конструкций, и зоны охраны в виде полилиний. Должна поддерживаться возможность разграничения прав доступа, чтобы наносить на карту маршруты движения и зоны охраны могли только определённые сотрудники.&lt;/P&gt;
+&lt;P&gt;Подобное приложение требует создания в базе данных таблиц для следующих сущностей:&lt;/P&gt;
+&lt;UL&gt;
+&lt;LI&gt;&lt;STRONG&gt;Документы (должны поддерживать привязку к карте)&lt;/STRONG&gt; 
+&lt;UL&gt;
+&lt;LI&gt;Рекламные конструкции. 
+&lt;LI&gt;Маршруты движения инспекторов. 
+&lt;LI&gt;Зоны охраны&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;&lt;STRONG&gt;Справочники&lt;/STRONG&gt; 
+&lt;UL&gt;
+&lt;LI&gt;Типы рекламных конструкций 
+&lt;LI&gt;Статусы рекламных конструкций 
+&lt;LI&gt;Владельцы рекламных конструкций 
+&lt;LI&gt;Виды зон охраны 
+&lt;LI&gt;Адреса 
+&lt;LI&gt;Инспектора 
+&lt;LI&gt;Права доступа&lt;/LI&gt;&lt;/UL&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;P&gt;Часть требуемой функциональности присутствует в стандартных модулях. Так, справочник статусов присутствует в модуле rms_. Для того чтобы им воспользоваться, бизнес-объект со статусом должен быть унаследован от класса Document, соответствующего таблице rms_Document. Для того чтобы можно было привязать объект к карте средствами модуля map_, бизнес-объект должен быть унаследован от класса Entity, объявленного в модуле cor_. Так как Document сам наследуется от Entity, бизнес-объект "Рекламные конструкции" следует наследовать от Document. Бизнес-объекты "Маршруты движения инспекторов" и "Зоны охраны" можно наследовать непосредственно от класса Entity.&lt;/P&gt;
+&lt;P&gt;Для хранения информации об инспекторах можно использовать справочники организационно-штатной структуры, имеющиеся в модуле rms_. Эти справочники позволяют связывать информацию о сотрудниках с правами доступа, работа с которой осуществляется средствами стандартного модуля sec_. Для работы с адресами предназначен стандартный модуль geo_.&amp;nbsp;Владельцы рекламных конструкций - это физические и юридические лица. Для работы с этими объектами предназначен стандартный модуль ci_.&amp;nbsp;Таким образом, специальный модуль нашего приложения должен будет включать в себя следующие бизнес-объекты:&lt;/P&gt;
+&lt;UL&gt;
+&lt;LI&gt;Рекламные конструкции. Должен быть отнаследован от Document 
+&lt;LI&gt;Маршруты движения инспекторов. Должен быть отнаследован от Entity 
+&lt;LI&gt;Зоны охраны. Должен быть отнаследован от Entity 
+&lt;LI&gt;Виды зон охраны 
+&lt;LI&gt;Типы рекламных конструкций.&lt;/LI&gt;&lt;/UL&gt;
+&lt;H1&gt;Создание таблиц&lt;/H1&gt;
+&lt;P&gt;Создайте базу данных Microsoft SQL Server и создайте в ней объекты для модулей _aux, cor_, sec_, rms_, geo_, ci_&amp;nbsp;и map_. Информация о том, как включить стандартные модули в новое приложение, изложена в теме &lt;A style="auto-update-caption: true" href="8c467c57-8e3a-456c-8d9d-8ccfee799f50"&gt;АРМ Настройки - Начало работы&lt;/A&gt;.&lt;/P&gt;
+&lt;P&gt;Наш модуль будет иметь префикс reg_ (сокращение от register - реестр). Первой создадим таблицу типов рекламных конструкций, т. к. на неё будет ссылаться таблица рекламных конструкций.&lt;/P&gt;&lt;innovasys:widget type="Colorized Example Code" layout="block"&gt;&lt;innovasys:widgetproperty layout="inline" name="Title"&gt;Создание таблицы типов рекламных конструкций&lt;/innovasys:widgetproperty&gt; &lt;innovasys:widgetproperty layout="inline" name="LanguageName"&gt;SQL&lt;/innovasys:widgetproperty&gt; &lt;innovasys:widgetproperty layout="block" name="Content"&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;
+&lt;P&gt;CREATE&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;TABLE&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[dbo]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;.&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[reg_AdvertisingType]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;(&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;
+&lt;P&gt;&lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;&amp;nbsp; [ID]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;int&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;IDENTITY&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;(&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;1&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;,&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;1&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;)&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;NOT&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;NULL,&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;
+&lt;P&gt;&lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;&amp;nbsp; [Name]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;nvarchar&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;(&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;256&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;)&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;NOT&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;NULL,&lt;/P&gt;
+&lt;P&gt;)&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;ON&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[PRIMARY]&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;
+&lt;P&gt;GO&lt;/P&gt;
+&lt;P&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;ALTER&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;TABLE&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[dbo]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;.&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[reg_AdvertisingType]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;ADD&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;CONSTRAINT&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[PK_reg_AdvertisingType]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;PRIMARY&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;KEY&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;CLUSTERED&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;&lt;FONT color=#000000&gt; &lt;/FONT&gt;&lt;/P&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;
+&lt;P&gt;(&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt;
+&lt;P&gt;&lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;&amp;nbsp; [ID]&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;ASC&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#808080 size=2&gt;&lt;FONT color=#808080 size=2&gt;
+&lt;P&gt;)&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;ON&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#000000 size=2&gt; &lt;/FONT&gt;&lt;FONT color=#008080 size=2&gt;&lt;FONT color=#008080 size=2&gt;[PRIMARY]&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;FONT color=#0000ff size=2&gt;&lt;FONT color=#0000ff size=2&gt;
+&lt;P&gt;GO&lt;/P&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/innovasys:widgetproperty&gt;&lt;/innovasys:widget&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;</Content>
+    </TopicSection>
+  </TopicSections>
+  <TopicLinks />
+  <TopicKeywords />
+  <PropertyDefinitionValues />
+</Topic>

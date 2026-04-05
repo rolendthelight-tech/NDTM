@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topic Id="e31bcb9b-4acf-4479-a077-792a5cd213cc" Status="New Topic" CreatedOn="2012-02-17T10:21:16.4949794Z" ModifiedOn="2012-02-17T10:37:04.0471616Z" PageTypeName="" AutoIndex="true" HelpContextIds="" Name="tutorial_index" BuildFlags="">
+  <Title m="2012-02-17T10:21:41.5114049Z">Пример проекта</Title>
+  <ContentsTitle />
+  <Notes></Notes>
+  <TopicSections>
+    <TopicSection Name="BodyText">
+      <Content m="2012-02-17T10:37:04.0471616Z">&lt;P&gt;В настоящем руководстве на примере разработки простого приложения рассматриваются принципы работы с платформой ERMS.Core.&lt;/P&gt;&lt;?xml:namespace prefix = innovasys ns = "http://www.innovasys.com/widgets" /&gt;&lt;innovasys:widget type="Mini Table of Contents" layout="block"&gt;&lt;innovasys:widgetproperty layout="block" name="tocnodeid"&gt;b9f87348-e52d-439c-b8a0-9ea625ed006c&lt;/innovasys:widgetproperty&gt;&lt;/innovasys:widget&gt;</Content>
+    </TopicSection>
+  </TopicSections>
+  <TopicLinks />
+  <TopicKeywords />
+  <PropertyDefinitionValues />
+</Topic>

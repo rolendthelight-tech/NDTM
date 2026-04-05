@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.0</ProductVersion>
+    <ProjectGuid>{fe0aa5b8-af0b-416a-9f69-651732fef8aa}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Графические компоненты</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Name>GraphicalComponentsInstaller</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Дистрибутив АРМ КПП|x86' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Дистрибутив АРМ КПП|AnyCPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Дистрибутив АРМ КПП|Any CPU' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <Compile Include="TargetFiles.wxs" />
+    <Compile Include="UI.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddOrRemovePrograms.wxi" />
+    <Content Include="components\DevExpress.BonusSkins.v11.1.dll" />
+    <Content Include="components\DevExpress.Build.XamlResourceProcessing.v11.1.dll" />
+    <Content Include="components\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.CodeParser.v11.1.dll" />
+    <Content Include="components\DevExpress.Data.v11.1.Compact.dll" />
+    <Content Include="components\DevExpress.Data.v11.1.dll" />
+    <Content Include="components\DevExpress.Data.v11.1.Linq.dll" />
+    <Content Include="components\DevExpress.DemoData.v11.1.dll" />
+    <Content Include="components\DevExpress.DemoReports.v11.1.dll" />
+    <Content Include="components\DevExpress.Design.v11.1.dll" />
+    <Content Include="components\DevExpress.OfficeSkins.v11.1.dll" />
+    <Content Include="components\DevExpress.PivotGrid.v11.1.Adomd.dll" />
+    <Content Include="components\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Projects.v11.1.Installers.dll" />
+    <Content Include="components\DevExpress.Reports.v11.1.Designer.dll" />
+    <Content Include="components\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.SharePoint.2010.v11.1.dll" />
+    <Content Include="components\DevExpress.SharePoint.MOSS.v11.1.dll" />
+    <Content Include="components\DevExpress.SharePoint.WSS.v11.1.dll" />
+    <Content Include="components\DevExpress.SpellChecker.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Tutorials.v11.1.dll" />
+    <Content Include="components\DevExpress.Utils.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxEditors.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxGauges.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxGridView.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxGridView.v11.1.Export.dll" />
+    <Content Include="components\DevExpress.Web.ASPxHtmlEditor.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxPivotGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll" />
+    <Content Include="components\DevExpress.Web.ASPxScheduler.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Web.ASPxScheduler.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxSpellChecker.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxThemes.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxTreeList.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.ASPxTreeList.v11.1.Export.dll" />
+    <Content Include="components\DevExpress.Web.Mvc.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.v11.1.dll" />
+    <Content Include="components\DevExpress.Web.v11.1.Linq.dll" />
+    <Content Include="components\DevExpress.Win.Projects.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Carousel.v11.1.Customization.dll" />
+    <Content Include="components\DevExpress.Xpf.Carousel.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Carousel.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Charts.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Charts.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Charts.v11.1.VisualStudio.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Controls.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Controls.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Core.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Core.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.DemoData.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.DemoData.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.v11.1.TestUtils.dll" />
+    <Content Include="components\DevExpress.Xpf.DemoBase.Web.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Docking.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Docking.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Gauges.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Gauges.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Grid.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Xpf.Grid.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Grid.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Layout.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Xpf.LayoutControl.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.LayoutControl.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.NavBar.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.NavBar.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.PivotGrid.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.PivotGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Printing.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.Xpf.Printing.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Printing.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Printing.v11.1.Service.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Printing.v11.1.Service.dll" />
+    <Content Include="components\DevExpress.Xpf.Projects.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.PropertyGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Ribbon.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Ribbon.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.RichEdit.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.RichEdit.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Scheduler.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpf.Scheduler.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.SpellChecker.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Themes.LightGray.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Themes.Office2007Black.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Themes.Office2007Blue.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Themes.Office2007Silver.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpf.Themes.Seven.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Compact.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Data.Services.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Linq.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Providers.Compact.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Providers.dll" />
+    <Content Include="components\DevExpress.Xpo.v11.1.Web.dll" />
+    <Content Include="components\DevExpress.XtraBars.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraBars.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.Extensions.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.UI.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.Web.Design.dll" />
+    <Content Include="components\DevExpress.XtraCharts.v11.1.Web.dll" />
+    <Content Include="components\DevExpress.XtraEditors.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraGauges.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.XtraGauges.v11.1.Design.Win.dll" />
+    <Content Include="components\DevExpress.XtraGauges.v11.1.Presets.dll" />
+    <Content Include="components\DevExpress.XtraGauges.v11.1.Win.dll" />
+    <Content Include="components\DevExpress.XtraGrid.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraLayout.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraNavBar.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraNavBar.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraPivotGrid.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraPrinting.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraReports.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraReports.v11.1.Extensions.dll" />
+    <Content Include="components\DevExpress.XtraReports.v11.1.Service.dll" />
+    <Content Include="components\DevExpress.XtraReports.v11.1.Web.dll" />
+    <Content Include="components\DevExpress.XtraRichEdit.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+    <Content Include="components\DevExpress.XtraRichEdit.v11.1.Printing.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.Core.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.Extensions.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.iCalendarExchange.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.OutlookExchange.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.Reporting.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.Reporting.Extensions.dll" />
+    <Content Include="components\DevExpress.XtraScheduler.v11.1.VCalendarExchange.dll" />
+    <Content Include="components\DevExpress.XtraSpellChecker.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraSpellChecker.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraTreeList.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraVerticalGrid.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraVerticalGrid.v11.1.dll" />
+    <Content Include="components\DevExpress.XtraWizard.v11.1.Design.dll" />
+    <Content Include="components\DevExpress.XtraWizard.v11.1.dll" />
+    <Content Include="components\RU\DevExpress.Data.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.AuditTrail.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Chart.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.CloneObject.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.ConditionalEditorState.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Demos.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.FileAttachment.Web.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.FileAttachment.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Kpi.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Objects.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.PivotChart.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.PivotChart.Web.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.PivotChart.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.PivotGrid.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Printing.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Reports.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Reports.Web.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Reports.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Scheduler.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Scheduler.Web.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Scheduler.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.ScriptRecorder.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.ScriptRecorder.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Security.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.StateMachine.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Validation.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Validation.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.ViewVariantsModule.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Web.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Workflow.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.ExpressApp.Workflow.Win.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.PivotGrid.v11.1.Core.resources.dll" />
+    <Content Include="components\RU\DevExpress.RichEdit.v11.1.Core.resources.dll" />
+    <Content Include="components\RU\DevExpress.Utils.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Charts.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Core.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Docking.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Gauges.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Grid.v11.1.Core.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.LayoutControl.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.NavBar.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Printing.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Ribbon.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.RichEdit.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpf.Scheduler.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.Xpo.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraBars.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraCharts.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraEditors.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraGauges.v11.1.Core.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraGauges.v11.1.Presets.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraGrid.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraLayout.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraNavBar.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraPivotGrid.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraPrinting.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraReports.v11.1.Extensions.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraReports.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraRichEdit.v11.1.Extensions.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraRichEdit.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraScheduler.v11.1.Core.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraScheduler.v11.1.Extensions.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraScheduler.v11.1.Reporting.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraScheduler.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraSpellChecker.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraTreeList.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraVerticalGrid.v11.1.resources.dll" />
+    <Content Include="components\RU\DevExpress.XtraWizard.v11.1.resources.dll" />
+    <Content Include="Variables.wxi" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WixUI_ru-ru.wxl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="components" />
+    <Folder Include="components\RU" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

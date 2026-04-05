@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topic Id="dee8d508-e0be-406b-947b-2286825cf63f" Status="New Topic" CreatedOn="2012-02-15T12:12:27.6974924Z" ModifiedOn="2012-02-21T19:36:29.1827567Z" PageTypeName="" AutoIndex="true" HelpContextIds="" Name="prerequisites" BuildFlags="">
+  <Title m="2012-02-15T12:12:39.5569433Z">Установка необходимого ПО</Title>
+  <ContentsTitle />
+  <Notes></Notes>
+  <TopicSections>
+    <TopicSection Name="BodyText">
+      <Content m="2012-02-15T12:19:45.8565466Z">&lt;P&gt;Для работы технологий быстрой разработки систем электронного документооборота требуется установить следующие компоненты:&lt;/P&gt;
+&lt;UL&gt;
+&lt;LI&gt;.NET Framework 3.5 SP1 и выше 
+&lt;LI&gt;DevExpress 12.2 
+&lt;LI&gt;MapXtreme 6.8.0, если требуется работа с картой 
+&lt;LI&gt;Adobe Reader, если требуется работа с отчётами 
+&lt;LI&gt;POS for .NET, если требуется работа с отчётами&lt;/LI&gt;&lt;/UL&gt;
+&lt;P&gt;Вместо DevExpress 12.2 можно установить программный компонент "AudiTech Графические компоненты 3". Этот дистрибутив устанавливает компоненты DevExpress в глобальный кэш сборок, но не устанавливает дизайнеры. Это позволит разрабатываемым приложениям компилироваться и выполняться, но не позволит создавать нестандартные формы.&lt;/P&gt;
+&lt;P&gt;Кроме того, для работы потребуется AudiTech АРМ Настройки, предоставляющий пользовательский интерфейс для работы со слепками и кодогенератором.&lt;/P&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;</Content>
+    </TopicSection>
+  </TopicSections>
+  <TopicLinks />
+  <TopicKeywords />
+  <PropertyDefinitionValues />
+</Topic>

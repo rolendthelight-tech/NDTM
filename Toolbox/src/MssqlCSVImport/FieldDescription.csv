@@ -1,0 +1,36 @@
+1	NULL	N	ID	int	True	False	Порядковый номер
+2	NULL	Район	District	string	True	False	NULL
+3	NULL	Название дороги	RoadName	string	True	False	NULL
+4	NULL	Дом	House	int	True	False	Номер дома
+5	AdvertisingView	Расположение	ArragementType	string	True	False	Способ расположения
+6	AdvertisingView	Тип	TypeName	string	True	False	это описание
+7	AdvertisingView	Площадь	Square	string	True	False	Площадь рекламной конструкции [м2]
+8	AdvertisingView	Артикул	Code	string	True	False	это описание
+9	AdvertisingView	Организация	OrganizationName	string	True	False	это описание
+10	AdvertisingView	Договор	ContractsName	string	True	False	это описание
+11	NULL	Начало	StartDate	string	True	False	это описание
+12	NULL	Конец	ClosingDate	string	True	False	это описание
+13	AdvertisingView	Нарушения	Violations	string	True	False	это описание
+14	NULL	Имя	Name	string	True	False	это описание
+15	ContractView	Организация	Organization	string	True	False	NULL
+21	NULL	Дата	Date	string	True	False	NULL
+25	NULL	Описание	Description	string	True	False	NULL
+27	NULL	Город	TownName	string	True	False	NULL
+28	NULL	Район	DistrictShortName	string	True	False	NULL
+30	SituationPlan	План	Scheme	binary	True	False	NULL
+31	NULL	Тип дороги	RoadType	string	True	False	Тип дороги, например, улица, шоссе, проспект, площадь и т.п.
+32	NULL	Корпус	HouseIndex	string	True	False	NULL
+33	NULL	Литера	HouseLetter	string	True	False	NULL
+34	NULL	Организация	IsOrganization	bool	True	False	NULL
+35	Miniature	Миниатюра	Data	binary	True	False	NULL
+36	NULL	Сокращение	ShortName	string	True	False	Сокращенное название
+37	AdvertisingView	Статус	Status	string	True	False	Статус рекламной конструкции
+38	AdvertisingArragement	Тип установки	Type	string	True	False	NULL
+40	PersonView	Название	OrganizationName	string	True	False	NULL
+42	NULL	Фамилия	Surname	string	True	False	NULL
+43	NULL	Отчество	Patronymic	string	True	False	NULL
+44	ManView	Номер паспорта	Number	string	True	False	NULL
+45	ManView	Серия	Series	string	True	False	NULL
+46	NULL	Дата выдачи	DeliveryDate	string	True	False	NULL
+47	ManView	Кем выдано	Department	string	True	False	NULL
+48	NULL	???	NULL	string	True	False	Описание столбца не задано

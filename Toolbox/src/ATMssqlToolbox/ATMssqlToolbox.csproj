@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C3B19E4-58D2-47C4-82A4-A44E7D20E858}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AT.Toolbox.MSSQL</RootNamespace>
+    <AssemblyName>ATMssqlToolbox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TrackFileAccess>false</TrackFileAccess>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\SqlAuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication\SqlAuthenticationForm.Designer.cs">
+      <DependentUpon>SqlAuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\SqlConnectionFactory.cs" />
+    <Compile Include="Browsing\AddServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browsing\AddServerForm.Designer.cs">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browsing\ATDatabaseRoutines.cs" />
+    <Compile Include="Browsing\BuildMouldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browsing\BuildMouldForm.Designer.cs">
+      <DependentUpon>BuildMouldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browsing\IDataImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browsing\IWizard.cs" />
+    <Compile Include="Browsing\RunScriptWork.cs" />
+    <Compile Include="Browsing\SimpleConnectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Browsing\SimpleConnectionControl.Designer.cs">
+      <DependentUpon>SimpleConnectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browsing\SqlCheckConnectionWork.cs" />
+    <Compile Include="Browsing\DatabaseEntry.cs" />
+    <Compile Include="Browsing\DatabaseRoutines.cs" />
+    <Compile Include="Browsing\DatabaseStructureGrabber.cs" />
+    <Compile Include="Browsing\ServerEntry.cs" />
+    <Compile Include="Browsing\SqlBackupWork.cs" />
+    <Compile Include="Browsing\SqlErrorSimpleParser.cs" />
+    <Compile Include="Browsing\SqlGetMaxVersionWork.cs" />
+    <Compile Include="Browsing\SqlGrabStructureWork.cs" />
+    <Compile Include="Browsing\SqlBuildMouldWork.cs" />
+    <Compile Include="Browsing\SqlRestoreWork.cs" />
+    <Compile Include="Browsing\SqlUpdateStructureWork.cs" />
+    <Compile Include="Browsing\SupportInfo.cs" />
+    <Compile Include="Browsing\VersionHelper.cs" />
+    <Compile Include="ORM\DAL\BindableItemList.cs" />
+    <Compile Include="ORM\DAL\EditableCollection.cs" />
+    <Compile Include="ORM\DAL\FdTypeDescriptor.cs" />
+    <Compile Include="ORM\DAL\IBindingAspect.cs" />
+    <Compile Include="ORM\DAL\IDbContext.cs" />
+    <Compile Include="ORM\DAL\IPackable.cs" />
+    <Compile Include="ORM\DAL\Query\CustomTextFilter.cs" />
+    <Compile Include="ORM\DAL\Query\InFilter.cs" />
+    <Compile Include="ORM\DAL\Query\SortFieldCollection.cs" />
+    <Compile Include="ORM\DAL\RecordCache.cs" />
+    <Compile Include="ORM\DAL\RecordServices.cs" />
+    <Compile Include="ORM\DAL\StandardPermissions.cs" />
+    <Compile Include="ORM\DAL\ViewRecord.cs" />
+    <Compile Include="ORM\DAL\Wcf\ExceptionHandlingProxyBase.cs" />
+    <Compile Include="ORM\DAL\Wcf\FileLoadServiceProxy.cs" />
+    <Compile Include="ORM\DAL\Wcf\IFileLoadService.cs" />
+    <Compile Include="ORM\DAL\Wcf\IRecordManagementService.cs" />
+    <Compile Include="ORM\DAL\Wcf\RecordManagementServiceProxy.cs" />
+    <Compile Include="ORM\DAL\Wcf\WcfRecordBinder.cs" />
+    <Compile Include="ORM\DAL\Wcf\WcfRecordBinderFactory.cs" />
+    <Compile Include="Extensions\DataRowExtensions.cs" />
+    <Compile Include="Extensions\DataTableExtensions.cs" />
+    <Compile Include="ORM\Common\ContextBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ORM\Common\DisplayNameResAttribute.cs" />
+    <Compile Include="ORM\Common\Info.cs" />
+    <Compile Include="ORM\Common\IWriteLogStrategy.cs" />
+    <Compile Include="ORM\Common\ObjectTextStore.cs" />
+    <Compile Include="ORM\Common\TextStreamWriteLogStrategy.cs" />
+    <Compile Include="ORM\DAL\BindableObject.cs" />
+    <Compile Include="ORM\DAL\BindableObject.Nested.cs" />
+    <Compile Include="ORM\DAL\BindableObjectList.cs" />
+    <Compile Include="ORM\DAL\BindingAction.cs" />
+    <Compile Include="ORM\DAL\DbContext.cs" />
+    <Compile Include="ORM\DAL\DbContextBase.cs" />
+    <Compile Include="ORM\DAL\DictionaryFieldBinder.cs" />
+    <Compile Include="ORM\DAL\IBindable.cs" />
+    <Compile Include="ORM\DAL\IBindableEntity.cs" />
+    <Compile Include="ORM\DAL\IBindableObjectList.cs" />
+    <Compile Include="ORM\DAL\IFieldBinder.cs" />
+    <Compile Include="ORM\DAL\IRecordBinder.cs" />
+    <Compile Include="ORM\DAL\IRecordBinderFactory.cs" />
+    <Compile Include="ORM\DAL\MaxAccessLevel.cs" />
+    <Compile Include="ORM\DAL\Query\AggregateOperation.cs" />
+    <Compile Include="ORM\DAL\Query\ExpressionFilter.cs" />
+    <Compile Include="ORM\DAL\Query\FilterBase.cs" />
+    <Compile Include="ORM\DAL\Query\FilterConverter.cs" />
+    <Compile Include="ORM\DAL\Query\FilterOperation.cs" />
+    <Compile Include="ORM\DAL\Query\GroupFilter.cs" />
+    <Compile Include="ORM\DAL\Query\IQueryBuilder.cs" />
+    <Compile Include="ORM\DAL\Query\Joiner.cs" />
+    <Compile Include="ORM\DAL\Query\NegateFilter.cs" />
+    <Compile Include="ORM\DAL\Query\NestedQueryFilter.cs" />
+    <Compile Include="ORM\DAL\Query\NullFilter.cs" />
+    <Compile Include="ORM\DAL\Query\Projection.cs" />
+    <Compile Include="ORM\DAL\Query\QueryObject.cs" />
+    <Compile Include="ORM\DAL\RecordManager.cs" />
+    <Compile Include="ORM\DAL\ReflectionFieldBinder.cs" />
+    <Compile Include="ORM\Common\ExceptionEventArgs.cs" />
+    <Compile Include="ORM\DAL\Sql\SqlQueryBuilder.cs" />
+    <Compile Include="ORM\DAL\Sql\SqlRecordBinder.cs" />
+    <Compile Include="ORM\DAL\Sql\SqlRecordBinderFactory.cs" />
+    <Compile Include="RecordLocker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecordLocker.Designer.cs">
+      <DependentUpon>RecordLocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleDalc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Filters\CustomFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filters\CustomFilterDialog.Designer.cs">
+      <DependentUpon>CustomFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Browsing\DatabaseBrowserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Browsing\DatabaseBrowserControl.Designer.cs">
+      <DependentUpon>DatabaseBrowserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\FilterStorage.cs" />
+    <Compile Include="Browsing\SqlGetBasesWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.RU.Designer.cs">
+      <DependentUpon>Resources.RU.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SqlExtendedPropertyHelper.cs" />
+    <Compile Include="Filters\SqlServerEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filters\SqlServerEditControl.Designer.cs">
+      <DependentUpon>SqlServerEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableCSVImporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Authentication\SqlAuthenticationForm.resx">
+      <DependentUpon>SqlAuthenticationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browsing\AddServerForm.resx">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browsing\BuildMouldForm.resx">
+      <DependentUpon>BuildMouldForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browsing\SimpleConnectionControl.resx">
+      <DependentUpon>SimpleConnectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filters\CustomFilterDialog.resx">
+      <DependentUpon>CustomFilterDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Browsing\DatabaseBrowserControl.resx">
+      <DependentUpon>DatabaseBrowserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORM\DAL\BindingAction.resx">
+      <DependentUpon>BindingAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORM\DAL\BindingAction.RU.resx">
+      <DependentUpon>BindingAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORM\DAL\Query\AggregateOperation.resx">
+      <DependentUpon>AggregateOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORM\DAL\Query\AggregateOperation.RU.resx">
+      <DependentUpon>AggregateOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.RU.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.RU.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filters\SqlServerEditControl.resx">
+      <DependentUpon>SqlServerEditControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleDalc.resx">
+      <DependentUpon>SimpleDalc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_database_into.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="APKD.pfx" />
+    <None Include="ObjectTextStore.datasource" />
+    <None Include="Resources\p_48_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\p_16_error.png" />
+    <Content Include="Resources\p_16_help.png" />
+    <Content Include="Resources\p_16_ok.png" />
+    <Content Include="Resources\p_16_warning.png" />
+    <Content Include="Resources\p_32_database_add.png" />
+    <Content Include="Resources\p_32_database_delete.png" />
+    <Content Include="Resources\p_32_database_into.png" />
+    <Content Include="Resources\p_32_database_refresh.png" />
+    <Content Include="Resources\p_32_database_restore.png" />
+    <None Include="Resources\p_32_database_run.png" />
+    <Content Include="Resources\p_32_database_save.png" />
+    <Content Include="Resources\p_32_database_script.png" />
+    <Content Include="Resources\p_32_refresh.png" />
+    <Content Include="Resources\p_32_server_add.png" />
+    <Content Include="Resources\p_32_server_refresh.png" />
+    <Content Include="Resources\p_32_server_remove.png" />
+    <Content Include="Resources\p_48_database_add.png" />
+    <Content Include="Resources\p_48_database_restore.png" />
+    <Content Include="Resources\p_48_database_save.png" />
+    <Content Include="Resources\p_48_database_script.png" />
+    <Content Include="Resources\p_48_server_add.png" />
+    <Content Include="Resources\p_48_server_delete.png" />
+    <Content Include="Resources\p_48_server_search.png" />
+    <Content Include="Resources\p_48_server_wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ERMS.Core\source\ERMS.Core\ERMS.Core.csproj">
+      <Project>{BCFA3EED-F999-4145-8FC9-8D7C6DD99010}</Project>
+      <Name>ERMS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATGuiToolbox\ATGuiToolbox.csproj">
+      <Project>{F5980E92-04CE-441F-9A7F-8F8F40AF859D}</Project>
+      <Name>ATGuiToolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATToolbox\ATToolbox.csproj">
+      <Project>{867510E4-F88F-4E4A-B267-95FD0C5E22DC}</Project>
+      <Name>ATToolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

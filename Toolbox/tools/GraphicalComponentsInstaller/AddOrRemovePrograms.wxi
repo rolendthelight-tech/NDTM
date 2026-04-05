@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- The properties defined by Windows Installer: http://msdn2.microsoft.com/en-us/library/aa370908(VS.85).aspx -->
+
+  <Property Id="ARPCOMMENTS" Value="$(var.ProductName)" />
+  <Property Id="ARPPRODUCTICON" Value="ApplicationIcon" />
+  <Property Id="ARPHELPLINK" Value="work@auditech.ru"/>
+  <Property Id="ARPHELPTELEPHONE" Value="(812)535-95-86" />
+  <Property Id="ARPSIZE" Value="30000" />
+
+  <!-- Set up ARPINSTALLLOCATION property -->
+  <CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+
+  <!-- Sequences -->
+  <InstallExecuteSequence>
+    <Custom Action="SetARPINSTALLLOCATION" After="InstallValidate"></Custom>
+  </InstallExecuteSequence>
+  
+</Include>

@@ -4,7 +4,6 @@
     using ERMS.Core.Common;
     using ERMS.Core.DAL;
     using ERMS.Core.DbMould;
-    using GUOP;
     using log4net;
     using Shell.UI.Properties;
     using System;
@@ -52,7 +51,10 @@
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Критическая ошибка при запуске приложения: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string detail = ex.InnerException != null
+                  ? ex.Message + "\r\n\r\n" + ex.InnerException.Message + "\r\n\r\n" + ex.InnerException
+                  : ex.ToString();
+                MessageBox.Show("Критическая ошибка при запуске приложения:\r\n" + detail, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
         }
@@ -168,7 +170,7 @@
 
             AppInstance.ConfigFileFinder = CreateSafeConfigFileFinder();
             RecordManager.Service = new RecordManagementService();
-            FileEntityDescriptionSource.ColumnListSources.Add(new EntityInfoCoulmnListSource(GUOPContext.DataSourceName));
+            FileEntityDescriptionSource.ColumnListSources.Add(new EntityInfoCoulmnListSource(GuopDataSource.Name));
             string fieldDescriptionFile = Shell.UI.Properties.Settings.Default.FieldDescription;
             string fieldDescriptionPath = null;
             try
@@ -206,7 +208,7 @@
                 {
                     try
                     {
-                        FileEntityDescriptionSource.Fields[GUOPContext.DataSourceName] = EntityDescriptionContainer.LoadFromFile(fieldDescriptionPath);
+                        FileEntityDescriptionSource.Fields[GuopDataSource.Name] = EntityDescriptionContainer.LoadFromFile(fieldDescriptionPath);
                         Log.InfoFormat("Loaded field description from: {0}", fieldDescriptionPath);
                     }
                     catch (Exception ex)

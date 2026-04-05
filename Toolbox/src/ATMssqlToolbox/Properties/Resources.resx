@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Sql_NextWithoutInitList" xml:space="preserve">
+    <value>Call InitList() before calling Next()</value>
+  </data>
+  <data name="SQLEDIT_AUTHTYPE" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SQL_CHECKING_SUCCESS" xml:space="preserve">
+    <value>Server connection OK</value>
+  </data>
+  <data name="SQL_CHECKING_FAILURE" xml:space="preserve">
+    <value>Server connection failed. Check log for details</value>
+  </data>
+  <data name="DB_BROWSER_REMOVE_DB_CONFIRM" xml:space="preserve">
+    <value>Are you sure to physically remove database</value>
+  </data>
+  <data name="DB_BROWSER_REFRESH_SERVER_TIP" xml:space="preserve">
+    <value>Refresh databases on the current server</value>
+  </data>
+  <data name="SQLEDIT_INSTANCE" xml:space="preserve">
+    <value>Instance name</value>
+  </data>
+  <data name="CONTEXT_CONNECTION_OK" xml:space="preserve">
+    <value>Server connection completed successfully</value>
+  </data>
+  <data name="DB_BROWSER_COL_VERSION" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="SETTINGS_RESTART_WARNING" xml:space="preserve">
+    <value>Restart is required. Do you wish to restart now ?</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="p_32_database_script" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_script.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_REMOVE_SERVER_TIP" xml:space="preserve">
+    <value>Removes selected server from the list</value>
+  </data>
+  <data name="BUILD_MOULD_REFRESH_METADATA" xml:space="preserve">
+    <value>Refreshing metadata</value>
+  </data>
+  <data name="DictionaryBinder_FieldCountMismatch" xml:space="preserve">
+    <value>Field quantity mismatch</value>
+  </data>
+  <data name="LOG_INFO_TITLE" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="DB_INFO" xml:space="preserve">
+    <value>Database info:</value>
+  </data>
+  <data name="LOG_LEVEL_DEBUG" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="BindableObject_NoAccess" xml:space="preserve">
+    <value>BindableObject_NoAccess</value>
+  </data>
+  <data name="STATUS_DESCRIPTION_NONE" xml:space="preserve">
+    <value>Mould contains some objects missed in the database or their versions are not consistent</value>
+  </data>
+  <data name="GlobalManager_NoStrategy" xml:space="preserve">
+    <value>Write log strategy is not set</value>
+  </data>
+  <data name="STATUS_DESCRIPTION_UNKNOWN" xml:space="preserve">
+    <value>Error occured during checking database</value>
+  </data>
+  <data name="VIEW" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="BindableObject_OrigEdit" xml:space="preserve">
+    <value>Attempt of (BindableObject.Orig) editing</value>
+  </data>
+  <data name="DB_BROWSER_REFRESH_ALL" xml:space="preserve">
+    <value>Refresh all</value>
+  </data>
+  <data name="p_32_server_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_server_remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p_32_database_restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_restore.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ContextException" xml:space="preserve">
+    <value>Error working with database context</value>
+  </data>
+  <data name="Sql_IndexerUninitialized" xml:space="preserve">
+    <value>Unable to read field, indexer is not initialized. Call OpenReader()</value>
+  </data>
+  <data name="DB_BROWSER_IMPORT_DATA_COMPLETE" xml:space="preserve">
+    <value>Import data complete</value>
+  </data>
+  <data name="SQL_CHECKING_CONNECTION_FAIL" xml:space="preserve">
+    <value>Error while cheching SQL Connection</value>
+  </data>
+  <data name="p_16_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_16_help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOG_SHOW_FILE_TITLE" xml:space="preserve">
+    <value>Show Log File</value>
+  </data>
+  <data name="LOG_WARINING_TITLE" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="DB_BROWSER_RESTORE_TIP" xml:space="preserve">
+    <value>Restore selected database</value>
+  </data>
+  <data name="LOG" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="DB_BROWSER_REMOVE_DB" xml:space="preserve">
+    <value>Remove database</value>
+  </data>
+  <data name="EXCEPTION_SOURCE" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="LOG_DEBUG_TITLE" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="NOT_WRONG_VERSION" xml:space="preserve">
+    <value> {0} has version "{1}" instead of "{2}</value>
+  </data>
+  <data name="DB_BROWSER_COL_STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="BindableObjectList_NullParent" xml:space="preserve">
+    <value>Parent list is not set</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_DEBUG_COLOR" xml:space="preserve">
+    <value>Show debug messages</value>
+  </data>
+  <data name="p_32_database_into" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_into.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_COL_USED" xml:space="preserve">
+    <value>Used</value>
+  </data>
+  <data name="DB_GUID" xml:space="preserve">
+    <value>Database guid: {0}</value>
+  </data>
+  <data name="p_48_database_restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_database_restore.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUILD_MOULD_REFRESH_DATABASE" xml:space="preserve">
+    <value>Refreshing database</value>
+  </data>
+  <data name="DB_BROWSER_MOULD" xml:space="preserve">
+    <value>Mould</value>
+  </data>
+  <data name="DB_BROWSER_TEST" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="p_32_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sql_InvalidQuery" xml:space="preserve">
+    <value>Unknown error while executong query</value>
+  </data>
+  <data name="PROCEDURE" xml:space="preserve">
+    <value>Procedure</value>
+  </data>
+  <data name="RESTART_REQUIRED" xml:space="preserve">
+    <value>Restart is reqired</value>
+  </data>
+  <data name="DB_BROWSER_REMOVE_SERVER" xml:space="preserve">
+    <value>Remove server</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_ERROR_COLOR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="p_48_server_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_server_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_SKIP_FK_TEST" xml:space="preserve">
+    <value>Skip foreign key testing</value>
+  </data>
+  <data name="p_32_server_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_server_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUILD_MOULD_NEW_VERSION" xml:space="preserve">
+    <value>New version</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Application settings</value>
+  </data>
+  <data name="BindableObject_FK_NotFound" xml:space="preserve">
+    <value>Foreign key for {0} not found</value>
+  </data>
+  <data name="SETTINGS_GENERIC" xml:space="preserve">
+    <value>Generic settings</value>
+  </data>
+  <data name="LOG_GRID_TIMESTAMP_TITLE" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="DB_GRABBER_INIT_LISTS" xml:space="preserve">
+    <value>Init lists</value>
+  </data>
+  <data name="p_32_database_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUILD_MOULD_NO_PATH" xml:space="preserve">
+    <value>Mould path is not selected</value>
+  </data>
+  <data name="QUERY_DUPLICATE_SORT_FIELD" xml:space="preserve">
+    <value>Field {0} is already used for sorting</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_DEBUG" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="p_48_database_into" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_database_into.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_RUN_SCRIPT" xml:space="preserve">
+    <value>Run script</value>
+  </data>
+  <data name="SQLEDIT_AUTHTYPE_WIN" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="p_48_database_script" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_database_script.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SQLEDIT_AUTH_GROUP" xml:space="preserve">
+    <value>Authentification</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_WARN_COLOR" xml:space="preserve">
+    <value>Warining</value>
+  </data>
+  <data name="DB_BROWSER_UPDATE_DB_STRUCTURE" xml:space="preserve">
+    <value>Updating database structure</value>
+  </data>
+  <data name="BindableObject_DirectFieldAccess" xml:space="preserve">
+    <value>BindableObject_DirectFieldAccess</value>
+  </data>
+  <data name="p_32_database_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MOULD_CHANGE_CONFLICT" xml:space="preserve">
+    <value>Database change conflict</value>
+  </data>
+  <data name="DB_BROWSER_ADD_DB_TIP" xml:space="preserve">
+    <value>Add new database</value>
+  </data>
+  <data name="DATABASE" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="p_16_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_16_error.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DONE" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="BindableObject_IncorrectForeignKey" xml:space="preserve">
+    <value>Foreign key value {0} is invalid</value>
+  </data>
+  <data name="SQL_INCORRECT_VERSION" xml:space="preserve">
+    <value>Incorrect format of the version: it must consist of four point-separated integers</value>
+  </data>
+  <data name="p_32_server_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_server_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="p_48_database_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_database_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="STATUS_DESCRIPTION_PARTIAL" xml:space="preserve">
+    <value>Database contains objects not existing in the mould</value>
+  </data>
+  <data name="EXCEPTION_DETAILS" xml:space="preserve">
+    <value>Exception details</value>
+  </data>
+  <data name="SQL_GET_DATABASE_LIST_FAIL" xml:space="preserve">
+    <value>Failed to get database list from : {0}</value>
+  </data>
+  <data name="BindableObject_RestrictedTrigger" xml:space="preserve">
+    <value>Unable to delete record form {0}. There are related records in {1}</value>
+  </data>
+  <data name="LOG_FILE" xml:space="preserve">
+    <value>Log file</value>
+  </data>
+  <data name="DB_BROWSER_ONLY_UNC" xml:space="preserve">
+    <value>Only network path can be used for backup</value>
+  </data>
+  <data name="DB_BROWSER_IMPORT_DATA_TIP" xml:space="preserve">
+    <value>Import data by selected algorithm</value>
+  </data>
+  <data name="RecordManager_NoFactory" xml:space="preserve">
+    <value>Record manager factory is not set. Use RecordManager.SetBinderFactory to fix it</value>
+  </data>
+  <data name="DB_BROWSER_SUPPORT_PROBLEMS" xml:space="preserve">
+    <value>Mismatches between database and mould detected:</value>
+  </data>
+  <data name="MOULD_COMPARE_MANDATORY_FK" xml:space="preserve">
+    <value>Unable to perform soft update: foreign key on {0} is mandatory</value>
+  </data>
+  <data name="DB_BROWSER_SOFT_UPDATE" xml:space="preserve">
+    <value>Soft update (preserving data)</value>
+  </data>
+  <data name="SQL_GETTING_BASES" xml:space="preserve">
+    <value>Retrieving database list</value>
+  </data>
+  <data name="BUILD_MOULD_NEW_MOULD" xml:space="preserve">
+    <value>New mould</value>
+  </data>
+  <data name="LOG_GRID_MESSAGE_TITLE" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="p_48_database_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_database_save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_NAME" xml:space="preserve">
+    <value>Database name: {0}</value>
+  </data>
+  <data name="DB_BROWSER_BACKUP_TIP" xml:space="preserve">
+    <value>Backup selected database</value>
+  </data>
+  <data name="Sql_InvalidConnection" xml:space="preserve">
+    <value>Connection to database failed. Please check connection settings</value>
+  </data>
+  <data name="SQL_CHECK_SERVER" xml:space="preserve">
+    <value>Check connection</value>
+  </data>
+  <data name="DB_GRABBER_GETTING_DATA" xml:space="preserve">
+    <value>Getting data</value>
+  </data>
+  <data name="DB_BROWSER_TEST_TIP" xml:space="preserve">
+    <value>Test selected database</value>
+  </data>
+  <data name="Sql_InvalidFilterOperation" xml:space="preserve">
+    <value>Value FilterOperation {0} is invalid</value>
+  </data>
+  <data name="CLEAR_LOG" xml:space="preserve">
+    <value>Clear log</value>
+  </data>
+  <data name="FAIL" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="DB_BROWSER_ADD_DATABASE" xml:space="preserve">
+    <value>Add new database</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SQL_CHECKING_SERVER" xml:space="preserve">
+    <value>Checking connection</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY" xml:space="preserve">
+    <value>Log display settings</value>
+  </data>
+  <data name="DB_GRABBER_INIT_CONNECTION" xml:space="preserve">
+    <value>Init connection</value>
+  </data>
+  <data name="p_48_server_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_server_search.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_ADD_DB" xml:space="preserve">
+    <value>Add database</value>
+  </data>
+  <data name="TABLE" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="LOG_LEVEL_INFO" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="BindableObject_ExtendedAspect" xml:space="preserve">
+    <value>BindableObject_ExtendedAspect</value>
+  </data>
+  <data name="SETTINGS_RESTART_TITLE" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="DB_BROWSER_RESET_DB_TIP" xml:space="preserve">
+    <value>Reset selected database</value>
+  </data>
+  <data name="p_48_server_wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_server_wait.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BindableObject_CacheCorruption" xml:space="preserve">
+    <value>Call of the reader operation can cause cache corruption. </value>
+  </data>
+  <data name="LOG_LEVEL_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="p_16_warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_16_warning.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_MOULD_TIP" xml:space="preserve">
+    <value>Build the mould of the selected database</value>
+  </data>
+  <data name="SQLEDIT_PASS" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LOG_LEVEL_FATAL" xml:space="preserve">
+    <value>Fatal</value>
+  </data>
+  <data name="DB_BROWSER_REFRESH_SERVER" xml:space="preserve">
+    <value>Refresh Server Info</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_INFO_COLOR" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="NOT_FOUND_IN_DATABASE" xml:space="preserve">
+    <value> {0} was not found in database</value>
+  </data>
+  <data name="DB_BROWSER_ADD_SERVER" xml:space="preserve">
+    <value>Add Server</value>
+  </data>
+  <data name="DB_BROWSER_ADD_SERVER_TIP" xml:space="preserve">
+    <value>Adds MS SQL server to the list</value>
+  </data>
+  <data name="BindableObject_ComplexPK_Error" xml:space="preserve">
+    <value>Method {0} is invalid for the complex primary key</value>
+  </data>
+  <data name="BUILD_MOULD_INCORRECT_VERSION" xml:space="preserve">
+    <value>Incorrect version: it must be larger than old version</value>
+  </data>
+  <data name="ReflectionBuilder_TypeMismatch" xml:space="preserve">
+    <value>Invalid type for binding. Must be {0}, found {1}</value>
+  </data>
+  <data name="DB_VERSION" xml:space="preserve">
+    <value>Database version: {0}</value>
+  </data>
+  <data name="SQLEDIT_LOGIN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="STATUS_DESCRIPTION_FULL" xml:space="preserve">
+    <value>Database is fully consistent with the mould</value>
+  </data>
+  <data name="p_48_server_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_server_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="p_16_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_16_ok.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_COL_NAME" xml:space="preserve">
+    <value>Database name</value>
+  </data>
+  <data name="CUSTOM_BINDER_TO_REPLACE" xml:space="preserve">
+    <value>Unable to replace type supporting custom record binding</value>
+  </data>
+  <data name="SQLEDIT_COMPUTER" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="LOG_GRID_EXCEPTION_TITLE" xml:space="preserve">
+    <value>Exception</value>
+  </data>
+  <data name="DB_BROWSER_BACKUP" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="BindableObject_RecursiveAspectCall" xml:space="preserve">
+    <value>BindableObject_RecursiveAspectCall</value>
+  </data>
+  <data name="DB_BROWSER_PERFORM_BACKUP" xml:space="preserve">
+    <value>Perform backup</value>
+  </data>
+  <data name="FUNCTION" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="SQLEDIT_ALTSEARCH" xml:space="preserve">
+    <value>Alternative search ( Slower )</value>
+  </data>
+  <data name="NOT_FOUND_IN_MD" xml:space="preserve">
+    <value> {0} not found in mould</value>
+  </data>
+  <data name="SETTINGS_LOG_CORE" xml:space="preserve">
+    <value>Log core settings</value>
+  </data>
+  <data name="RecordManager_InvalidType" xml:space="preserve">
+    <value>Invalid type. Must be a class implementing IBindable with public constructor without parameters</value>
+  </data>
+  <data name="SQLEDIT_LOCATION_GROUP" xml:space="preserve">
+    <value>Server location</value>
+  </data>
+  <data name="DB_BROWSER_RESET_DB" xml:space="preserve">
+    <value>Reset database</value>
+  </data>
+  <data name="p_48_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_48_login.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUILD_MOULD_OLD_MOULD" xml:space="preserve">
+    <value>Old mould</value>
+  </data>
+  <data name="LOG_LEVEL_WARN" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="BUILD_MOULD" xml:space="preserve">
+    <value>Building mould</value>
+  </data>
+  <data name="DB_BROWSER_RESTORE" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="BindableObject_PropertyNotFound" xml:space="preserve">
+    <value>Property for the access to the field {0} not found</value>
+  </data>
+  <data name="DB_BROWSER_REMOVE_DB_TIP" xml:space="preserve">
+    <value>Remove selected database</value>
+  </data>
+  <data name="DB_BROWSER_IMPORT_DATA" xml:space="preserve">
+    <value>Import data</value>
+  </data>
+  <data name="p_32_database_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BUILD_MOULD_OLD_VERSION" xml:space="preserve">
+    <value>Old version</value>
+  </data>
+  <data name="LOG_GRID_LEVEL_TITLE" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SQL_CHECKING_VERSIONS" xml:space="preserve">
+    <value>Checking databases</value>
+  </data>
+  <data name="p_32_database_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOG_GRID_LOGGER_TITLE" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="LOG_ERRORS_TITLE" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="AudioEditorPath" xml:space="preserve">
+    <value>Audio editor path</value>
+  </data>
+  <data name="SQL_GETTING_MAX_VERSION" xml:space="preserve">
+    <value>Getting maximum version</value>
+  </data>
+  <data name="EXCEPTION_CALLSTACK" xml:space="preserve">
+    <value>Call stack</value>
+  </data>
+  <data name="DB_BROWSER_COL_TEST_RESULTS" xml:space="preserve">
+    <value>Test results</value>
+  </data>
+  <data name="DB_BROWSER_REFRESH_ALL_TIP" xml:space="preserve">
+    <value>Refreshes database list for all servers</value>
+  </data>
+  <data name="CONTEXT_CONNECTION_FAILED" xml:space="preserve">
+    <value>Failed to connect to server. Do you want to check connection?</value>
+  </data>
+  <data name="SQL_ADD_SERVER" xml:space="preserve">
+    <value>Add SQL Server</value>
+  </data>
+  <data name="NOT_WRONG_GUID" xml:space="preserve">
+    <value> {0} has object Guid "{1}" instead of "{2}</value>
+  </data>
+  <data name="EXCEPTION_MESSAGE" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="SQLEDIT_AUTHTYPE_SQL" xml:space="preserve">
+    <value>SQL Server</value>
+  </data>
+  <data name="APPLY" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="p_32_database_run" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_32_database_run.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DB_BROWSER_RUN_SCRIPT_TIP" xml:space="preserve">
+    <value>Open SQL file and run it</value>
+  </data>
+  <data name="DB_BROWSER_COMPATIBILITY_MODE_MS_SQL_SERVER_2005" xml:space="preserve">
+    <value>Convert data types date and time for compatibility</value>
+  </data>
+  <data name="DB_BROWSER_USE_FILESTREAM" xml:space="preserve">
+    <value>Use type FileStream</value>
+  </data>
+  <data name="DB_BROWSER_CONTINUE_ON_ERROR_IN_SCRIPTS" xml:space="preserve">
+    <value>Continue to create the DB structure for errors in scripts</value>
+  </data>
+  <data name="DB_BROWSER_TRANSFORMATION_MOULD" xml:space="preserve">
+    <value>Transformation of the mould</value>
+  </data>
+  <data name="DB_BROWSER_RECREATE_TABLES" xml:space="preserve">
+    <value>Recreate tables</value>
+  </data>
+</root>

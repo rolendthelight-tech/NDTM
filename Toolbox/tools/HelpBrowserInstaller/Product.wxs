@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <?include Variables.wxi?>
+
+  <Product Id="$(var.ProductCode)" Name="$(var.Manufacturer) $(var.ProductName) $(var.ProductVersion)" Language="1049" Version="$(var.ProductVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="$(var.UpgradeCode)">
+		<Package InstallerVersion="200" Compressed="yes" />
+
+    <!--Проверка версии ОС (http://msdn.microsoft.com, Operating System Property Values)-->
+    <Condition Message="Для работы приложения требуется ОС Windows XP, 2003, Vista, 7">
+      <![CDATA[Installed OR (VersionNT > 500)]]>
+    </Condition>
+
+    <!--Проверка наличия .NET Framework 3.5-->
+    <PropertyRef Id="NETFRAMEWORK35"/>
+    <Condition Message="Для работы приложения требуется наличие .NET Framework 3.5. Пожалуйста, установите .NET Framework и запустите программу установки заново.">
+      <![CDATA[Installed OR NETFRAMEWORK35]]>
+    </Condition>
+
+    <Icon Id="ApplicationIcon" SourceFile="Application.ico" />
+
+    <?include AddOrRemovePrograms.wxi?>
+
+    <?define ProductRegistryPath="SOFTWARE\$(var.Manufacturer)\$(var.ProductName)\$(var.ProductVersion)" ?>
+    
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+    <!--Системные сслыки на папки http://msdn.microsoft.com/en-us/library/aa370905%28VS.85%29.aspx#system_folder_properties-->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="ManufacturerFolder" Name="$(var.Manufacturer)">
+          <Directory Id="ProductFolder" Name="$(var.ProductName)">
+            <Directory Id="INSTALLLOCATION" Name="$(var.ProductVersion)">
+
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+
+    </Directory>
+
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+
+      <ComponentGroupRef Id="TargetFiles"/>
+     
+    </Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" ></Property>
+    <UIRef Id="WixUI_InstallDir_Customized"/>
+
+    <CustomAction Id="StartAppOnExit" Directory="INSTALLLOCATION" ExeCommand="[INSTALLLOCATION]$(var.ProgramExecutableFile)" Execute="immediate" Impersonate="yes" Return="asyncNoWait" />
+    <CustomAction Id="NoDowngrade" Error="Более новая версия [ProductName] уже установлена." />
+    <!--<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />-->
+
+    <InstallExecuteSequence>
+      <Custom Action="NoDowngrade" After="FindRelatedProducts">NEWERVERSIONFOUND</Custom>
+      <RemoveExistingProducts After="InstallInitialize">PREVIOUSVERSIONFOUND</RemoveExistingProducts>
+      <!--<Custom Action="SetARPINSTALLLOCATION" After="InstallValidate" />-->
+    </InstallExecuteSequence>
+
+    <!--Особенность ICE: При сравнении двух значений версий учитываются только первые 3 числа из каждой версии.-->
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion OnlyDetect="yes" Property="NEWERVERSIONFOUND" IncludeMinimum="no" Minimum="$(var.ProductVersion)" Maximum="2.0.0" IncludeMaximum="no" />
+      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSVERSIONFOUND" IncludeMinimum="yes" Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMaximum="no" />
+    </Upgrade>
+
+   </Product>
+</Wix>

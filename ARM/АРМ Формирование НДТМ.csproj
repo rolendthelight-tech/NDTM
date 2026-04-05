@@ -185,4 +185,11 @@
     </Reference>
   </ItemGroup>
 
+  <!-- Копировать конфиг рядом с exe (bindingRedirect для ATToolbox и настройки) -->
+  <ItemGroup>
+    <None Update="АРМ Формирование НДТМ.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

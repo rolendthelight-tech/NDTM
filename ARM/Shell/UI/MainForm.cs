@@ -9,7 +9,6 @@
     using ERMS.Core.Common;
     using ERMS.Core.DAL;
     using ERMS.UI;
-    using GUOP;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -59,10 +58,10 @@
 
         public void CheckDocumentsMenuVisibility()
         {
-            this.m_menu_documents.Visibility = RecordManager.DataSources.Contains(GUOPContext.DataSourceName) ? BarItemVisibility.Always : BarItemVisibility.Never;
+            this.m_menu_documents.Visibility = RecordManager.DataSources.Contains(GuopDataSource.Name) ? BarItemVisibility.Always : BarItemVisibility.Never;
             if (this.m_menu_documents.Visibility == BarItemVisibility.Always)
             {
-                Program.Preferences.GUOPConnectionString = RecordManager.DataSources[GUOPContext.DataSourceName].RecordBinder.ConnectionString;
+                Program.Preferences.GUOPConnectionString = RecordManager.DataSources[GuopDataSource.Name].RecordBinder.ConnectionString;
                 this.m_guop_cnn_string.Caption = Program.Preferences.GUOPConnectionString;
             }
             else
@@ -375,7 +374,7 @@
         {
             base.OnLoad(e);
             this.CheckDocumentsMenuVisibility();
-            if (!RecordManager.DataSources.Contains(GUOPContext.DataSourceName))
+            if (!RecordManager.DataSources.Contains(GuopDataSource.Name))
             {
                 this.m_menu_documents.Visibility = BarItemVisibility.Never;
             }

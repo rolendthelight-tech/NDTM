@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="TargetFiles">
+      <Component Id="ATGuiToolbox.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="ATGuiToolbox.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\ATGuiToolbox.dll" />
+      </Component>
+      
+      <Component Id="ATHelpBrowser.exe" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="ATHelpBrowser.exe" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\ATHelpBrowser.exe" />
+
+          <Extension Id="athelp" ContentType="application/athelp">
+            <Verb Id="open" Command="Open" TargetFile="ATHelpBrowser.exe" Argument="&quot;%1&quot;" />
+          </Extension>
+      </Component>
+      
+      <Component Id="ATToolbox.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="ATToolbox.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\ATToolbox.dll" />
+      </Component>
+      <Component Id="DevExpress.Data.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.Data.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.Data.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.Utils.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.Utils.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.Utils.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraBars.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.XtraBars.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.XtraBars.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraEditors.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.XtraEditors.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.XtraEditors.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraGrid.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.XtraGrid.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.XtraGrid.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraLayout.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.XtraLayout.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.XtraLayout.v11.1.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraTreeList.v11.1.dll" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="DevExpress.XtraTreeList.v11.1.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\DevExpress.XtraTreeList.v11.1.dll" />
+      </Component>
+      <Component Id="settings.xml" Directory="INSTALLLOCATION" Guid="*">
+        <File Id="settings.xml" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\settings.xml" />
+      </Component>
+      <Component Id="ATGuiToolbox.resources.dll" Directory="RU" Guid="*">
+        <File Id="ATGuiToolbox.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\ATGuiToolbox.resources.dll" />
+      </Component>
+      <Component Id="ATToolbox.resources.dll" Directory="RU" Guid="*">
+        <File Id="ATToolbox.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\ATToolbox.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.Data.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.Data.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.Data.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.Utils.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.Utils.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.Utils.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraBars.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.XtraBars.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.XtraBars.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraEditors.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.XtraEditors.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.XtraEditors.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraGrid.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.XtraGrid.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.XtraGrid.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraLayout.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.XtraLayout.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.XtraLayout.v11.1.resources.dll" />
+      </Component>
+      <Component Id="DevExpress.XtraTreeList.v11.1.resources.dll" Directory="RU" Guid="*">
+        <File Id="DevExpress.XtraTreeList.v11.1.resources.dll" KeyPath="yes" Source="$(var.ATHelpBrowser.TargetDir)\RU\DevExpress.XtraTreeList.v11.1.resources.dll" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="INSTALLLOCATION">
+      <Directory Id="RU" Name="RU" />
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="RU" />
+  </Fragment>
+</Wix>

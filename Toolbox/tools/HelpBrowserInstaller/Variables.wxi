@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <?define ProductVersion="1.1.1.0"?>
+  <?define ProductName="Обозреватель справки"?>
+  <?define FullProductName="$(var.ProductName) $(var.ProductVersion)"?>
+  <?define Manufacturer="AudiTech"?>
+  <?define Description="Программа для просмотра файлов справки"?>
+  <?define ProductCode="04DE5741-F85D-4B7B-A19F-CFFA0B35EB08"?>
+  <?define UpgradeCode="94FCC4BC-4D3F-4FE0-86D9-3D3480C96331"?>
+  <?define ProgramExecutableFile="ATHelpBrowser.exe"?>
+
+</Include>

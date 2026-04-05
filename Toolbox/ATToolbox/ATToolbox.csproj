@@ -28,4 +28,7 @@
   <ItemGroup>
     <Compile Remove="Network\ClickOnce\**\*.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
 </Project>

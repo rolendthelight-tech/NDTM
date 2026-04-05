@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topic Id="68fdccc2-ea13-4834-ae23-db1a182b7c65" Status="Waiting Review" CreatedOn="2012-02-15T10:20:18.9284481Z" ModifiedOn="2012-02-17T10:20:43.8064334Z" PageTypeName="standard.html" AutoIndex="true" HelpContextIds="" Name="technologies" BuildFlags="">
+  <Title m="2012-02-15T12:01:31.3646275Z">Технологии</Title>
+  <ContentsTitle />
+  <Notes></Notes>
+  <TopicSections>
+    <TopicSection Name="BodyText">
+      <Content m="2012-02-17T10:20:43.8064334Z">&lt;P align=left&gt;Описываемые в настоящем руководстве технологии предназначены для быстрой разработки систем электронного документооборота, интегрированных с топографическими картами. Они включают в себя:&lt;/P&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;Подсистемы уровня приложения&lt;/STRONG&gt; &lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;$$Конфигуратор$$&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Управление жизненным циклом приложения&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Сервис для оповещения пользователя и логгирования&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Сервис для управления фоновыми задачами&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;$$Служба подписки$$&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Часто используемые структуры данных, отсутстующие в стандартных библиотеках .NET Framework&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;Средства решения типовых задач пользовательского интерфейса&lt;/STRONG&gt;&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Элементы управления и диалоги для отображения сложных сообщений пользователю&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Элементы управления и диалоги для работы с фоновыми задачами&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Стандартные диалоги для ввода данных&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Диалог и элеметы управления для конфигурирования программы&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;Ядро документооборота&lt;/STRONG&gt;&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Надстройки над технологией WCF для быстрой разработки распределённых приложений&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Расширения ADO.NET&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Объектная модель запроса&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Механизм для сохранения структуры базы данных в файл для развёртывания на другом сервере&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Средства описания базы данных и меню для работы с этой базой данных в пользовательском интерфейсе&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Специализированный $$ORM$$ с $$Axapta$$-подобным API, позволяющий быстро разрабатывать распределённые бизнес-объекты&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;&lt;A id=base_project_list name=base_project_list&gt;&lt;/A&gt;Типовые формы для работы с документами&lt;/STRONG&gt;&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Табличная форма для работы со списком документов, позволяющая осуществлять поиск документов определённого типа по их атрибутам&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Табличная форма для просмотра произвольной таблицы, формируемой программно&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;$$Карточка редактирования$$, позволяющая редактировать атрибуты документа&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Селектор, позволяющий связывать документ одного типа с несколькими документами другого типа связью "Многие ко многим".&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Форма редактируемого списка, позволяющая связывать документ одного типа с несколькими документами другого типа связью "Один ко многим".&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Форма для задания статического фильтра для документов выбранного типа. Требуется при работе с очень большими списками документов, чтобы запретить пользователю загружать такие списки целиком.&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Компонент, автоматически привязывающий любую иерархическую структуру данных к элементу управления TreeView.&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Компоненты, облегчающие разработку нестандартных карточек, и средства подключения нестандартных форм для работы с документами определённых типов.&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;Повторно используемые модули&lt;/STRONG&gt;&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Контроль доступа к таблицам&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Базовые объекты&lt;/DIV&gt;
+&lt;DIV align=left&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;История документов&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Блокировка документов для защиты от совместного редактирования&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Работа с файлами, хранящимися в базе данных&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Привязка изображений к документам&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Модуль общего документооборота&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;Планировщик периодических операций 
+&lt;LI&gt;
+&lt;DIV align=left&gt;Работа с отчётами&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Журнал внешней переписки&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Организационно-штатная структура предприятия&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Картографический модуль&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Общие алгоритмы работы с картографическими данными&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Надстройки над MapXtreme&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Картографический сервер&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Картографические справочники&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/LI&gt;&lt;/UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;&lt;STRONG&gt;Утилиты&lt;/STRONG&gt;&lt;/DIV&gt;
+&lt;UL&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;АРМ Настройки - программа для автоматизации разрвёртывания и некоторых операций разработки приложений&lt;/DIV&gt;
+&lt;LI&gt;
+&lt;DIV align=left&gt;Анализатор протокола - программа для анализа логов, сформированных продуктами, созданными на описываемых технологиях&lt;/DIV&gt;&lt;/LI&gt;&lt;/UL&gt;&lt;/LI&gt;&lt;/UL&gt;</Content>
+    </TopicSection>
+  </TopicSections>
+  <TopicLinks>
+    <TopicLink Id="8182bd18-3eea-481f-95e4-ea901cb64dca" CategoryId="" TopicLinkCategorySource="TargetItemCategory" Target="7fc66877-3797-4079-b5df-c99b4e1a3446" BuildFlags="">
+      <Title m="2012-02-15T11:58:43.2531007Z">Методика генерации кода</Title>
+      <Category />
+    </TopicLink>
+  </TopicLinks>
+  <TopicKeywords />
+  <PropertyDefinitionValues />
+</Topic>

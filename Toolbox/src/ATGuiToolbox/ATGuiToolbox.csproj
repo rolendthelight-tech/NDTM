@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5980E92-04CE-441F-9A7F-8F8F40AF859D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AT.Toolbox</RootNamespace>
+    <AssemblyName>ATGuiToolbox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TrackFileAccess>false</TrackFileAccess>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationStarter.cs" />
+    <Compile Include="Application\AppPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Application\AppPropertyPage.Designer.cs">
+      <DependentUpon>AppPropertyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\MainFormView.cs" />
+    <Compile Include="Application\BackgroundWorkRunningContext.cs" />
+    <Compile Include="Base\AtWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\AtWebBrowser.Designer.cs">
+      <DependentUpon>AtWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\DrawingModeConverter.cs" />
+    <Compile Include="Base\LanguageSwitcher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\LocalizableUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\LocalizableUserControl.Designer.cs">
+      <DependentUpon>LocalizableUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\PropertyPage.Designer.cs">
+      <DependentUpon>PropertyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BarToolbarsListItemSuper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPlaceholder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPlaceholder.Designer.cs">
+      <DependentUpon>ControlPlaceholder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DialogButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DialogButtonPanel.designer.cs">
+      <DependentUpon>DialogButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Log\ILogListerView.cs" />
+    <Compile Include="Controls\Log\LogEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Log\LogLister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Log\LogLister.designer.cs">
+      <DependentUpon>LogLister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Log\LogListerPresenter.cs" />
+    <Compile Include="Controls\Log\LogListerSettings.cs">
+    </Compile>
+    <Compile Include="Controls\Log\LogPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Log\LogPropertyPage.Designer.cs">
+      <DependentUpon>LogPropertyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskLister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskLister.Designer.cs">
+      <DependentUpon>TaskLister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimeSpanEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TimeSpanEdit.Designer.cs">
+      <DependentUpon>TimeSpanEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TwoPaneSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TwoPaneSelector.Designer.cs">
+      <DependentUpon>TwoPaneSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BarToolbarsListItemPuper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChoiceForm.Designer.cs">
+      <DependentUpon>ChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DialogBase.designer.cs">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Edit Forms\StringEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Edit Forms\StringEditForm.Designer.cs">
+      <DependentUpon>StringEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\LocalizableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\LocalizableForm.Designer.cs">
+      <DependentUpon>LocalizableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InfoBufferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InfoBufferForm.designer.cs">
+      <DependentUpon>InfoBufferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoTreeView.designer.cs">
+      <DependentUpon>InfoTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MessageBoxEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MessageBoxEx.Designer.cs">
+      <DependentUpon>MessageBoxEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\MinimizeToTrayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\MinimizeToTrayForm.Designer.cs">
+      <DependentUpon>MinimizeToTrayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MultiEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MultiEditForm.Designer.cs">
+      <DependentUpon>MultiEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UpdateInstallerForm\UpdateInstallerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UpdateInstallerForm\UpdateInstallerForm.Designer.cs">
+      <DependentUpon>UpdateInstallerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\StringAndChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\StringAndChoiceForm.designer.cs">
+      <DependentUpon>StringAndChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Wizard\WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Wizard\WizardForm.Designer.cs">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Wizard\WizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Wizard\WizardPage.Designer.cs">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Work\BackgroundWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Work\BackgroundWorkerForm.Designer.cs">
+      <DependentUpon>BackgroundWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ErrorBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ErrorBox.Designer.cs">
+      <DependentUpon>ErrorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Edit Forms\MemoEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Edit Forms\MemoEditForm.Designer.cs">
+      <DependentUpon>MemoEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Work\MinimizableTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Work\MinimizableTaskForm.Designer.cs">
+      <DependentUpon>MinimizableTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Work\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Work\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docking\UndockAsFormController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Docking\UndockAsFormController.Designer.cs">
+      <DependentUpon>UndockAsFormController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docking\UndockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docking\UndockForm.designer.cs">
+      <DependentUpon>UndockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\GridControlDeleteFeature.cs">
+    </Compile>
+    <Compile Include="Extensions\GridControlExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions\GridControlFeature.cs">
+    </Compile>
+    <Compile Include="Extensions\GridControlFeatureEditor.cs" />
+    <Compile Include="Extensions\GridControlMultiEditFeature.cs">
+    </Compile>
+    <Compile Include="Extensions\GridViewExtensions.cs" />
+    <Compile Include="Grid\GridLayoutSaver.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Grid\GridLayoutSaver.Designer.cs">
+      <DependentUpon>GridLayoutSaver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid\LayoutSave.cs" />
+    <Compile Include="Help\Display\AppHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\Display\AppHelpForm.Designer.cs">
+      <DependentUpon>AppHelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\ApplicationHelp.cs" />
+    <Compile Include="Help\Display\HelpBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Help\Display\HelpBrowser.Designer.cs">
+      <DependentUpon>HelpBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Display\UserHelpNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Help\Display\UserHelpNavigator.Designer.cs">
+      <DependentUpon>UserHelpNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\HelpFile.cs" />
+    <Compile Include="Help\HelpMapper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Help\HelpMapper.Designer.cs">
+      <DependentUpon>HelpMapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Message Filtering\HelpMessageFilter.cs" />
+    <Compile Include="Help\IHelpSupported.cs" />
+    <Compile Include="Help\Message Filtering\HelpResolvers.cs" />
+    <Compile Include="Help\Message Filtering\SpecificResolvers.cs" />
+    <Compile Include="Misc\GroupControlDragger.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Misc\GroupControlDragger.designer.cs">
+      <DependentUpon>GroupControlDragger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misc\IPropertyPage.cs">
+    </Compile>
+    <Compile Include="Misc\StubWork.cs" />
+    <Compile Include="Misc\IBackgroundWork.cs">
+    </Compile>
+    <Compile Include="Misc\LoadLogFileWork.cs">
+    </Compile>
+    <Compile Include="Misc\Win32.cs" />
+    <Compile Include="Misc\WndProcHooker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.RU.Designer.cs">
+      <DependentUpon>Resources.RU.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Application\AppPropertyPage.resx">
+      <DependentUpon>AppPropertyPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\PropertyPage.resx">
+      <DependentUpon>PropertyPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ControlPlaceholder.resx">
+      <DependentUpon>ControlPlaceholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DialogButtonPanel.resx">
+      <DependentUpon>DialogButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Log\LogLister.resx">
+      <DependentUpon>LogLister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Log\LogPropertyPage.resx">
+      <DependentUpon>LogPropertyPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TaskLister.resx">
+      <DependentUpon>TaskLister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TimeSpanEdit.resx">
+      <DependentUpon>TimeSpanEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TwoPaneSelector.resx">
+      <DependentUpon>TwoPaneSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChoiceForm.resx">
+      <DependentUpon>ChoiceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DialogBase.resx">
+      <DependentUpon>DialogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Edit Forms\StringEditForm.resx">
+      <DependentUpon>StringEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\LocalizableForm.resx">
+      <DependentUpon>LocalizableForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InfoBufferForm.resx">
+      <DependentUpon>InfoBufferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InfoTreeView.resx">
+      <DependentUpon>InfoTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MessageBoxEx.resx">
+      <DependentUpon>MessageBoxEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultiEditForm.resx">
+      <DependentUpon>MultiEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UpdateInstallerForm\UpdateInstallerForm.resx">
+      <DependentUpon>UpdateInstallerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StringAndChoiceForm.resx">
+      <DependentUpon>StringAndChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Wizard\WizardForm.resx">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Wizard\WizardPage.resx">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Work\BackgroundWorkerForm.resx">
+      <DependentUpon>BackgroundWorkerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ErrorBox.resx">
+      <DependentUpon>ErrorBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Edit Forms\MemoEditForm.resx">
+      <DependentUpon>MemoEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Work\MinimizableTaskForm.resx">
+      <DependentUpon>MinimizableTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Work\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docking\UndockForm.resx">
+      <DependentUpon>UndockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Display\AppHelpForm.resx">
+      <DependentUpon>AppHelpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Display\HelpBrowser.resx">
+      <DependentUpon>HelpBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Display\UserHelpNavigator.resx">
+      <DependentUpon>UserHelpNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.RU.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.RU.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\AT.Toolbox.Controls.LogLister.datasource" />
+    <None Include="Properties\DataSources\log4net.Core.LoggingEvent.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\AppInstance.Settings.datasource" />
+    <None Include="Properties\DataSources\AssemblyAttributes.datasource" />
+    <None Include="Properties\DataSources\AT.Toolbox.Controls.ServerEntry.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config.log4net" />
+    <None Include="Resources\p_16_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_32_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_database_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_forbidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_user_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_view_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_48_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_16_debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_32_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_32_folder_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_32_log_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_32_app_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\AT.Toolbox.Dialogs.ErrorBox+Settings.datasource" />
+    <None Include="Resources\foward_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\AT.Toolbox.Dialogs.SettingsForm+SettingError.datasource" />
+    <None Include="Resources\p_32_bug_mail.png" />
+    <None Include="Resources\p_48_bug_mail.png" />
+    <None Include="Resources\p_32_document_config.png" />
+    <None Include="Resources\p_48_debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ATToolbox\ATToolbox.csproj">
+      <Project>{867510E4-F88F-4E4A-B267-95FD0C5E22DC}</Project>
+      <Name>ATToolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\DataSources\TaskInfo.datasource" />
+    <None Include="Resources\p_16_purge.png" />
+    <None Include="Resources\p_24_purge.png" />
+    <None Include="Resources\p_32_purge.png" />
+    <None Include="Resources\p_48_purge.png" />
+    <Content Include="RU\DevExpress.Data.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.AuditTrail.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Chart.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.CloneObject.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.ConditionalEditorState.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Demos.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.FileAttachment.Web.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.FileAttachment.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Kpi.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Objects.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.PivotChart.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.PivotChart.Web.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.PivotChart.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.PivotGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Printing.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Reports.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Reports.Web.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Reports.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Scheduler.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Scheduler.Web.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Scheduler.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.ScriptRecorder.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.ScriptRecorder.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Security.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.StateMachine.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Validation.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Validation.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.ViewVariantsModule.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Web.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Workflow.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.ExpressApp.Workflow.Win.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.PivotGrid.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.RichEdit.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Utils.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Charts.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Core.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Docking.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Gauges.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Grid.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.LayoutControl.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.NavBar.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Printing.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Ribbon.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.RichEdit.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpf.Scheduler.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.Xpo.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraBars.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraCharts.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraEditors.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraGauges.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraGauges.v11.1.Presets.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraLayout.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraNavBar.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraPivotGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraPrinting.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraReports.v11.1.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraReports.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraRichEdit.v11.1.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraRichEdit.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraScheduler.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraScheduler.v11.1.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraScheduler.v11.1.Reporting.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraScheduler.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraSpellChecker.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraTreeList.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraVerticalGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RU\DevExpress.XtraWizard.v11.1.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

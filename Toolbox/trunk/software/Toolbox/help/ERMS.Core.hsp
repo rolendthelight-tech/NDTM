@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentXProject Id="82184b21-97e0-4fd1-a451-7275a92eac30" Version="2011.1" PrimaryLocaleCultureId="ru">
+  <Features>
+    <Feature>Booklets</Feature>
+  </Features>
+  <SeparateFiles>true</SeparateFiles>
+  <Flags>
+    <Flag Id="{46CEF21D-3301-4517-A875-A0906828390E}" HighlightColor="#FFA1FFD0">Exclude from Online</Flag>
+    <Flag Id="{4AAE0FD4-7313-4FEE-A25F-0785B885F736}" HighlightColor="#FFFFFFA1">Exclude from Booklet</Flag>
+    <Flag Id="0C0B1663-DC1D-4BAF-92A0-11BF7A00B1CB" HighlightColor="#FF4BB9FD">future</Flag>
+    <Flag Id="099F97D0-62A2-4238-9D09-9A5800D591B2" HighlightColor="#FFFFA1FF">obsolete</Flag>
+  </Flags>
+  <PropertyDefinitions />
+  <PropertyDefinitionValues />
+  <Title />
+  <GlossaryProjectPlugin>
+    <IsGlossaryOutputEnabled>true</IsGlossaryOutputEnabled>
+  </GlossaryProjectPlugin>
+  <HelpProjectPlugin ShowGettingStartedPage="true" />
+  <OtherFilesProjectPlugin>
+    <OtherFiles>
+      <OtherFile Id="a9bcafff-940e-441a-bfde-999795600451" FileName="stylesheets\customstyles.css" SourceData="" BuildFlags="" />
+      <OtherFile Id="20d035b1-f47d-4008-b027-2a652597319e" FileName="images\aws_empty.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="b0fec78f-cc69-483e-8784-907cc6fbbbaa" FileName="images\aws_empty_thumb.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="af896554-78f5-4d42-a5b8-a2e845ffd774" FileName="images\aws_mould_editor.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="8ab07282-1231-49c3-86dc-7a4aee9a312c" FileName="images\aws_module_export.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="7d877fa7-b966-4ee5-a647-c3aea7f3aeea" FileName="images\aws_add_server_button.png" SourceData="" BuildFlags="" />
+      <OtherFile Id="4038d43f-020d-44be-b226-418bd651133e" FileName="images\aws_add_server.png" SourceData="" BuildFlags="" />
+      <OtherFile Id="5a8b8b39-c67e-4b7d-9521-54ca0e57fe1f" FileName="images\aws_add_db_button.png" SourceData="" BuildFlags="" />
+      <OtherFile Id="9371c4a2-3955-4e6c-afae-805cbd911684" FileName="images\aws_reset_db_button.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="03238c03-23e0-45e6-a0ee-f29adbcb7c61" FileName="images\aws_create_mould_button.PNG" SourceData="" BuildFlags="" />
+      <OtherFile Id="70e9b786-f654-4290-9533-80fa6a3efe9b" FileName="images\aws_create_mould.PNG" SourceData="" BuildFlags="" />
+    </OtherFiles>
+    <DefaultStylesheet>stylesheets\customstyles.css</DefaultStylesheet>
+    <DefaultCaptureDirectory></DefaultCaptureDirectory>
+  </OtherFilesProjectPlugin>
+  <SourceControlProjectPlugin />
+  <TasksProjectPlugin />
+  <BookletsProjectPlugin />
+  <TableOfContents />
+  <TopicsProjectPlugin>
+    <TopicCategories>
+      <TopicCategory Id="-" AutoIndex="false">
+        <Caption m="2009-09-11T10:57:19.7639331Z">(Un-categorized)</Caption>
+        <ChildTopicCategories />
+        <Topics>
+          <Topic Id="68fdccc2-ea13-4834-ae23-db1a182b7c65" />
+          <Topic Id="7fc66877-3797-4079-b5df-c99b4e1a3446" />
+          <Topic Id="2380196c-24ff-4e11-b369-da30418549dd" />
+        </Topics>
+      </TopicCategory>
+      <TopicCategory Id="CONTENTSNIPPETS" AutoIndex="false">
+        <Caption m="2012-02-15T10:15:26.5496738Z">Content Snippets</Caption>
+        <ChildTopicCategories />
+        <Topics />
+      </TopicCategory>
+      <TopicCategory Id="19c57ff7-f1f4-48e7-ba99-6c00e6793d20" AutoIndex="false">
+        <Caption m="2012-02-15T10:19:22.8496053Z">Пример проекта</Caption>
+        <ChildTopicCategories />
+        <Topics>
+          <Topic Id="e31bcb9b-4acf-4479-a077-792a5cd213cc" />
+          <Topic Id="dee8d508-e0be-406b-947b-2286825cf63f" />
+          <Topic Id="8c467c57-8e3a-456c-8d9d-8ccfee799f50" />
+          <Topic Id="36bff3bd-9076-4ae0-887f-7856919b3a88" />
+          <Topic Id="0af1cc3a-4459-46dd-9330-91b9f0286b25" />
+        </Topics>
+      </TopicCategory>
+    </TopicCategories>
+    <CustomTopicPropertyDefinitions />
+    <PropertyDefinitionValues />
+    <AutoNameDigits>0</AutoNameDigits>
+    <AutoNameLastNumber>0</AutoNameLastNumber>
+    <AutoNameEnabled>false</AutoNameEnabled>
+    <AutoNamePrefix></AutoNamePrefix>
+    <IncludeTopicNameInTitle>false</IncludeTopicNameInTitle>
+    <TopicEditorState>
+      <Attributes>
+        <Attribute key="dtscrollpos" valuetype="integer">0</Attribute>
+      </Attributes>
+    </TopicEditorState>
+  </TopicsProjectPlugin>
+  <WidgetsProjectPlugin>
+    <WidgetTypes Version="2011.1" />
+  </WidgetsProjectPlugin>
+  <ProjectProfiles>
+    <ProjectProfile Id="6b2cfb6d-7340-49af-9cfb-d31ec7a4a0d5" Name="ERMS.Core.Tutorial">
+      <DefaultItemQualifiedName></DefaultItemQualifiedName>
+      <StripMetadata>false</StripMetadata>
+      <AlwaysCopyTemplateFiles>true</AlwaysCopyTemplateFiles>
+      <OutputFileExtension>.html</OutputFileExtension>
+      <Title />
+      <ClearOutputDirectoryBeforeBuild>false</ClearOutputDirectoryBeforeBuild>
+      <IsNewIndicatorEnabled>false</IsNewIndicatorEnabled>
+      <IsNewDateTime></IsNewDateTime>
+      <PropertyDefinitionValues>
+        <PropertyDefinitionValue PropertyDefinitionId="dfae4477-6a1c-4fa6-82bb-d2f487f5b99b">
+          <PropertyValue m="2012-02-20T15:09:36.1538065Z">&amp;copy;%%year%%. Все права защищены.</PropertyValue>
+        </PropertyDefinitionValue>
+        <PropertyDefinitionValue PropertyDefinitionId="76de16a8-8dcb-462c-b636-b20ff0b3c3a1">
+          <PropertyValue m="2012-02-20T15:09:47.1097108Z">&lt;a href="mailto:support@company.com?subject=Documentation Feedback: %%FileName%%"&gt;Отправить отзыв&lt;/a&gt;</PropertyValue>
+        </PropertyDefinitionValue>
+      </PropertyDefinitionValues>
+      <IsTidyXhtmlEnabled>false</IsTidyXhtmlEnabled>
+      <CommunityOptions UseLocalProxyUrl="false" Enabled="false">
+        <ServerType>PublicEvaluation</ServerType>
+        <LocalProxyUrl></LocalProxyUrl>
+        <HostingAccessKey></HostingAccessKey>
+        <PrivateServerUrl></PrivateServerUrl>
+        <PrivateServerAccessKey></PrivateServerAccessKey>
+        <ProjectKey />
+      </CommunityOptions>
+      <HelpCompiler CompileHelpFile="true" IsWebOutputEnabled="false" IsMarkOfTheWebEnabled="false">
+        <MarkOfTheWebDomain>(0014)about:internet</MarkOfTheWebDomain>
+        <HelpFileVersion>HtmlHelp1</HelpFileVersion>
+        <Help2Namespace>ERMS.Core</Help2Namespace>
+        <Help2FileId>ERMSCore</Help2FileId>
+        <Help2PluginToNamespaces></Help2PluginToNamespaces>
+        <Help2Plugin>false</Help2Plugin>
+        <RuntimeMerge></RuntimeMerge>
+        <IncludeTextPopupFile>false</IncludeTextPopupFile>
+        <Help3BuildIdentifier></Help3BuildIdentifier>
+        <Help3VendorName></Help3VendorName>
+        <Help3CatalogName>VS</Help3CatalogName>
+        <Help3CatalogVersion>100</Help3CatalogVersion>
+        <Help3CatalogLocaleText>en-US</Help3CatalogLocaleText>
+        <Help3TemplateName></Help3TemplateName>
+        <Help3ProductName></Help3ProductName>
+        <Help3BookName></Help3BookName>
+        <IsHelp3CreateRegistrationScriptEnabled>true</IsHelp3CreateRegistrationScriptEnabled>
+        <IsHelp3RegisterLocallyEnabled>true</IsHelp3RegisterLocallyEnabled>
+        <IsHelp3SigningEnabled>false</IsHelp3SigningEnabled>
+        <IsHelp3ValidationEnabled>false</IsHelp3ValidationEnabled>
+        <IsHelp3KeywordsEnabled>false</IsHelp3KeywordsEnabled>
+        <BrowserHelpTemplateName>Default</BrowserHelpTemplateName>
+        <IsCustomHtmlHelpWindowSettings>false</IsCustomHtmlHelpWindowSettings>
+        <CustomHtmlHelpWindowSettings>
+          <IsExpandVisible>true</IsExpandVisible>
+          <IsBackVisible>true</IsBackVisible>
+          <IsForwardVisible>true</IsForwardVisible>
+          <IsStopVisible>false</IsStopVisible>
+          <IsRefreshVisible>false</IsRefreshVisible>
+          <IsHomeVisible>false</IsHomeVisible>
+          <IsLocateVisible>true</IsLocateVisible>
+          <IsOptionsVisible>true</IsOptionsVisible>
+          <IsPrintVisible>true</IsPrintVisible>
+          <IsZoomVisible>false</IsZoomVisible>
+          <NavigationPaneWidth>200</NavigationPaneWidth>
+          <IsNavigationPaneInitiallyClosed>false</IsNavigationPaneInitiallyClosed>
+          <IsAutoSyncWithTocEnabled>true</IsAutoSyncWithTocEnabled>
+          <IsSearchTabVisible>true</IsSearchTabVisible>
+          <IsHistoryTabVisible>false</IsHistoryTabVisible>
+          <IsFavoritesTabVisible>true</IsFavoritesTabVisible>
+          <DefaultTab>Contents</DefaultTab>
+          <IsSaveUserWindowSettingsEnabled>true</IsSaveUserWindowSettingsEnabled>
+          <WindowSizeHeight>400</WindowSizeHeight>
+          <WindowSizeWidth>600</WindowSizeWidth>
+          <WindowLocationLeft>0</WindowLocationLeft>
+          <WindowLocationTop>0</WindowLocationTop>
+        </CustomHtmlHelpWindowSettings>
+        <HelpFileName></HelpFileName>
+      </HelpCompiler>
+      <RuleEngine>
+        <Rules Caption="" MatchType="All" IsReadOnly="false" Id="root">
+          <Rules>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="standard">
+              <Rules>
+                <Rule Caption="" MatchType="All" IsReadOnly="false" Id="outputtype">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="" IsReadOnly="false" Id="4c7ca296-f253-4ae9-9d90-ef8cb42183a8" Designer="BUILDFLAGS">
+                      <BuildFlags>{46CEF21D-3301-4517-A875-A0906828390E}</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="custom">
+              <Rules>
+                <Rule Caption="Non_future" MatchType="All" IsReadOnly="false" Id="9633b1b1-69e0-4ae9-8ace-e6c94d78ad44">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="Non_future" IsReadOnly="false" Id="d3c40ad8-f86c-4717-9b17-cdf6158ab74a" Designer="BUILDFLAGS">
+                      <BuildFlags>0C0B1663-DC1D-4BAF-92A0-11BF7A00B1CB</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+          </Rules>
+        </Rules>
+      </RuleEngine>
+      <ShortFileNames GenerateShortFileNames="false" />
+      <TopicsProjectProfilePlugin>
+        <TemplateName>Visual Studio 2008 Style</TemplateName>
+        <IncludeBreadcrumbs>true</IncludeBreadcrumbs>
+        <AutoGenerateTopicIndexEntries>true</AutoGenerateTopicIndexEntries>
+        <AutoGenerateCategoryIndexEntries>true</AutoGenerateCategoryIndexEntries>
+        <IncludeOnlyCompletedTopics>false</IncludeOnlyCompletedTopics>
+        <IsNewSource>CreationDateTime</IsNewSource>
+        <IsNewCustomTopicPropertyId></IsNewCustomTopicPropertyId>
+        <IsAnchorParsingEnabled>false</IsAnchorParsingEnabled>
+      </TopicsProjectProfilePlugin>
+      <BookletsProjectProfilePlugin>
+        <TemplateName></TemplateName>
+      </BookletsProjectProfilePlugin>
+      <WidgetsProjectProfilePlugin>
+        <WidgetTypes Version="2011.1" />
+      </WidgetsProjectProfilePlugin>
+      <OtherFiles>
+        <IsLogoEnabled>false</IsLogoEnabled>
+        <LogoOtherFileName></LogoOtherFileName>
+      </OtherFiles>
+      <OutputDirectory></OutputDirectory>
+    </ProjectProfile>
+    <ProjectProfile Id="11c68d7f-a4d8-423c-9f1b-e0363b6d60da" Name="ERMS.Core.Manual" Type="Innovasys.ContentAuthoring.Booklets.BookletProfile" Assembly="Innovasys.ContentAuthoring.Booklets">
+      <StripMetadata>true</StripMetadata>
+      <ClearOutputDirectoryBeforeBuild>true</ClearOutputDirectoryBeforeBuild>
+      <OutputFileExtension>.html</OutputFileExtension>
+      <BookletTocLayoutSource>TocLayout</BookletTocLayoutSource>
+      <BookletTocLayout Id="7a1a18a5-e870-4044-ad62-db51f4deec78">
+        <Name />
+        <Description />
+        <RootNodes>
+          <TocNode IsHeaderVisible="true" IsFooterVisible="true" Name="" Id="b9f79e2f-b9cd-4230-80ff-e65f91f98b97" IconIndex="-1" IsNew="false" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="BOOKLETTABLEOFCONTENTS">
+            <Target>__tableofcontents.html</Target>
+            <CaptionTemplate />
+            <ChildNodes />
+          </TocNode>
+          <TocNode IsHeaderVisible="true" IsFooterVisible="true" Name="" Id="ede38b52-2b77-4b04-af66-33b2156f222f" IconIndex="-1" IsNew="false" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="BOOKLETINDEX">
+            <Target>__Index.html</Target>
+            <CaptionTemplate />
+            <ChildNodes />
+          </TocNode>
+        </RootNodes>
+      </BookletTocLayout>
+      <BookletSettings>
+        <ContentMarginLeft>65</ContentMarginLeft>
+        <ContentMarginRight>50</ContentMarginRight>
+        <ContentMarginTop>110</ContentMarginTop>
+        <ContentMarginBottom>80</ContentMarginBottom>
+        <HeaderContentEven></HeaderContentEven>
+        <HeaderContentOdd>&lt;div class="header"&gt;&lt;div class="booklettitle"&gt;%%BookletTitle%%&lt;/div&gt;&lt;div class="pagenumber"&gt;&lt;a href="http://pagenumber"&gt;&amp;nbsp;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;</HeaderContentOdd>
+        <FooterContentEven></FooterContentEven>
+        <FooterContentOdd>&lt;div class="footer"&gt;&lt;div class="footercontent"&gt;%%footercontent%%&lt;/div&gt;&lt;/div&gt;</FooterContentOdd>
+        <HeaderFooterMarginLeft>0</HeaderFooterMarginLeft>
+        <HeaderFooterMarginRight>0</HeaderFooterMarginRight>
+        <FooterMarginBottom>0</FooterMarginBottom>
+        <HeaderMarginTop>0</HeaderMarginTop>
+      </BookletSettings>
+      <PageNumbering>StartOnFirstContentPage</PageNumbering>
+      <PageNumberingStartPage>0</PageNumberingStartPage>
+      <Subject m="2012-02-17T11:01:39.827342Z">ERMS.Core</Subject>
+      <Author m="2012-02-17T11:01:47.1086852Z">AudiTech</Author>
+      <Keywords />
+      <HeadingNumbering>TopicsOnly</HeadingNumbering>
+      <HeadingTagName>H2</HeadingTagName>
+      <PageBreak>BeforeTopLevelEntries</PageBreak>
+      <Orientation>Portrait</Orientation>
+      <PageSize>A4</PageSize>
+      <HeaderFooterStartPageIndex>0</HeaderFooterStartPageIndex>
+      <IsLinearlized>false</IsLinearlized>
+      <BookletViewerSettings>
+        <IsFitWindowToContent>false</IsFitWindowToContent>
+        <IsMenuHidden>false</IsMenuHidden>
+        <IsToolbarHidden>false</IsToolbarHidden>
+        <IsWindowUiHidden>false</IsWindowUiHidden>
+        <Layout>None</Layout>
+        <PageLayout>SinglePage</PageLayout>
+      </BookletViewerSettings>
+      <CompressionLevel>Normal</CompressionLevel>
+      <EmbedFonts>false</EmbedFonts>
+      <IsImageKeepTogetherEnabled>false</IsImageKeepTogetherEnabled>
+      <IsImageCompressionEnabled>false</IsImageCompressionEnabled>
+      <ImageQuality>95</ImageQuality>
+      <LinkReplacementInfos>
+        <LinkReplacementInfo Id="JAVASCRIPT" LinkReplacementInfoSource="Template" IsEnabled="true">
+          <Html>&lt;b&gt;%%LinkCaption%%&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="URL_WITH_CAPTION" LinkReplacementInfoSource="Template" IsEnabled="false">
+          <Html>&lt;b&gt;%%LinkCaption%% (%%LinkURL%%)&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="URL_NO_CAPTION" LinkReplacementInfoSource="Template" IsEnabled="true">
+          <Html>&lt;b&gt;%%LinkCaption%%&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="BOOKMARK" LinkReplacementInfoSource="Template" IsEnabled="true">
+          <Html>&lt;b&gt;%%LinkCaption%%&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="TOPIC_IN_BOOKLET" LinkReplacementInfoSource="Template" IsEnabled="true">
+          <Html>&lt;b&gt;%%LinkCaption%%%%replaceinquotes:value=false%%%%LinkEntryNumber:format=" (Section %%LinkEntryNumber%%)"%%&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="TOPIC_NOT_IN_BOOKLET" LinkReplacementInfoSource="Template" IsEnabled="true">
+          <Html>&lt;b&gt;%%LinkCaption%% (%%replaceinquotes:value=false%%%%LinkCaption:OnlyIfNotTopicTitle=True,format="'%%LinkCaption%%' in the "%%on-line documentation)&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+        <LinkReplacementInfo Id="OTHER" LinkReplacementInfoSource="Template" IsEnabled="false">
+          <Html>&lt;b&gt;%%LinkCaption%%&lt;/b&gt;</Html>
+        </LinkReplacementInfo>
+      </LinkReplacementInfos>
+      <DefaultItemQualifiedName></DefaultItemQualifiedName>
+      <AlwaysCopyTemplateFiles>true</AlwaysCopyTemplateFiles>
+      <Title m="2012-02-17T11:01:28.6709492Z">Пример работы с ERMS.Core</Title>
+      <IsNewIndicatorEnabled>true</IsNewIndicatorEnabled>
+      <IsNewDateTime></IsNewDateTime>
+      <PropertyDefinitionValues>
+        <PropertyDefinitionValue PropertyDefinitionId="09de2c63-c533-49c3-a1d7-52b3995b9bec">
+          <PropertyValue m="2012-02-17T11:03:27.1099652Z">&amp;copy;%%Year%% AudiTech. All Rights Reserved.</PropertyValue>
+        </PropertyDefinitionValue>
+      </PropertyDefinitionValues>
+      <IsTidyXhtmlEnabled>true</IsTidyXhtmlEnabled>
+      <CommunityOptions UseLocalProxyUrl="false" Enabled="false">
+        <ServerType>PublicEvaluation</ServerType>
+        <LocalProxyUrl></LocalProxyUrl>
+        <HostingAccessKey></HostingAccessKey>
+        <PrivateServerUrl></PrivateServerUrl>
+        <PrivateServerAccessKey></PrivateServerAccessKey>
+        <ProjectKey />
+      </CommunityOptions>
+      <HelpCompiler CompileHelpFile="false" IsWebOutputEnabled="true" IsMarkOfTheWebEnabled="false">
+        <MarkOfTheWebDomain>(0014)about:internet</MarkOfTheWebDomain>
+        <HelpFileVersion>HtmlHelp1</HelpFileVersion>
+        <Help2Namespace>ERMS.Core</Help2Namespace>
+        <Help2FileId>ERMS.Core.Manual</Help2FileId>
+        <Help2PluginToNamespaces></Help2PluginToNamespaces>
+        <Help2Plugin>false</Help2Plugin>
+        <RuntimeMerge></RuntimeMerge>
+        <IncludeTextPopupFile>false</IncludeTextPopupFile>
+        <Help3BuildIdentifier></Help3BuildIdentifier>
+        <Help3VendorName></Help3VendorName>
+        <Help3CatalogName>VS</Help3CatalogName>
+        <Help3CatalogVersion>100</Help3CatalogVersion>
+        <Help3CatalogLocaleText>en-US</Help3CatalogLocaleText>
+        <Help3TemplateName></Help3TemplateName>
+        <Help3ProductName></Help3ProductName>
+        <Help3BookName></Help3BookName>
+        <IsHelp3CreateRegistrationScriptEnabled>true</IsHelp3CreateRegistrationScriptEnabled>
+        <IsHelp3RegisterLocallyEnabled>true</IsHelp3RegisterLocallyEnabled>
+        <IsHelp3SigningEnabled>false</IsHelp3SigningEnabled>
+        <IsHelp3ValidationEnabled>false</IsHelp3ValidationEnabled>
+        <IsHelp3KeywordsEnabled>false</IsHelp3KeywordsEnabled>
+        <BrowserHelpTemplateName></BrowserHelpTemplateName>
+        <IsCustomHtmlHelpWindowSettings>false</IsCustomHtmlHelpWindowSettings>
+        <CustomHtmlHelpWindowSettings>
+          <IsExpandVisible>true</IsExpandVisible>
+          <IsBackVisible>true</IsBackVisible>
+          <IsForwardVisible>true</IsForwardVisible>
+          <IsStopVisible>false</IsStopVisible>
+          <IsRefreshVisible>false</IsRefreshVisible>
+          <IsHomeVisible>false</IsHomeVisible>
+          <IsLocateVisible>true</IsLocateVisible>
+          <IsOptionsVisible>true</IsOptionsVisible>
+          <IsPrintVisible>true</IsPrintVisible>
+          <IsZoomVisible>false</IsZoomVisible>
+          <NavigationPaneWidth>200</NavigationPaneWidth>
+          <IsNavigationPaneInitiallyClosed>false</IsNavigationPaneInitiallyClosed>
+          <IsAutoSyncWithTocEnabled>true</IsAutoSyncWithTocEnabled>
+          <IsSearchTabVisible>true</IsSearchTabVisible>
+          <IsHistoryTabVisible>false</IsHistoryTabVisible>
+          <IsFavoritesTabVisible>true</IsFavoritesTabVisible>
+          <DefaultTab>Contents</DefaultTab>
+          <IsSaveUserWindowSettingsEnabled>true</IsSaveUserWindowSettingsEnabled>
+          <WindowSizeHeight>400</WindowSizeHeight>
+          <WindowSizeWidth>600</WindowSizeWidth>
+          <WindowLocationLeft>0</WindowLocationLeft>
+          <WindowLocationTop>0</WindowLocationTop>
+        </CustomHtmlHelpWindowSettings>
+        <HelpFileName></HelpFileName>
+      </HelpCompiler>
+      <RuleEngine>
+        <Rules Caption="" MatchType="All" IsReadOnly="false" Id="root">
+          <Rules>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="custom">
+              <Rules>
+                <Rule Caption="new" MatchType="All" IsReadOnly="false" Id="f47e14eb-b64b-46ef-a5e4-c8b8d96cb646">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="not_future" IsReadOnly="false" Id="70c3521e-2193-4bd5-94ad-86b4f2339fbc" Designer="BUILDFLAGS">
+                      <BuildFlags>099F97D0-62A2-4238-9D09-9A5800D591B2</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="standard">
+              <Rules>
+                <Rule Caption="" MatchType="All" IsReadOnly="false" Id="outputtype">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="" IsReadOnly="false" Id="2f68e30d-bdd7-4574-9510-4a2f52f4967c" Designer="BUILDFLAGS">
+                      <BuildFlags>{4AAE0FD4-7313-4FEE-A25F-0785B885F736}</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+          </Rules>
+        </Rules>
+      </RuleEngine>
+      <ShortFileNames GenerateShortFileNames="false" />
+      <TopicsProjectProfilePlugin>
+        <TemplateName>Booklet Serif</TemplateName>
+        <IncludeBreadcrumbs>true</IncludeBreadcrumbs>
+        <AutoGenerateTopicIndexEntries>true</AutoGenerateTopicIndexEntries>
+        <AutoGenerateCategoryIndexEntries>true</AutoGenerateCategoryIndexEntries>
+        <IncludeOnlyCompletedTopics>false</IncludeOnlyCompletedTopics>
+        <IsNewSource>CreationDateTime</IsNewSource>
+        <IsNewCustomTopicPropertyId></IsNewCustomTopicPropertyId>
+        <IsAnchorParsingEnabled>false</IsAnchorParsingEnabled>
+      </TopicsProjectProfilePlugin>
+      <BookletsProjectProfilePlugin>
+        <TemplateName>Booklet Serif</TemplateName>
+      </BookletsProjectProfilePlugin>
+      <WidgetsProjectProfilePlugin>
+        <WidgetTypes Version="2011.1" />
+      </WidgetsProjectProfilePlugin>
+      <OtherFiles>
+        <IsLogoEnabled>false</IsLogoEnabled>
+        <LogoOtherFileName></LogoOtherFileName>
+      </OtherFiles>
+      <OutputDirectory></OutputDirectory>
+      <BookletFileName />
+    </ProjectProfile>
+    <ProjectProfile Id="346a9665-3747-4d7a-b996-d98baf4379c3" Name="Future.Tutorial">
+      <DefaultItemQualifiedName></DefaultItemQualifiedName>
+      <StripMetadata>false</StripMetadata>
+      <AlwaysCopyTemplateFiles>true</AlwaysCopyTemplateFiles>
+      <OutputFileExtension>.html</OutputFileExtension>
+      <Title />
+      <ClearOutputDirectoryBeforeBuild>false</ClearOutputDirectoryBeforeBuild>
+      <IsNewIndicatorEnabled>true</IsNewIndicatorEnabled>
+      <IsNewDateTime></IsNewDateTime>
+      <PropertyDefinitionValues />
+      <IsTidyXhtmlEnabled>true</IsTidyXhtmlEnabled>
+      <CommunityOptions UseLocalProxyUrl="false" Enabled="false">
+        <ServerType>PublicEvaluation</ServerType>
+        <LocalProxyUrl></LocalProxyUrl>
+        <HostingAccessKey></HostingAccessKey>
+        <PrivateServerUrl></PrivateServerUrl>
+        <PrivateServerAccessKey></PrivateServerAccessKey>
+        <ProjectKey />
+      </CommunityOptions>
+      <HelpCompiler CompileHelpFile="true" IsWebOutputEnabled="false" IsMarkOfTheWebEnabled="false">
+        <MarkOfTheWebDomain>(0014)about:internet</MarkOfTheWebDomain>
+        <HelpFileVersion>HtmlHelp1</HelpFileVersion>
+        <Help2Namespace>ERMS.Core</Help2Namespace>
+        <Help2FileId>Future.Tutorial</Help2FileId>
+        <Help2PluginToNamespaces></Help2PluginToNamespaces>
+        <Help2Plugin>false</Help2Plugin>
+        <RuntimeMerge></RuntimeMerge>
+        <IncludeTextPopupFile>false</IncludeTextPopupFile>
+        <Help3BuildIdentifier></Help3BuildIdentifier>
+        <Help3VendorName></Help3VendorName>
+        <Help3CatalogName>VS</Help3CatalogName>
+        <Help3CatalogVersion>100</Help3CatalogVersion>
+        <Help3CatalogLocaleText>en-US</Help3CatalogLocaleText>
+        <Help3TemplateName></Help3TemplateName>
+        <Help3ProductName></Help3ProductName>
+        <Help3BookName></Help3BookName>
+        <IsHelp3CreateRegistrationScriptEnabled>true</IsHelp3CreateRegistrationScriptEnabled>
+        <IsHelp3RegisterLocallyEnabled>true</IsHelp3RegisterLocallyEnabled>
+        <IsHelp3SigningEnabled>false</IsHelp3SigningEnabled>
+        <IsHelp3ValidationEnabled>false</IsHelp3ValidationEnabled>
+        <IsHelp3KeywordsEnabled>false</IsHelp3KeywordsEnabled>
+        <BrowserHelpTemplateName>Default</BrowserHelpTemplateName>
+        <IsCustomHtmlHelpWindowSettings>false</IsCustomHtmlHelpWindowSettings>
+        <CustomHtmlHelpWindowSettings>
+          <IsExpandVisible>true</IsExpandVisible>
+          <IsBackVisible>true</IsBackVisible>
+          <IsForwardVisible>true</IsForwardVisible>
+          <IsStopVisible>false</IsStopVisible>
+          <IsRefreshVisible>false</IsRefreshVisible>
+          <IsHomeVisible>false</IsHomeVisible>
+          <IsLocateVisible>true</IsLocateVisible>
+          <IsOptionsVisible>true</IsOptionsVisible>
+          <IsPrintVisible>true</IsPrintVisible>
+          <IsZoomVisible>false</IsZoomVisible>
+          <NavigationPaneWidth>200</NavigationPaneWidth>
+          <IsNavigationPaneInitiallyClosed>false</IsNavigationPaneInitiallyClosed>
+          <IsAutoSyncWithTocEnabled>true</IsAutoSyncWithTocEnabled>
+          <IsSearchTabVisible>true</IsSearchTabVisible>
+          <IsHistoryTabVisible>false</IsHistoryTabVisible>
+          <IsFavoritesTabVisible>true</IsFavoritesTabVisible>
+          <DefaultTab>Contents</DefaultTab>
+          <IsSaveUserWindowSettingsEnabled>true</IsSaveUserWindowSettingsEnabled>
+          <WindowSizeHeight>400</WindowSizeHeight>
+          <WindowSizeWidth>600</WindowSizeWidth>
+          <WindowLocationLeft>0</WindowLocationLeft>
+          <WindowLocationTop>0</WindowLocationTop>
+        </CustomHtmlHelpWindowSettings>
+        <HelpFileName></HelpFileName>
+      </HelpCompiler>
+      <RuleEngine>
+        <Rules Caption="" MatchType="All" IsReadOnly="false" Id="root">
+          <Rules>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="standard">
+              <Rules>
+                <Rule Caption="" MatchType="All" IsReadOnly="false" Id="outputtype">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="" IsReadOnly="false" Id="5bde6bbc-e0ba-4ddf-a1f5-94c16ce6c16b" Designer="BUILDFLAGS">
+                      <BuildFlags>{46CEF21D-3301-4517-A875-A0906828390E}</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+            <RuleGroup Caption="" MatchType="All" IsReadOnly="false" Id="custom">
+              <Rules>
+                <Rule Caption="obsolete" MatchType="All" IsReadOnly="false" Id="9fdebbf4-c1d1-4108-8458-91c942e5e698">
+                  <Conditions>
+                    <RuleCondition BuildFlagMatchType="None" Caption="obsolete" IsReadOnly="false" Id="03fd6b84-8486-4c2f-8cd8-369b7920413c" Designer="BUILDFLAGS">
+                      <BuildFlags>099F97D0-62A2-4238-9D09-9A5800D591B2</BuildFlags>
+                    </RuleCondition>
+                  </Conditions>
+                </Rule>
+              </Rules>
+            </RuleGroup>
+          </Rules>
+        </Rules>
+      </RuleEngine>
+      <ShortFileNames GenerateShortFileNames="false" />
+      <TopicsProjectProfilePlugin>
+        <TemplateName>Visual Studio 2008 Style</TemplateName>
+        <IncludeBreadcrumbs>true</IncludeBreadcrumbs>
+        <AutoGenerateTopicIndexEntries>true</AutoGenerateTopicIndexEntries>
+        <AutoGenerateCategoryIndexEntries>true</AutoGenerateCategoryIndexEntries>
+        <IncludeOnlyCompletedTopics>false</IncludeOnlyCompletedTopics>
+        <IsNewSource>CreationDateTime</IsNewSource>
+        <IsNewCustomTopicPropertyId></IsNewCustomTopicPropertyId>
+        <IsAnchorParsingEnabled>false</IsAnchorParsingEnabled>
+      </TopicsProjectProfilePlugin>
+      <BookletsProjectProfilePlugin>
+        <TemplateName></TemplateName>
+      </BookletsProjectProfilePlugin>
+      <WidgetsProjectProfilePlugin>
+        <WidgetTypes Version="2011.1" />
+      </WidgetsProjectProfilePlugin>
+      <OtherFiles>
+        <IsLogoEnabled>false</IsLogoEnabled>
+        <LogoOtherFileName></LogoOtherFileName>
+      </OtherFiles>
+      <OutputDirectory></OutputDirectory>
+    </ProjectProfile>
+  </ProjectProfiles>
+  <BuildConfigurations>
+    <BuildConfiguration Id="ab9ac981-f2f9-46e1-83af-8bbbdf191947" Name="BuildConfiguration">
+      <BuildConfigurationItems>
+        <BuildConfigurationItem ProjectProfileId="6b2cfb6d-7340-49af-9cfb-d31ec7a4a0d5" IsIncluded="true">
+          <ProjectLocale CultureId="-" />
+        </BuildConfigurationItem>
+        <BuildConfigurationItem ProjectProfileId="11c68d7f-a4d8-423c-9f1b-e0363b6d60da" IsIncluded="false">
+          <ProjectLocale CultureId="-" />
+        </BuildConfigurationItem>
+        <BuildConfigurationItem ProjectProfileId="346a9665-3747-4d7a-b996-d98baf4379c3" IsIncluded="false">
+          <ProjectLocale CultureId="-" />
+        </BuildConfigurationItem>
+      </BuildConfigurationItems>
+    </BuildConfiguration>
+  </BuildConfigurations>
+  <HelpContextIDHeaderFile></HelpContextIDHeaderFile>
+  <PrimaryLocale CultureId="-">
+    <ExportDateTime></ExportDateTime>
+    <Dictionary></Dictionary>
+    <Notes></Notes>
+    <PhraseCultureId>ru</PhraseCultureId>
+    <EncodingCulture>ru-RU</EncodingCulture>
+  </PrimaryLocale>
+  <ContentFiles />
+  <ContentFromProjectPlugin />
+  <Filters>
+    <ExcludedItems />
+  </Filters>
+  <ComProjectPlugin />
+  <AjaxProjectPlugin />
+  <JavaProjectPlugin />
+  <DotNetAssemblies />
+  <DatabaseProjectPlugin>
+    <Databases />
+  </DatabaseProjectPlugin>
+  <XsdProjectPlugin>
+    <XsdSchemas />
+  </XsdProjectPlugin>
+  <IsNewProject>false</IsNewProject>
+</DocumentXProject>

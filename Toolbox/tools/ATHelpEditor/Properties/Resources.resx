@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="16_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_book.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16_book_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_book_open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16_pin_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16_pin_blue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_book_blue_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_book_blue_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_book_blue_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_book_blue_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_hyperlink_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_hyperlink_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_picture.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_pin_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_pin_blue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_save.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_align_center" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_align_center.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_align_justified" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_align_justified.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_align_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_align_left.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_align_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_align_right.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_bold.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_indent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_indent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_italics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_italics.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_outdent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_outdent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="24_text_underlined" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24_text_underlined.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="48_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="48_hyperlink_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_hyperlink_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="48_pin_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48_pin_blue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ADDSTYLE_ALIGNMENT" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="ADDSTYLE_COLOR" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ADDSTYLE_DEMO" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="ADDSTYLE_DUPLICATENAME" xml:space="preserve">
+    <value>Duplicate names of the style</value>
+  </data>
+  <data name="ADDSTYLE_FONT" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="ADDSTYLE_FONTSIZE" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="ADDSTYLE_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ADDSTYLE_NONAME" xml:space="preserve">
+    <value>The name of the style is not set</value>
+  </data>
+  <data name="ALIGNMENT_CENTER" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="ALIGNMENT_DEFAULT" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="ALIGNMENT_FAR" xml:space="preserve">
+    <value>Far</value>
+  </data>
+  <data name="ALIGNMENT_NEAR" xml:space="preserve">
+    <value>Near</value>
+  </data>
+  <data name="BUTTON_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BUTTON_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DOC_PROPERTIES" xml:space="preserve">
+    <value>Document fromat properties</value>
+  </data>
+  <data name="DOC_PROPERTIES_BG_COLOR" xml:space="preserve">
+    <value>Background color</value>
+  </data>
+  <data name="DOC_PROPERTIES_COLOR" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="DOC_PROPERTIES_COLOR_ALINK" xml:space="preserve">
+    <value>Active link color</value>
+  </data>
+  <data name="DOC_PROPERTIES_COLOR_LINK" xml:space="preserve">
+    <value>Link color</value>
+  </data>
+  <data name="DOC_PROPERTIES_COLOR_VLINK" xml:space="preserve">
+    <value>Visited link color</value>
+  </data>
+  <data name="DOC_PROPERTIES_FORE_COLOR" xml:space="preserve">
+    <value>Foreground color</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_BOTTOM" xml:space="preserve">
+    <value>Bottom margin</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_HEIGHT" xml:space="preserve">
+    <value>Margin height</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_LEFT" xml:space="preserve">
+    <value>Left margin</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_PROP" xml:space="preserve">
+    <value>Margin properties</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_RIGHT" xml:space="preserve">
+    <value>Right margin</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_TOP" xml:space="preserve">
+    <value>Top margin</value>
+  </data>
+  <data name="DOC_PROPERTIES_MARGIN_WIDTH" xml:space="preserve">
+    <value>Margin width</value>
+  </data>
+  <data name="MF_COMPILE" xml:space="preserve">
+    <value>Compile</value>
+  </data>
+  <data name="MF_COMPILE_TEST" xml:space="preserve">
+    <value>Compile and test</value>
+  </data>
+  <data name="MF_LOG" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="MF_NEW_PROJECT" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="MF_NODES" xml:space="preserve">
+    <value>Help File Nodes</value>
+  </data>
+  <data name="MF_OPEN_PROJECT" xml:space="preserve">
+    <value>Open Project</value>
+  </data>
+  <data name="MF_SAVE_ALL" xml:space="preserve">
+    <value>Save all</value>
+  </data>
+  <data name="MF_SAVE_PROJECT" xml:space="preserve">
+    <value>Save project</value>
+  </data>
+  <data name="MF_SETTINGS" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MODIFIED_FILES" xml:space="preserve">
+    <value>There are unsaved changes in the file. Would you like to save it now ?</value>
+  </data>
+  <data name="MODIFIED_PROJECT" xml:space="preserve">
+    <value>Your project has been changed. Would you like to save it now ?</value>
+  </data>
+  <data name="NAVIGATOR_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="NAVIGATOR_DISPLAY_NAME" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="NAVIGATOR_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="NAVIGATOR_IMPORT" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="NAVIGATOR_IMPORT_PROJECT" xml:space="preserve">
+    <value>Import project</value>
+  </data>
+  <data name="NAVIGATOR_NEW_HELP_TOPIC" xml:space="preserve">
+    <value>New help topic</value>
+  </data>
+  <data name="PROJECT_ERROR" xml:space="preserve">
+    <value>Error while opening the project</value>
+  </data>
+  <data name="PROJECT_ERROR_EMPTY" xml:space="preserve">
+    <value>Empty project</value>
+  </data>
+  <data name="SETTINGS_PAGE_GROUP" xml:space="preserve">
+    <value>Help Editor</value>
+  </data>
+  <data name="SETTINGS_PAGE_NAME" xml:space="preserve">
+    <value>Hrlp Editor properties</value>
+  </data>
+  <data name="SETTINGS_PAGE_PATH" xml:space="preserve">
+    <value>Template path</value>
+  </data>
+  <data name="TOPIC_EDITOR" xml:space="preserve">
+    <value>Topic edit form</value>
+  </data>
+  <data name="TOPIC_EDITOR_ID" xml:space="preserve">
+    <value>Topic Id</value>
+  </data>
+  <data name="TOPIC_EDITOR_NAME" xml:space="preserve">
+    <value>Topic name</value>
+  </data>
+  <data name="UNSAVED_CHANGES" xml:space="preserve">
+    <value>Unsaved changes!</value>
+  </data>
+  <data name="URI_EDITOR" xml:space="preserve">
+    <value>URI Editor</value>
+  </data>
+  <data name="URI_EDITOR_COPY" xml:space="preserve">
+    <value>Copy locally</value>
+  </data>
+  <data name="URI_EDITOR_INDEX" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="URI_EDITOR_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="URI_EDITOR_RESOURCE" xml:space="preserve">
+    <value>File or page</value>
+  </data>
+  <data name="URI_EDITOR_TOPIC" xml:space="preserve">
+    <value>Topic</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WISIWYG_ALIGN_CENTER" xml:space="preserve">
+    <value>Align center</value>
+  </data>
+  <data name="WISIWYG_ALIGN_JUSTIFY" xml:space="preserve">
+    <value>Align justify</value>
+  </data>
+  <data name="WISIWYG_ALIGN_LEFT" xml:space="preserve">
+    <value>Align left</value>
+  </data>
+  <data name="WISIWYG_ALIGN_RIGHT" xml:space="preserve">
+    <value>Align right</value>
+  </data>
+  <data name="WISIWYG_BACK_COLOR" xml:space="preserve">
+    <value>Back color</value>
+  </data>
+  <data name="WISIWYG_BAR_COLOR" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="WISIWYG_BAR_FILE" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="WISIWYG_BAR_FONT" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="WISIWYG_BAR_FORMAT" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="WISIWYG_BAR_TOOLS" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="WISIWYG_BOLD" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="WISIWYG_CODE" xml:space="preserve">
+    <value>Source code</value>
+  </data>
+  <data name="WISIWYG_DESIGNER" xml:space="preserve">
+    <value>Designer</value>
+  </data>
+  <data name="WISIWYG_FONT" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="WISIWYG_FONT_SIZE" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="WISIWYG_FORE_COLOR" xml:space="preserve">
+    <value>Fore color</value>
+  </data>
+  <data name="WISIWYG_INDENT" xml:space="preserve">
+    <value>Indent</value>
+  </data>
+  <data name="WISIWYG_INSERT_BOOKMARK" xml:space="preserve">
+    <value>Insert bookmark</value>
+  </data>
+  <data name="WISIWYG_INSERT_HR" xml:space="preserve">
+    <value>Insert horizontal line</value>
+  </data>
+  <data name="WISIWYG_INSERT_IMAGE" xml:space="preserve">
+    <value>Insert image</value>
+  </data>
+  <data name="WISIWYG_INSERT_LINK" xml:space="preserve">
+    <value>Insert link</value>
+  </data>
+  <data name="WISIWYG_INSERT_OL" xml:space="preserve">
+    <value>Insert ordered list</value>
+  </data>
+  <data name="WISIWYG_INSERT_UL" xml:space="preserve">
+    <value>Insert unsorted list</value>
+  </data>
+  <data name="WISIWYG_ITALIC" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="WISIWYG_PROPERTIES" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="WISIWYG_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="WISIWYG_UNDERLINE" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="WISIWYG_UNINDENT" xml:space="preserve">
+    <value>Unindent</value>
+  </data>
+</root>

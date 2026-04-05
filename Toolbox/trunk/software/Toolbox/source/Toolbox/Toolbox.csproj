@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67A88EF9-8838-40BB-8E28-E2E855D67F21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toolbox</RootNamespace>
+    <AssemblyName>Toolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Toolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Toolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Toolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Toolbox.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationInfo.cs" />
+    <Compile Include="Application\ApplicationSettings.cs" />
+    <Compile Include="Application\AppSwitchabelPool.cs" />
+    <Compile Include="Application\ISwitchableLanguage.cs" />
+    <Compile Include="Application\Load\IAppInstanceInitializer.cs" />
+    <Compile Include="Common\FileNotFoundDetalizedException.cs" />
+    <Compile Include="Common\Files\FileSystemHelper.cs" />
+    <Compile Include="Common\Files\Temp\ISafeTempResource.cs" />
+    <Compile Include="Common\Files\Temp\ITempResource.cs" />
+    <Compile Include="Common\Files\Temp\SafeTempResource.cs" />
+    <Compile Include="Common\FuncNotNull.cs" />
+    <Compile Include="Common\RegExpException.cs" />
+    <Compile Include="Common\SelectEqualityComparer.cs" />
+    <Compile Include="Common\SizeD.cs" />
+    <Compile Include="Data\ICopiable.cs" />
+    <Compile Include="Data\IReadOnlyDictionary.cs" />
+    <Compile Include="Data\ListWrapper.cs" />
+    <Compile Include="Data\IReadonlyCountSet.cs" />
+    <Compile Include="Data\IResourcePoolFactory.cs" />
+    <Compile Include="Data\QueueStream.cs" />
+    <Compile Include="Data\ResourcePoolEndedException.cs" />
+    <Compile Include="Application\Services\BackgroundWorkerReportProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\Services\InvalidPluginManifestException.cs" />
+    <Compile Include="Application\Services\ISynchronizeProvider.cs" />
+    <Compile Include="Application\Load\ApplicationLoadingTask.cs" />
+    <Compile Include="Application\Load\DependencyContainer.cs" />
+    <Compile Include="Application\Load\IApplicationLoader.cs" />
+    <Compile Include="Application\Load\IDependencyItem.cs" />
+    <Compile Include="Application\Load\ILoadingQueue.cs" />
+    <Compile Include="Application\Services\AppManager.cs" />
+    <Compile Include="Application\Services\AssemblyClassifier.cs" />
+    <Compile Include="Application\Services\AssemblyTreeBuilder.cs" />
+    <Compile Include="Application\Services\IAppInstance.cs" />
+    <Compile Include="Application\Services\INotificator.cs" />
+    <Compile Include="Application\Services\LoginService.cs" />
+    <Compile Include="Application\Services\PluginInfo.cs" />
+    <Compile Include="Application\CommandLineArgs.cs" />
+    <Compile Include="Application\Services\RunBaseSequence.cs" />
+    <Compile Include="Common\AssemblyCollector.cs" />
+    <Compile Include="Common\Constants\Constants.cs" />
+    <Compile Include="Common\ConvertionHelper.cs" />
+    <Compile Include="Common\DisplayName2Attribute.cs" />
+    <Compile Include="Common\DisplayNameFromResourceAttribute.cs" />
+    <Compile Include="Common\DisposeChecker.cs" />
+    <Compile Include="Common\EditEndEventArgs.cs" />
+    <Compile Include="Common\Files\Temp\TempDirectoryCreateException.cs" />
+    <Compile Include="Common\Files\Temp\TempDirectory.cs" />
+    <Compile Include="Common\Files\Temp\TempFile.cs" />
+    <Compile Include="Common\Files\Temp\TempRegularFileCreateException.cs" />
+    <Compile Include="Common\Files\Temp\TempResource.cs" />
+    <Compile Include="Common\Files\Temp\TempRegularFile.cs" />
+    <Compile Include="Common\Files\Temp\TempResourceCreateException.cs" />
+    <Compile Include="Common\IBackgroundContext.cs" />
+    <Compile Include="Common\Interval.cs" />
+    <Compile Include="Common\JetBrains.Annotations.cs" />
+    <Compile Include="Common\ReferenceComparer.cs" />
+    <Compile Include="Common\XElementWrapper.cs" />
+    <Compile Include="Common\DisplayTipAttribute.cs" />
+    <Compile Include="Data\CountSet.cs" />
+    <Compile Include="Data\HashSetWrapper.cs" />
+    <Compile Include="Data\ICountSet.cs" />
+    <Compile Include="Data\IReadOnlyCollection.cs" />
+    <Compile Include="Data\IReadOnlyList.cs" />
+    <Compile Include="Data\IResourceLink.cs" />
+    <Compile Include="Data\IResourcePool.cs" />
+    <Compile Include="Data\ISet.cs" />
+    <Compile Include="Data\NonCloseableStream.cs" />
+    <Compile Include="Data\IReadOnlySet.cs" />
+    <Compile Include="Data\ResourceAcquirerEndedException.cs" />
+    <Compile Include="Data\ResourcePoolFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\SynchronizedCountSet.cs" />
+    <Compile Include="Extensions\WaitHandleExtensions.cs" />
+    <Compile Include="Extensions\AsyncResultExtensions.cs" />
+    <Compile Include="Extensions\RandomExtensions.cs" />
+    <Compile Include="Extensions\BitmapExtentions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\SetExtensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Tasks\ReadonlyParallelOptions.cs" />
+    <Compile Include="Extensions\ActionExtensions.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\FloatExtensions.cs" />
+    <Compile Include="Extensions\FuncExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\Log4netExtensions.cs" />
+    <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Imaging\Gradient.cs" />
+    <Compile Include="Imaging\GradientPoint.cs" />
+    <Compile Include="Imaging\HLS.cs" />
+    <Compile Include="Imaging\HSLRoutines.cs" />
+    <Compile Include="Data\IResourceAcquirer.cs" />
+    <Compile Include="Security\Cryptography\Crc32.cs" />
+    <Compile Include="Common\Files\CsvFile.cs" />
+    <Compile Include="Configuration\DataContractConfigurator.cs" />
+    <Compile Include="Common\Files\DirScanner.cs" />
+    <Compile Include="Common\DisplayNameResAttribute.cs" />
+    <Compile Include="Common\DynamicMethodFactory.cs" />
+    <Compile Include="Common\EnumLabelConverter.cs" />
+    <Compile Include="Common\Files\FlatFile.cs" />
+    <Compile Include="Common\GetHashCodeHelper.cs" />
+    <Compile Include="Application\Services\IEventDispatcher.cs" />
+    <Compile Include="Common\IOperationWrapper.cs" />
+    <Compile Include="Application\Services\IRunBase.cs" />
+    <Compile Include="Application\Services\ITaskManager.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Tasks\IResultable.cs" />
+    <Compile Include="Tasks\ISuccessable.cs" />
+    <Compile Include="Tasks\ISuccessResult.cs" />
+    <Compile Include="Tasks\SuccessResult.cs" />
+    <Compile Include="Tasks\FailResult.cs" />
+    <Compile Include="Text\TextItem.cs" />
+    <Compile Include="Threading\ParametrizedTimer.cs" />
+    <Compile Include="Common\ParamEventArgs.cs" />
+    <Compile Include="Common\PointD.cs" />
+    <Compile Include="Common\ProcessExitCodes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ProgressState.cs" />
+    <Compile Include="Application\Services\RemoteProgressRepository.cs" />
+    <Compile Include="Common\TypeFilterConverter.cs" />
+    <Compile Include="Configuration\ConfigFileFinder.cs" />
+    <Compile Include="Configuration\IConfigFile.cs" />
+    <Compile Include="Configuration\IConfigurator.cs" />
+    <Compile Include="Data\AdjacencyList.cs" />
+    <Compile Include="Data\CommandHistory.cs" />
+    <Compile Include="Data\EntryBase.cs" />
+    <Compile Include="Data\ICommand.cs" />
+    <Compile Include="Data\ILookupProvider.cs" />
+    <Compile Include="Data\INodeMoveProvider.cs" />
+    <Compile Include="Data\LookupContainer.cs" />
+    <Compile Include="Data\NestedBindingList.cs" />
+    <Compile Include="Data\PropertyValueContainer.cs" />
+    <Compile Include="Data\ReadOnlyArray.cs" />
+    <Compile Include="Data\ReadOnlyDictionary.cs" />
+    <Compile Include="Data\SerializableDictionary.cs" />
+    <Compile Include="Data\SharedSource.cs" />
+    <Compile Include="Data\VirtualizedCollection.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\PathExtensions.cs" />
+    <Compile Include="Extensions\ReflectionExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\SystemExtensions.cs" />
+    <Compile Include="Application\Services\Info.cs" />
+    <Compile Include="Log\LoggingUtils.cs" />
+    <Compile Include="Log\LogStreamWriter.cs" />
+    <Compile Include="Log\MessageLogAppender.cs" />
+    <Compile Include="Network\Mail\MailHelper.cs" />
+    <Compile Include="Network\Messenger.cs" />
+    <Compile Include="Network\NetworkMessenger.cs" />
+    <Compile Include="Network\Networks.cs" />
+    <Compile Include="Network\PopSmtpMessenger.cs" />
+    <Compile Include="Network\SyncTCPClient.cs" />
+    <Compile Include="Network\SyncTCPServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Cryptography\FileEncryptor.cs" />
+    <Compile Include="Security\Cryptography\SecureStringProvider.cs" />
+    <Compile Include="Threading\Lock.cs" />
+    <Compile Include="Threading\RepeatedActionThread.cs" />
+    <Compile Include="Threading\SingleThreadChecker.cs" />
+    <Compile Include="Threading\ThreadField.cs" />
+    <Compile Include="ToolboxResources.Designer.cs">
+      <DependentUpon>ToolboxResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\FTP\" />
+    <Folder Include="Network\WCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.RU.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ToolboxResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxResources.RU.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config.log4net">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

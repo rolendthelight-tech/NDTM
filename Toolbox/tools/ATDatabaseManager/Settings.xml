@@ -1,0 +1,40 @@
+<CONFIG>
+  <LOG>
+	  <CORE>
+		  <Enabled>True</Enabled>
+		  <WaitForListeners>True</WaitForListeners>
+	  </CORE>
+	  <DISPLAY>
+		  <ShowDebug>False</ShowDebug>
+		  <ErrorColor>Red</ErrorColor>
+		  <WarningColor>Orange</WarningColor>
+		  <InfoColor>Black</InfoColor>
+		  <DebugColor>Gray</DebugColor>
+		  <ScrollDown>True</ScrollDown>
+		  <RecentLogCount>100</RecentLogCount>
+	  </DISPLAY>
+	  <FILE_WRITER>
+		  <FileURI>.\log.log</FileURI>
+		  <Enabled>True</Enabled>
+		  <PerFileCount>100000</PerFileCount>
+	  </FILE_WRITER>
+  </LOG>
+  <DATABASE>
+    <BROWSER>
+      <CachedServers ItemAssembly="ATMssqlToolbox, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" ItemType="AT.Toolbox.MSSQL.ServerEntry">
+      </CachedServers>
+      <MouldFilePath>mould.xml</MouldFilePath>
+      <CurrentConnection></CurrentConnection>
+      <DeveloperMode>True</DeveloperMode>
+      <SaveAuthData>False</SaveAuthData>
+    </BROWSER>
+  </DATABASE>
+	<ERROR_MAIL>
+		<RemoteAdress>
+		</RemoteAdress>
+	</ERROR_MAIL>
+	<HELP>
+    <HelpFilePath>manager_help.athelp</HelpFilePath>
+    <DebugMode>False</DebugMode>
+  </HELP>
+</CONFIG>

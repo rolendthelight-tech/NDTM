@@ -1,0 +1,144 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Sql;
+using System.Runtime.InteropServices;
+using System.Security;
+using Toolbox.Common;
+using Toolbox.Common.Constants;
+
+namespace Toolbox.Network
+{
+	/// <summary>
+  /// Вспомогательный класс для работы с сетью
+  /// </summary>
+  public static class NetLister
+  {
+    //TODO: Локализация
+
+    private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(NetLister));
+
+    #region Dll Imports ---------------------------------------------------------------------------------------------------------
+
+    [DllImport( "Netapi32", CharSet = CharSet.Auto, SetLastError = true, BestFitMapping = false,
+      ThrowOnUnmappableChar = true )]
+    [SuppressUnmanagedCodeSecurity]
+    public static extern int NetServerEnum( string ServerName,
+                                            // must be null
+                                            int dwLevel,
+                                            ref IntPtr pBuf,
+                                            int dwPrefMaxLen,
+                                            out int dwEntriesRead,
+                                            out int dwTotalEntries,
+                                            int dwServerType,
+                                            string domain,
+                                            // null for login domain
+                                            out int dwResumeHandle );
+
+    [DllImport( "Netapi32", SetLastError = true )]
+    [SuppressUnmanagedCodeSecurity]
+    public static extern int NetApiBufferFree( IntPtr pBuf );
+
+    [StructLayout( LayoutKind.Sequential )]
+    public struct ServerInfo
+    {
+      internal int sv100_platform_id;
+
+      [MarshalAs( UnmanagedType.LPWStr )]
+      internal string sv100_name;
+    }
+
+    #endregion
+
+    #region Public Methods ------------------------------------------------------------------------------------------------------
+
+    public static List<string> GetNetworkComputers( ) { return GetNetworkComputers( ComputerTypes.Workstation | ComputerTypes.Server ); }
+
+    /// <summary>
+    /// Получение списка компьютеров в сети
+    /// </summary>
+    /// <returns>Список имён компьютеорв</returns>
+    public static List<string> GetNetworkComputers( ComputerTypes Type )
+    {
+      const int MAX_PREFERRED_LENGTH = -1;
+
+      IntPtr buffer = IntPtr.Zero;
+      List<string> ret_val = new List<string>( );
+
+      try
+      {
+        int entriesRead;
+        int totalEntries;
+        int resHandle;
+        int sizeofINFO = Marshal.SizeOf( typeof( ServerInfo ) );
+
+        int result = NetServerEnum( null,
+                                    100,
+                                    ref buffer,
+                                    MAX_PREFERRED_LENGTH,
+                                    out entriesRead,
+                                    out totalEntries,
+                                    (int) Type,
+                                    null,
+                                    out resHandle );
+
+        if( 0 != result )
+        {
+					Log.ErrorFormat("GetNetworkComputers(): NetServerEnum returned {0}", result);
+          return ret_val;
+        }
+
+        for( int i = 0; i < totalEntries; i++ )
+        {
+          IntPtr tmpBuffer = new IntPtr( (int) buffer + ( i * sizeofINFO ) );
+
+          ServerInfo svrInfo = (ServerInfo) Marshal.PtrToStructure( tmpBuffer, typeof( ServerInfo ) );
+
+          ret_val.Add( new string( svrInfo.sv100_name.ToCharArray( ) ) );
+        }
+      }
+      catch( Exception ex )
+      {
+        Log.Error( "GetNetworkComputers(): exception", ex );
+      }
+      finally
+      {
+        NetApiBufferFree( buffer );
+      }
+
+      return ret_val;
+    }
+
+    /// <summary>
+    /// Получение списка SQL-серверов
+    /// </summary>
+    /// <returns>Список имён SQL-серверов</returns>
+    public static List<string> GetSQLServers( )
+    {
+      List<string> ret_val = new List<string>( );
+
+      try
+      {
+        SqlDataSourceEnumerator instance = SqlDataSourceEnumerator.Instance;
+        DataTable table = instance.GetDataSources( );
+
+        foreach( DataRow row in table.Rows )
+        {
+          string val = (string) row["ServerName"] 
+            + (row["InstanceName"].ToString() != "" ? "\\" + row["InstanceName"] : "");
+
+          if( !ret_val.Contains( val ) )
+            ret_val.Add( val );
+        }
+      }
+      catch( Exception ex )
+      {
+        Log.Error( "GetSQLServers(): exception", ex );
+      }
+
+      return ret_val;
+    }
+
+    #endregion
+  }
+}

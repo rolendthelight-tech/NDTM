@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableOfContents>
+  <TocLayout Id="c7552482-a1ae-44a2-a9fc-c757d62b5073">
+    <Name />
+    <Description />
+    <RootNodes>
+      <TocNode Name="" Id="729b1dd8-f7a2-4f31-be30-9ece145a5862" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="NOLINK">
+        <CaptionTemplate m="2012-02-15T12:00:40.9889827Z">Общие сведения</CaptionTemplate>
+        <ChildNodes>
+          <TocNode Name="" Id="244a22d3-035a-41b3-babb-ce5feec411bc" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>68fdccc2-ea13-4834-ae23-db1a182b7c65</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="b999d53c-e338-49bf-b4fa-ad93e31ad3d9" IconIndex="-1" IsNew="false" Target="glossary.html" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>7fc66877-3797-4079-b5df-c99b4e1a3446</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="d3adf534-226f-4d96-84a5-199868b473e1" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>e31bcb9b-4acf-4479-a077-792a5cd213cc</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+        </ChildNodes>
+      </TocNode>
+      <TocNode Name="" Id="b9f87348-e52d-439c-b8a0-9ea625ed006c" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="NOLINK">
+        <CaptionTemplate m="2012-02-15T12:26:34.9372897Z">Пример разработки приложения</CaptionTemplate>
+        <ChildNodes>
+          <TocNode Name="" Id="26a82057-cd7d-48ba-9abc-d8c28a088033" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>dee8d508-e0be-406b-947b-2286825cf63f</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="a5dd6df5-c026-49f0-a0a8-c8c4ad0aca7b" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>8c467c57-8e3a-456c-8d9d-8ccfee799f50</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="22a14581-f420-424c-9f41-57cbc6d1f471" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>36bff3bd-9076-4ae0-887f-7856919b3a88</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="606242f2-7257-445a-b737-c436d76d5233" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>0af1cc3a-4459-46dd-9330-91b9f0286b25</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+        </ChildNodes>
+      </TocNode>
+      <TocNode Name="" Id="793c22c9-7c23-4f9d-aab9-b9e92e69add5" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="NOLINK">
+        <CaptionTemplate m="2012-02-15T12:00:23.4887587Z">Справочник</CaptionTemplate>
+        <ChildNodes>
+          <TocNode Name="" Id="48530e00-9511-47aa-a8b8-710268809b5a" IconIndex="-1" IsNew="false" Target="" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="PROJECTITEM">
+            <CaptionTemplate />
+            <ChildNodes />
+            <TargetItemId>2380196c-24ff-4e11-b369-da30418549dd</TargetItemId>
+            <TargetItemBookmark></TargetItemBookmark>
+          </TocNode>
+          <TocNode Name="" Id="4e4dda94-d295-49cb-8426-d110a154e0d6" IconIndex="-1" IsNew="false" DependsOnItemTypeName="" DependsOnItemTypeFilter="" DependsOnMinimumCount="0" DependsOnStillProcessChildNodes="false" BuildFlags="" NodeType="GLOSSARY">
+            <CaptionTemplate />
+            <ChildNodes />
+          </TocNode>
+        </ChildNodes>
+      </TocNode>
+    </RootNodes>
+  </TocLayout>
+</TableOfContents>

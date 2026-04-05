@@ -1,0 +1,259 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Runtime.Serialization;
+using System.IO;
+using System.Xml;
+using System.Threading;
+using System.Xml.Serialization;
+using AT.Toolbox.Properties;
+
+namespace AT.Toolbox
+{
+  public class DataContractConfigurator : IConfigurator
+  {
+    private readonly Dictionary<Type, ConfigurationSection> m_sections = new Dictionary<Type, ConfigurationSection>();
+    private readonly LockSource m_lock = new LockSource();
+    private readonly IConfigFile m_file;
+
+    public DataContractConfigurator(IConfigFile file)
+    {
+      if (file == null)
+        throw new ArgumentNullException("file");
+
+      m_file = file;
+    }
+
+    public DataContractConfigurator(string fileName) :
+      this(new ConfigFile(fileName)) { }
+
+    public bool LoadSection(Type sectionType, InfoBuffer buffer)
+    {
+      if (sectionType == null)
+        throw new ArgumentNullException("sectionType");
+
+      if (buffer == null)
+        throw new ArgumentNullException("buffer");
+      
+      bool ret = true;
+
+      using (m_lock.GetWriteLock())
+      {
+        if (!typeof(ConfigurationSection).IsAssignableFrom(sectionType)
+          || sectionType.IsAbstract || sectionType.GetConstructor(Type.EmptyTypes) == null)
+          throw new ArgumentException(Resources.INVALID_CONFIG_SECTION_TYPE);
+        
+        ConfigurationSection section;
+        
+        if (!m_sections.TryGetValue(sectionType, out section))
+        {
+          section = this.CreateSection(sectionType);
+          m_sections.Add(sectionType, section);
+        }
+
+        ret = section.Validate(buffer);
+      }
+
+      return ret;
+    }
+
+    public TSection GetSection<TSection>() where TSection : ConfigurationSection, new()
+    {
+      ConfigurationSection ret;
+
+      using (m_lock.GetReadLock())
+      {
+        if (m_sections.TryGetValue(typeof(TSection), out ret))
+          return (TSection)ret;
+      }
+
+      using (m_lock.GetWriteLock())
+      {
+        if (!m_sections.TryGetValue(typeof(TSection), out ret))
+        {
+          ret = CreateSection(typeof(TSection));
+
+          InfoBuffer buffer = new InfoBuffer();
+
+          //if (!ret.Validate(buffer))
+          //{
+          //  foreach (var info in buffer)
+          //    AppManager.Notificator.Log(ret.ToString(), info);
+          //}
+
+          m_sections.Add(typeof(TSection), ret);
+        }
+      }
+
+      return (TSection)ret;
+    }
+
+    public void SaveSection<TSection>(TSection section)
+      where TSection : ConfigurationSection, new()
+    {
+      if (section == null)
+        throw new ArgumentNullException("section");
+
+      using (m_lock.GetWriteLock())
+      {
+        m_sections[typeof(TSection)] = section;
+      }
+    }
+
+    public void HandleError(Exception error)
+    {
+      using (m_lock.GetReadLock())
+      {
+        foreach (var section in m_sections)
+          section.Value.OnError(error);
+      }
+    }
+
+    public void ApplySettings()
+    {
+      using (m_lock.GetWriteLock())
+      {
+        foreach (var kv in m_sections)
+          kv.Value.ApplySettings();
+      }
+    }
+
+    public void SaveSettings()
+    {
+      using (m_lock.GetWriteLock())
+      {
+        foreach (var kv in m_sections)
+        {
+          string section_name;
+          bool data_contract;
+
+          section_name = GetSectionName(kv.Key, out data_contract);
+
+          StringBuilder sb = new StringBuilder();
+
+          using (StringWriter sw = new StringWriter(sb))
+          {
+            using (XmlTextWriter writer = new XmlTextWriter(sw))
+            {
+              if (data_contract)
+              {
+                DataContractSerializer sr = new DataContractSerializer(kv.Key);
+                sr.WriteObject(writer, kv.Value);
+                m_file[section_name] = sb.ToString();
+              }
+              else
+              {
+                XmlSerializer sr = new XmlSerializer(kv.Key);
+                sr.Serialize(writer, kv.Value);
+
+                var tmp = sb.ToString();
+
+                if (tmp.StartsWith("<?"))
+                {
+                  int idx = tmp.IndexOf("?>");
+
+                  if (idx >= 0)
+                  {
+                    idx += 2;
+                    tmp = tmp.Substring(idx);
+                  }
+                }
+                m_file[section_name] = tmp;
+              }
+            }
+          }
+        }
+        m_file.Save();
+      }
+    }
+
+    private static string DataContractName(Type type)
+    {
+      if (type == null)
+        return null;
+      Type refl = type.ReflectedType;
+      return (refl == null) ? type.Name : string.Format("{0}.{1}", DataContractName(refl), type.Name);
+    }
+
+    private ConfigurationSection CreateSection(Type sectionType) 
+    {
+      ConfigurationSection ret = null;
+      
+      string section_name;
+      bool data_contract;
+
+      section_name = GetSectionName(sectionType, out data_contract);
+
+      string section_xml = null;
+
+      if (m_file.TryGetSection(section_name, out section_xml))
+      {
+        using (StringReader reader = new StringReader(section_xml))
+        {
+          using (XmlTextReader xml_reader = new XmlTextReader(reader))
+          {
+            if (data_contract)
+            {
+              DataContractSerializer sr = new DataContractSerializer(sectionType);
+              try
+              {
+                ret = (ConfigurationSection)sr.ReadObject(xml_reader);
+              }
+              catch (Exception ex)
+              {
+                AppManager.Notificator.Log("DataContractConfigurator", new Info(ex));
+                ret = (ConfigurationSection)Activator.CreateInstance(sectionType);
+              }
+            }
+            else
+            {
+              XmlSerializer sr = new XmlSerializer(sectionType);
+              try
+              {
+                ret = (ConfigurationSection)sr.Deserialize(xml_reader);
+              }
+              catch (Exception ex)
+              {
+                AppManager.Notificator.Log("DataContractConfigurator", new Info(ex));
+                ret = (ConfigurationSection)Activator.CreateInstance(sectionType);
+              }
+            }
+          }
+        }
+      }
+      else
+        ret = (ConfigurationSection)Activator.CreateInstance(sectionType);
+
+      return ret;
+    }
+
+    private static string GetSectionName(Type sectionType, out bool data_contract)
+    {
+      string section_name;
+      if (data_contract = sectionType.IsDefined(typeof(DataContractAttribute), false))
+      {
+        DataContractAttribute contract
+          = sectionType.GetCustomAttributes(typeof(DataContractAttribute),
+            false)[0] as DataContractAttribute;
+
+        section_name = contract.Name ?? DataContractName(sectionType);
+      }
+      else
+        if (sectionType.IsDefined(typeof(XmlRootAttribute), false))
+        {
+          XmlRootAttribute root
+            = sectionType.GetCustomAttributes(typeof(XmlRootAttribute),
+              false)[0] as XmlRootAttribute;
+
+          section_name = root.ElementName;
+
+          if (string.IsNullOrEmpty(section_name))
+            section_name = sectionType.Name;
+        }
+        else
+          section_name = sectionType.Name;
+      return section_name;
+    }
+  }
+}

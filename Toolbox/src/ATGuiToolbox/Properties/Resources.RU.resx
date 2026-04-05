@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APPLY" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="LOG" xml:space="preserve">
+    <value>Протокол</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="RESTART_REQUIRED" xml:space="preserve">
+    <value>Требуется перезапуск</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Настройки приложения</value>
+  </data>
+  <data name="SETTINGS_GENERIC" xml:space="preserve">
+    <value>Общие настройки</value>
+  </data>
+  <data name="SETTINGS_LOG_CORE" xml:space="preserve">
+    <value>Настройки протоколирования</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY" xml:space="preserve">
+    <value>Настройки отображения протокола</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_DEBUG" xml:space="preserve">
+    <value>Показывать отладочные сообщения</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_DEBUG_COLOR" xml:space="preserve">
+    <value>Отладочное</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_ERROR_COLOR" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_INFO_COLOR" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="SETTINGS_LOG_DISPLAY_WARN_COLOR" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="SETTINGS_RESTART_TITLE" xml:space="preserve">
+    <value>Перезапуск</value>
+  </data>
+  <data name="SETTINGS_RESTART_WARNING" xml:space="preserve">
+    <value>Некоторые изменения не могут быть применены без перезагрузки программы. Перезагрузить сейчас?</value>
+  </data>
+  <data name="EXCEPTION_CALLSTACK" xml:space="preserve">
+    <value>Стек вызовов</value>
+  </data>
+  <data name="EXCEPTION_DETAILS" xml:space="preserve">
+    <value>Детали исключения</value>
+  </data>
+  <data name="EXCEPTION_MESSAGE" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="EXCEPTION_SOURCE" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="LOG_DEBUG_TITLE" xml:space="preserve">
+    <value>Отладочные</value>
+  </data>
+  <data name="LOG_ERRORS_TITLE" xml:space="preserve">
+    <value>Ошибок</value>
+  </data>
+  <data name="LOG_FILE" xml:space="preserve">
+    <value>Файл протокола</value>
+  </data>
+  <data name="LOG_GRID_EXCEPTION_TITLE" xml:space="preserve">
+    <value>Исключение</value>
+  </data>
+  <data name="LOG_GRID_LEVEL_TITLE" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="LOG_GRID_LOGGER_TITLE" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="LOG_GRID_MESSAGE_TITLE" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="LOG_GRID_TIMESTAMP_TITLE" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="LOG_INFO_TITLE" xml:space="preserve">
+    <value>Сообщений</value>
+  </data>
+  <data name="LOG_LEVEL_DEBUG" xml:space="preserve">
+    <value>Отладочное</value>
+  </data>
+  <data name="LOG_LEVEL_ERROR" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="LOG_LEVEL_FATAL" xml:space="preserve">
+    <value>Смертельно</value>
+  </data>
+  <data name="LOG_LEVEL_INFO" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="LOG_LEVEL_WARN" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="LOG_SHOW_FILE_TITLE" xml:space="preserve">
+    <value>Показать файл протокола</value>
+  </data>
+  <data name="LOG_WARINING_TITLE" xml:space="preserve">
+    <value>Предупреждений</value>
+  </data>
+  <data name="FAIL" xml:space="preserve">
+    <value>Увы</value>
+  </data>
+  <data name="APPLICATION_SETTINGS" xml:space="preserve">
+    <value>Настройки приложения</value>
+  </data>
+  <data name="ALLOW_ONE_INSTANCE" xml:space="preserve">
+    <value>Разрешить только один экземпляр программы</value>
+  </data>
+  <data name="CONFIG_FILE_PATH" xml:space="preserve">
+    <value>Путь к файлу настроек</value>
+  </data>
+  <data name="LOCALE" xml:space="preserve">
+    <value>Язык интерфейса</value>
+  </data>
+  <data name="LOCALE_ENGLISH" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="LOCALE_RUSSIAN" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="RESTART_ON_CRITICAL" xml:space="preserve">
+    <value>Перезапускать при критической ошибке</value>
+  </data>
+  <data name="DRAWING_OFFICE_2003" xml:space="preserve">
+    <value>Office 2003</value>
+  </data>
+  <data name="DRAWING_SKIN_ASPHALT" xml:space="preserve">
+    <value>Asphalt Skin</value>
+  </data>
+  <data name="DRAWING_SKIN_BLUE" xml:space="preserve">
+    <value>Blue Skin</value>
+  </data>
+  <data name="DRAWING_SKIN_CARAMEL" xml:space="preserve">
+    <value>Caramel Skin</value>
+  </data>
+  <data name="DRAWING_WIN32" xml:space="preserve">
+    <value>Windows standard</value>
+  </data>
+  <data name="ABOUT_TITLE" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="CLOSE" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="COPYRIGHT_TITLE" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="DEVELOPED_TITLE" xml:space="preserve">
+    <value>Разработано</value>
+  </data>
+  <data name="INFO_TITLE" xml:space="preserve">
+    <value>Дополнительная информация</value>
+  </data>
+  <data name="MODULES_TITLE" xml:space="preserve">
+    <value>Программные модули</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="VERSION_TITLE" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="LOG_LEVEL_ALL" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="SETTINGS_LOG_INFO" xml:space="preserve">
+    <value>Настройки протокола</value>
+  </data>
+  <data name="SETTINGS_LOG_LEVEL" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="SETTINGS_LOG_PATH" xml:space="preserve">
+    <value>Путь к файлу протокола</value>
+  </data>
+  <data name="SETTINGS_LOG_RECENT_COUNT" xml:space="preserve">
+    <value>Последние сообщения</value>
+  </data>
+  <data name="DELETE_CONFIRM" xml:space="preserve">
+    <value>Вы действительно хотите удалить запись?</value>
+  </data>
+  <data name="MultiEdit" xml:space="preserve">
+    <value>Множественное редактирование</value>
+  </data>
+  <data name="APPHELP_NOHELPFILE" xml:space="preserve">
+    <value>Не указан файл справки</value>
+  </data>
+  <data name="LOG_CLEAR" xml:space="preserve">
+    <value>Очистка</value>
+  </data>
+  <data name="APPLICATION_COMMIT_CLOSE" xml:space="preserve">
+    <value>Вы действительно хотите выйти из программы?</value>
+  </data>
+  <data name="ABORT" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="IGNORE" xml:space="preserve">
+    <value>Пропустить</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="RETRY" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="YES" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="INVALID_OPERATION" xml:space="preserve">
+    <value>Программа выполнила недопустимую операцию и будет закрыта</value>
+  </data>
+  <data name="HELP_BROWSER_CONTENTS" xml:space="preserve">
+    <value>Содержание</value>
+  </data>
+  <data name="HELP_BROWSER_INDEX" xml:space="preserve">
+    <value>Индекс</value>
+  </data>
+  <data name="HELP_BROWSER_TITLE" xml:space="preserve">
+    <value>Обозреватель справки</value>
+  </data>
+  <data name="ICON" xml:space="preserve">
+    <value>Иконка</value>
+  </data>
+  <data name="DONT_CLOSE" xml:space="preserve">
+    <value>Не закрывать при критической ошибке</value>
+  </data>
+  <data name="APPHELP_CANT_OPEN_HELPFILE" xml:space="preserve">
+    <value>Невозможно открыть файл справки</value>
+  </data>
+  <data name="EDIT_CONFIRM" xml:space="preserve">
+    <value>Вы действительно хотите сохранить изменения?</value>
+  </data>
+  <data name="LOG_MIN_LEVEL" xml:space="preserve">
+    <value>Минимальный уровень</value>
+  </data>
+  <data name="CLEAR" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="COL_DETAILS" xml:space="preserve">
+    <value>Подробности</value>
+  </data>
+  <data name="COL_EVENT_TIME" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="COL_MESSAGE" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="COL_SOURCE" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="INFO_WND" xml:space="preserve">
+    <value>Окно сообщений</value>
+  </data>
+  <data name="LEVEL" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="LIST_TO_END" xml:space="preserve">
+    <value>В конец</value>
+  </data>
+  <data name="SHOW_LOG" xml:space="preserve">
+    <value>Открыть папку протокола</value>
+  </data>
+  <data name="SUMMARY_ERROR" xml:space="preserve">
+    <value>Произошло несколько критических ошибок, приведших к останову.  Просмотрите детальную информацию</value>
+  </data>
+  <data name="SUMMARY_INFO" xml:space="preserve">
+    <value>Эти сообщения носят информационный характер и не требуют никаких дополнительных действий</value>
+  </data>
+  <data name="SUMMARY_WARNING" xml:space="preserve">
+    <value>Прочтите предупреждающие сообщения и примите необходимые меры</value>
+  </data>
+  <data name="SETTINGS_VALIDATE" xml:space="preserve">
+    <value>Проверить</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="TASK" xml:space="preserve">
+    <value>Задача</value>
+  </data>
+  <data name="KILL_TASK_CONFIRM" xml:space="preserve">
+    <value>Вы действительно хотите прервать задачу {0}?</value>
+  </data>
+  <data name="EXCEPTION_CALLSTACK1" xml:space="preserve">
+    <value>Стек вызовов</value>
+  </data>
+  <data name="EXCEPTION_SOURCE1" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="INIT_FAIL" xml:space="preserve">
+    <value>Сбой при инициализации</value>
+  </data>
+  <data name="INIT_FAIL_DESCRIPTION" xml:space="preserve">
+    <value>Не удалось запустить приложение. Измените настройки</value>
+  </data>
+</root>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09DE0B1D-D7F3-42AC-80ED-88860A2930E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ATHelpEditor</RootNamespace>
+    <AssemblyName>ATHelpEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 9.0\Visual Studio Tools for Office\PIA\Office12\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewStyleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewStyleDialog.Designer.cs">
+      <DependentUpon>AddNewStyleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevHelpNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DevHelpNavigator.Designer.cs">
+      <DependentUpon>DevHelpNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpEditorPropertyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpEditorPropertyPage.Designer.cs">
+      <DependentUpon>HelpEditorPropertyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpProject.cs" />
+    <Compile Include="HtmlWisiwygEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HtmlWisiwygEdit.Designer.cs">
+      <DependentUpon>HtmlWisiwygEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewStyleDialog.resx">
+      <DependentUpon>AddNewStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevHelpNavigator.resx">
+      <DependentUpon>DevHelpNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpEditorPropertyPage.resx">
+      <DependentUpon>HelpEditorPropertyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlWisiwygEdit.resx">
+      <DependentUpon>HtmlWisiwygEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.RU.resx" />
+    <EmbeddedResource Include="TopicEditForm.resx">
+      <DependentUpon>TopicEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URIEdit.resx">
+      <DependentUpon>URIEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocPropertiesForm.resx">
+      <DependentUpon>DocPropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TextBlockStyle.cs" />
+    <Compile Include="TopicEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopicEditForm.Designer.cs">
+      <DependentUpon>TopicEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URIEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URIEdit.Designer.cs">
+      <DependentUpon>URIEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocPropertiesForm.Designer.cs">
+      <DependentUpon>DocPropertiesForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_book_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16_pin_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_book_blue_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_book_blue_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_hyperlink_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_pin_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_align_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_align_justified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_align_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_align_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_indent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_italics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_outdent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_text_underlined.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48_hyperlink_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Resources\48_pin_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ATGuiToolbox\ATGuiToolbox.csproj">
+      <Project>{F5980E92-04CE-441F-9A7F-8F8F40AF859D}</Project>
+      <Name>ATGuiToolbox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\ATToolbox\ATToolbox.csproj">
+      <Project>{867510E4-F88F-4E4A-B267-95FD0C5E22DC}</Project>
+      <Name>ATToolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
