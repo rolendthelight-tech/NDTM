@@ -39,7 +39,7 @@ namespace AT.Toolbox.Base
       InitLocalization();
     }
 
-    protected Cursor m_cur = Cursor.Current;
+    protected Cursor m_cur = Cursors.Default;
 
     public new bool UseWaitCursor
     {
@@ -54,7 +54,7 @@ namespace AT.Toolbox.Base
           Cursor = Cursors.WaitCursor;
         }
         else
-          Cursor = m_cur;
+          Cursor = m_cur ?? Cursors.Default;
       }
     }
 
@@ -70,7 +70,7 @@ namespace AT.Toolbox.Base
       }
       catch (Exception ex)
       {
-        //TODO: не очень красиво, но не хочется делать референс в этом проекте на ERMS.Security
+        //TODO: Г­ГҐ Г®Г·ГҐГ­Гј ГЄГ°Г Г±ГЁГўГ®, Г­Г® Г­ГҐ ГµГ®Г·ГҐГІГ±Гї Г¤ГҐГ«Г ГІГј Г°ГҐГґГҐГ°ГҐГ­Г± Гў ГЅГІГ®Г¬ ГЇГ°Г®ГҐГЄГІГҐ Г­Г  ERMS.Security
         if (ex.GetType().Name == "SecurityControlException") 
           throw;
 
