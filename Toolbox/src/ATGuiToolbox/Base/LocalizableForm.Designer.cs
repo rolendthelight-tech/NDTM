@@ -34,7 +34,6 @@ namespace AT.Toolbox.Base
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(292, 273);
       this.Name = "LocalizableForm";
       this.Text = "LocalizableForm";
       this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.LocalizableForm_HelpRequested);
